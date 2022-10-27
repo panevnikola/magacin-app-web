@@ -1,0 +1,918 @@
+{
+    "sourceFile": "src/components/Dashboard/Dashboard.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 225,
+            "patches": [
+                {
+                    "date": 1640278253765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640302004071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,27 @@\n import React from 'react';\n-import { Typography } from '@material-ui/core';\n+import { Grid, Item } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n \n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <div className={classes.container}>\n-      <Typography variant='h5' className={classes.title}>\n-        Dashboard\n-      </Typography>\n-    </div>\n+    <Grid container spacing={2}>\n+      <Grid item xs={6} md={8}>\n+        <Item>xs=6 md=8</Item>\n+      </Grid>\n+      <Grid item xs={6} md={4}>\n+        <Item>xs=6 md=4</Item>\n+      </Grid>\n+      <Grid item xs={6} md={4}>\n+        <Item>xs=6 md=4</Item>\n+      </Grid>\n+      <Grid item xs={6} md={8}>\n+        <Item>xs=6 md=8</Item>\n+      </Grid>\n+    </Grid>\n   );\n };\n \n export default Dashboard;\n"
+                },
+                {
+                    "date": 1640302067824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react';\n+import { styled } from '@material-ui/material/styles';\n import { Grid, Item } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n \n"
+                },
+                {
+                    "date": 1640302095397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\n import { styled } from '@material-ui/material/styles';\n-import { Grid, Item } from '@material-ui/core';\n+import { Grid } from '@material-ui/core';\n+import { Item } from '@material-ui/material';\n \n import useStyles from './DashboardStyles';\n \n const Dashboard = (props) => {\n"
+                },
+                {
+                    "date": 1640302101368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\n import { styled } from '@material-ui/material/styles';\n import { Grid } from '@material-ui/core';\n-import { Item } from '@material-ui/material';\n+import { Item } from '@material-ui';\n \n import useStyles from './DashboardStyles';\n \n const Dashboard = (props) => {\n"
+                },
+                {
+                    "date": 1640302127447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\n import { styled } from '@material-ui/material/styles';\n import { Grid } from '@material-ui/core';\n-import { Item } from '@material-ui';\n+import Item from '@material-ui/core/Item';\n \n import useStyles from './DashboardStyles';\n \n const Dashboard = (props) => {\n"
+                },
+                {
+                    "date": 1640302247960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,17 @@\n import React from 'react';\n import { styled } from '@material-ui/material/styles';\n-import { Grid } from '@material-ui/core';\n-import Item from '@material-ui/core/Item';\n+import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n \n+const Item = styled(Paper)(({ theme }) => ({\n+  ...theme.typography.body2,\n+  padding: theme.spacing(1),\n+  textAlign: 'center',\n+  color: theme.palette.text.secondary,\n+}));\n+\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n"
+                },
+                {
+                    "date": 1640302258179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-import { styled } from '@material-ui/material/styles';\n+import { styled } from '@material-ui/core/styles';\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n \n"
+                },
+                {
+                    "date": 1640302275111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container spacing={2}>\n+    <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={8}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302381384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   const classes = useStyles();\n \n   return (\n     <Grid container spacing={2} className={classes.container}>\n-      <Grid item xs={6} md={8}>\n+      <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n"
+                },
+                {
+                    "date": 1640302392026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container spacing={2} className={classes.container}>\n+    <Grid container className={classes.container}>\n       <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302397520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container className={classes.container}>\n+    <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302409015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container spacing={2} className={classes.container}>\n+    <Grid container spacing={} className={classes.container}>\n       <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302415676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container spacing={} className={classes.container}>\n+    <Grid container spacing={8} className={classes.container}>\n       <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302421767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n-    <Grid container spacing={8} className={classes.container}>\n+    <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={3}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640302439720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,20 +15,17 @@\n   const classes = useStyles();\n \n   return (\n     <Grid container spacing={2} className={classes.container}>\n-      <Grid item xs={6} md={3}>\n+      <Grid item xs={6} md={4}>\n         <Item>xs=6 md=8</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n-      <Grid item xs={6} md={8}>\n-        <Item>xs=6 md=8</Item>\n-      </Grid>\n     </Grid>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1640302633405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,13 @@\n import { styled } from '@material-ui/core/styles';\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n+import CustomCard from './Card';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n-  padding: theme.spacing(1),\n+  // padding: theme.spacing(1),\n   textAlign: 'center',\n   color: theme.palette.text.secondary,\n }));\n \n"
+                },
+                {
+                    "date": 1640302639102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import CustomCard from './Card';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n-  // padding: theme.spacing(1),\n+  padding: theme.spacing(10),\n   textAlign: 'center',\n   color: theme.palette.text.secondary,\n }));\n \n"
+                },
+                {
+                    "date": 1640302649526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n   textAlign: 'center',\n-  color: theme.palette.text.secondary,\n+  // color: theme.palette.text.secondary,\n }));\n \n const Dashboard = (props) => {\n   const classes = useStyles();\n"
+                },
+                {
+                    "date": 1640302880417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,18 +8,18 @@\n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n   textAlign: 'center',\n-  // color: theme.palette.text.secondary,\n+  color: theme.palette.text.secondary,\n }));\n \n const Dashboard = (props) => {\n   const classes = useStyles();\n \n   return (\n     <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={4}>\n-        <Item>xs=6 md=8</Item>\n+        <CustomCard />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640353265324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-import { styled } from '@material-ui/core/styles';\n+import { styled, useTheme } from '@material-ui/core/styles';\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n@@ -13,13 +13,14 @@\n }));\n \n const Dashboard = (props) => {\n   const classes = useStyles();\n+  const theme = useTheme();\n \n   return (\n     <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={4}>\n-        <CustomCard />\n+        <CustomCard bgColor={theme.palette.secondary.dark} />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640353529839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,12 @@\n \n   return (\n     <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={4}>\n-        <CustomCard bgColor={theme.palette.secondary.dark} />\n+        <CustomCard\n+          bgColor={theme.palette.secondary.dark}\n+          bgAfter={theme.palette.secondary[800]}\n+        />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640353734162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n+          value={278}\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n"
+                },
+                {
+                    "date": 1640353781860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n           value={278}\n+          type='Нарачки'\n+          month='Декември 2021'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n"
+                },
+                {
+                    "date": 1640353874543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,15 @@\n           month='Декември 2021'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        <Item>xs=6 md=4</Item>\n+        <CustomCard\n+          bgColor={theme.palette.secondary.dark}\n+          bgAfter={theme.palette.secondary[800]}\n+          value={278}\n+          type='Нарачки'\n+          month='Декември 2021'\n+        />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640353881415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <CustomCard\n-          bgColor={theme.palette.secondary.dark}\n+          bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.secondary[800]}\n           value={278}\n           type='Нарачки'\n           month='Декември 2021'\n"
+                },
+                {
+                    "date": 1640353892639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n-          bgAfter={theme.palette.secondary[800]}\n+          bgAfter={theme.palette.primary[800]}\n           value={278}\n           type='Нарачки'\n           month='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640353910665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,18 +23,18 @@\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n           value={278}\n           type='Нарачки'\n-          month='Декември 2021'\n+          description='Декември 2021'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n           value={278}\n           type='Нарачки'\n-          month='Декември 2021'\n+          description='Декември 2021'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n"
+                },
+                {
+                    "date": 1640353970200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,11 +30,11 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n-          value={278}\n-          type='Нарачки'\n-          description='Декември 2021'\n+          value={46}\n+          type='Број на партнери'\n+          description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <Item>xs=6 md=4</Item>\n"
+                },
+                {
+                    "date": 1640356157194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n+import IncomeCard from './IncomeCard/IncomeCard';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n@@ -36,9 +37,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        <Item>xs=6 md=4</Item>\n+        <IncomeCard />\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640356488032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-import React from 'react';\n+import React, { useState } from 'react';\n import { styled, useTheme } from '@material-ui/core/styles';\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n-import IncomeCard from './IncomeCard/IncomeCard';\n+import IncomeLoadingCard from './IncomeLoadingCard/IncomeLoadingCard';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n@@ -16,8 +16,10 @@\n const Dashboard = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n \n+  const [isLoading, setIsLoading] = useState(false);\n+\n   return (\n     <Grid container spacing={2} className={classes.container}>\n       <Grid item xs={6} md={4}>\n         <CustomCard\n@@ -37,9 +39,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        <IncomeCard />\n+        {isLoading ? <IncomeLoadingCard /> : <></>}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640356574032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n-import IncomeLoadingCard from './IncomeLoadingCard/IncomeLoadingCard';\n+import IncomeLoadingCard from './IncomeCard/IncomeLoadingCard';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n"
+                },
+                {
+                    "date": 1640356579464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        {isLoading ? <IncomeLoadingCard /> : <></>}\n+        {!isLoading ? <IncomeLoadingCard /> : <></>}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640356942934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n import IncomeLoadingCard from './IncomeCard/IncomeLoadingCard';\n+import IncomeCard from './IncomeCard/IncomeCard';\n \n const Item = styled(Paper)(({ theme }) => ({\n   ...theme.typography.body2,\n   padding: theme.spacing(10),\n@@ -39,9 +40,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        {!isLoading ? <IncomeLoadingCard /> : <></>}\n+        {!isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640356982823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        {!isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n+        {isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640357260090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        {isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n+        {!isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640357930234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,13 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        {!isLoading ? <IncomeLoadingCard /> : <IncomeCard />}\n+        {isLoading ? (\n+          <IncomeLoadingCard />\n+        ) : (\n+          <IncomeCard bgColor={theme.palette.primary.dark} />\n+        )}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640357953189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,12 @@\n       <Grid item xs={6} md={4}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n-          <IncomeCard bgColor={theme.palette.primary.dark} />\n+          <IncomeCard\n+            bgColor={theme.palette.primary.dark}\n+            bgAfter={theme.palette.primary[200]}\n+          />\n         )}\n       </Grid>\n     </Grid>\n   );\n"
+                },
+                {
+                    "date": 1640358127802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,16 @@\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n           />\n         )}\n+        {isLoading ? (\n+          <IncomeLoadingCard />\n+        ) : (\n+          <IncomeCard\n+            bgColor={theme.palette.primary.dark}\n+            bgAfter={theme.palette.primary[200]}\n+          />\n+        )}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640358225085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,24 +40,26 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n+        <Grid item>\n+          {isLoading ? (\n+            <IncomeLoadingCard />\n+          ) : (\n+            <IncomeCard\n+              bgColor={theme.palette.primary.dark}\n+              bgAfter={theme.palette.primary[200]}\n+            />\n+          )}\n+        </Grid>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n           />\n         )}\n-        {isLoading ? (\n-          <IncomeLoadingCard />\n-        ) : (\n-          <IncomeCard\n-            bgColor={theme.palette.primary.dark}\n-            bgAfter={theme.palette.primary[200]}\n-          />\n-        )}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640358240894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,16 +50,18 @@\n               bgAfter={theme.palette.primary[200]}\n             />\n           )}\n         </Grid>\n-        {isLoading ? (\n-          <IncomeLoadingCard />\n-        ) : (\n-          <IncomeCard\n-            bgColor={theme.palette.primary.dark}\n-            bgAfter={theme.palette.primary[200]}\n-          />\n-        )}\n+        <Grid item>\n+          {isLoading ? (\n+            <IncomeLoadingCard />\n+          ) : (\n+            <IncomeCard\n+              bgColor={theme.palette.primary.dark}\n+              bgAfter={theme.palette.primary[200]}\n+            />\n+          )}\n+        </Grid>\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640358256465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,28 +40,24 @@\n           description='12 градови'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n-        <Grid item>\n-          {isLoading ? (\n-            <IncomeLoadingCard />\n-          ) : (\n-            <IncomeCard\n-              bgColor={theme.palette.primary.dark}\n-              bgAfter={theme.palette.primary[200]}\n-            />\n-          )}\n-        </Grid>\n-        <Grid item>\n-          {isLoading ? (\n-            <IncomeLoadingCard />\n-          ) : (\n-            <IncomeCard\n-              bgColor={theme.palette.primary.dark}\n-              bgAfter={theme.palette.primary[200]}\n-            />\n-          )}\n-        </Grid>\n+        {isLoading ? (\n+          <IncomeLoadingCard />\n+        ) : (\n+          <IncomeCard\n+            bgColor={theme.palette.primary.dark}\n+            bgAfter={theme.palette.primary[200]}\n+          />\n+        )}\n+        {isLoading ? (\n+          <IncomeLoadingCard />\n+        ) : (\n+          <IncomeCard\n+            bgColor={theme.palette.primary.dark}\n+            bgAfter={theme.palette.primary[200]}\n+          />\n+        )}\n       </Grid>\n     </Grid>\n   );\n };\n"
+                },
+                {
+                    "date": 1640358265334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid item xs={6} md={4}>\n+      <Grid item xs={6} md={4} style={{ display: 'flex'}}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358274653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid item xs={6} md={4} style={{ display: 'flex'}}>\n+      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'row' }}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358289477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'row' }}>\n+      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358297045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>\n+      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358307404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,13 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid item xs={6} md={4} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>\n+      <Grid\n+        item\n+        xs={6}\n+        md={4}\n+      >\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358340415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,9 @@\n           type='Број на партнери'\n           description='12 градови'\n         />\n       </Grid>\n-      <Grid\n-        item\n-        xs={6}\n-        md={4}\n-      >\n+      <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n"
+                },
+                {
+                    "date": 1640358363982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.primary.dark}\n+            bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358498956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n+            textColor={theme.palette.primary.contrastText}\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640358554115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.contrastText}\n+            descriptionColor={theme.palette.primary.light}\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640358588509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.contrastText}\n-            descriptionColor={theme.palette.primary.light}\n+            descriptionColor={theme.palette.primary.main}\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640358595671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.contrastText}\n-            descriptionColor={theme.palette.primary.main}\n+            descriptionColor={theme.palette.secondary.light}\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640358601861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.contrastText}\n-            descriptionColor={theme.palette.secondary.light}\n+            descriptionColor={theme.palette.primary.light}\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640358611394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,10 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n+            textColor={theme.palette.primary.contrastText}\n+            descriptionColor={theme.palette.primary.light}\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640358616680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.primary.contrastText}\n+            textColor={theme.palette.primary.text}\n             descriptionColor={theme.palette.primary.light}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358721342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,10 +56,10 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.primary.text}\n-            descriptionColor={theme.palette.primary.light}\n+            textColor={theme.palette.primary.main}\n+            descriptionColor={theme.palette.primary.main}\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640358730132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.main}\n-            descriptionColor={theme.palette.primary.main}\n+            descriptionColor={theme.palette.text.primary}\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640358735514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n             textColor={theme.palette.primary.main}\n-            descriptionColor={theme.palette.text.primary}\n+            descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640358749483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.primary.main}\n+            textColor={theme.palette.text.main}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358774468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.text.main}\n+            textColor={theme.palette.primary.main}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358780839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.primary.main}\n+            textColor={theme.palette.secondary.main}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358787416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.secondary.main}\n+            textColor={theme.palette.text.primary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358792888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            textColor={theme.palette.text.primary}\n+            textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640358831753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n+            avatarColor={theme.palette.primary[800]}\n             textColor={theme.palette.primary.contrastText}\n             descriptionColor={theme.palette.primary.light}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358893702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n+            avatarColor={theme.palette.primary[800]}\n             textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358904706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.primary[800]}\n+            avatarColor={theme.palette.secondary[200]}\n             textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358911198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.secondary[200]}\n+            avatarColor={theme.palette.secondary.main}\n             textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358930967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.secondary.main}\n+            avatarColor={theme.palette.secondary.dark}\n             textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358939774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.secondary.dark}\n+            avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.text.secondary}\n             descriptionColor={theme.palette.text.secondary}\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640358952422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n           <IncomeCard\n             bgColor={theme.palette.primary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n             avatarColor={theme.palette.secondary[800]}\n-            textColor={theme.palette.text.secondary}\n-            descriptionColor={theme.palette.text.secondary}\n+            textColor={theme.palette.secondary[800]}\n+            descriptionColor={theme.palette.secondary[800]}\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640358964737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.primary.contrastText}\n+            bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.primary[200]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n"
+                },
+                {
+                    "date": 1640358971778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n-            bgAfter={theme.palette.primary[200]}\n+            bgAfter={theme.palette.secondary[200]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n           />\n"
+                },
+                {
+                    "date": 1640358977793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n-            bgAfter={theme.palette.secondary[200]}\n+            bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n           />\n"
+                },
+                {
+                    "date": 1640359220387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,10 @@\n             bgAfter={theme.palette.primary[200]}\n             avatarColor={theme.palette.primary[800]}\n             textColor={theme.palette.primary.contrastText}\n             descriptionColor={theme.palette.primary.light}\n+            value={`203,500 MKD`}\n+            description='Вкупна сума од нарачки'\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n@@ -60,8 +62,10 @@\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n+            value={`203,500 MKD`}\n+            description='Вкупна сума од нарачки'\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640359286733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n             avatarColor={theme.palette.primary[800]}\n             textColor={theme.palette.primary.contrastText}\n             descriptionColor={theme.palette.primary.light}\n             value={`203,500 MKD`}\n-            description='Вкупна сума од нарачки'\n+            description='Вкупна сума - Декември 2021'\n           />\n         )}\n         {isLoading ? (\n           <IncomeLoadingCard />\n@@ -63,9 +63,9 @@\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`203,500 MKD`}\n-            description='Вкупна сума од нарачки'\n+            description='Вкупна сума - 2021'\n           />\n         )}\n       </Grid>\n     </Grid>\n"
+                },
+                {
+                    "date": 1640359313539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n-            value={`203,500 MKD`}\n+            value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n       </Grid>\n"
+                },
+                {
+                    "date": 1640359640430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.secondary.contrastText}\n+            bgColor={theme.palette.success.contrastText}\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n"
+                },
+                {
+                    "date": 1640359647778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.success.contrastText}\n+            bgColor={theme.palette.success.main}\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n"
+                },
+                {
+                    "date": 1640359657496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.success.main}\n-            bgAfter={theme.palette.secondary[800]}\n+            bgColor={theme.palette.secondary.contrastText}\n+            bgAfter={theme.palette.success[800]}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n"
+                },
+                {
+                    "date": 1640359663455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n-            bgAfter={theme.palette.success[800]}\n+            bgAfter={theme.palette.success.main}\n             avatarColor={theme.palette.secondary[800]}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n"
+                },
+                {
+                    "date": 1640359674900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.main}\n-            avatarColor={theme.palette.secondary[800]}\n+            avatarColor={theme.palette.success.main}\n             textColor={theme.palette.secondary[800]}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640359681673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.main}\n             avatarColor={theme.palette.success.main}\n-            textColor={theme.palette.secondary[800]}\n+            textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n"
+                },
+                {
+                    "date": 1640359690807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.main}\n             avatarColor={theme.palette.success.main}\n-            textColor={theme.palette.success.dark}\n+            textColor={theme.palette.success.light}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n"
+                },
+                {
+                    "date": 1640359700651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,10 +59,10 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.main}\n-            avatarColor={theme.palette.success.main}\n-            textColor={theme.palette.success.light}\n+            avatarColor={theme.palette.success.light}\n+            textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n"
+                },
+                {
+                    "date": 1640359709911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n-            bgAfter={theme.palette.success.main}\n-            avatarColor={theme.palette.success.light}\n+            bgAfter={theme.palette.success.dark}\n+            avatarColor={theme.palette.success.dark}\n             textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.secondary[800]}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640359717259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.dark}\n             avatarColor={theme.palette.success.dark}\n             textColor={theme.palette.success.dark}\n-            descriptionColor={theme.palette.secondary[800]}\n+            descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640359726407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.dark}\n             avatarColor={theme.palette.success.dark}\n             textColor={theme.palette.success.dark}\n-            descriptionColor={theme.palette.success.main}\n+            descriptionColor={theme.palette.success.light}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640359733924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.dark}\n             avatarColor={theme.palette.success.dark}\n             textColor={theme.palette.success.dark}\n-            descriptionColor={theme.palette.success.light}\n+            descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640359740763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.dark}\n-            avatarColor={theme.palette.success.dark}\n+            avatarColor={theme.palette.success.light}\n             textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640359746858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.secondary.contrastText}\n             bgAfter={theme.palette.success.dark}\n-            avatarColor={theme.palette.success.light}\n+            avatarColor={theme.palette.success}\n             textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640359980680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,11 @@\n         {isLoading ? (\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n-            bgColor={theme.palette.secondary.contrastText}\n+            bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.success.dark}\n-            avatarColor={theme.palette.success}\n+            avatarColor={theme.palette.success.main}\n             textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640359985734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.orange.contrastText}\n-            bgAfter={theme.palette.success.dark}\n+            bgAfter={theme.palette.orange.dark}\n             avatarColor={theme.palette.success.main}\n             textColor={theme.palette.success.dark}\n             descriptionColor={theme.palette.success.main}\n             value={`2,006,450 MKD`}\n"
+                },
+                {
+                    "date": 1640360005434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,11 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.dark}\n-            avatarColor={theme.palette.success.main}\n-            textColor={theme.palette.success.dark}\n-            descriptionColor={theme.palette.success.main}\n+            avatarColor={theme.palette.orange.main}\n+            textColor={theme.palette.orange.dark}\n+            descriptionColor={theme.palette.orange.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640360017255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.dark}\n             avatarColor={theme.palette.orange.main}\n             textColor={theme.palette.orange.dark}\n-            descriptionColor={theme.palette.orange.main}\n+            descriptionColor={theme.palette.orange.dark}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640360024433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.dark}\n-            avatarColor={theme.palette.orange.main}\n+            avatarColor={theme.palette.orange.light}\n             textColor={theme.palette.orange.dark}\n             descriptionColor={theme.palette.orange.dark}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640360031418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n           <IncomeLoadingCard />\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.orange.contrastText}\n-            bgAfter={theme.palette.orange.dark}\n-            avatarColor={theme.palette.orange.light}\n+            bgAfter={theme.palette.orange.main}\n+            avatarColor={theme.palette.orange.main}\n             textColor={theme.palette.orange.dark}\n             descriptionColor={theme.palette.orange.dark}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n"
+                },
+                {
+                    "date": 1640360045041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.main}\n             avatarColor={theme.palette.orange.main}\n             textColor={theme.palette.orange.dark}\n-            descriptionColor={theme.palette.orange.dark}\n+            descriptionColor={theme.palette.text.main}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640360050639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.main}\n             avatarColor={theme.palette.orange.main}\n             textColor={theme.palette.orange.dark}\n-            descriptionColor={theme.palette.text.main}\n+            descriptionColor={theme.palette.text.primary}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640360063292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,10 +60,10 @@\n           <IncomeCard\n             bgColor={theme.palette.orange.contrastText}\n             bgAfter={theme.palette.orange.main}\n             avatarColor={theme.palette.orange.main}\n-            textColor={theme.palette.orange.dark}\n-            descriptionColor={theme.palette.text.primary}\n+            textColor={theme.palette.text.primary}\n+            descriptionColor={theme.palette.text.secondary}\n             value={`2,006,450 MKD`}\n             description='Вкупна сума - 2021'\n           />\n         )}\n"
+                },
+                {
+                    "date": 1640361465443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n+          avatarColor={theme.palette.secondary[800]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640361475394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[800]}\n+          avatarColor={theme.palette.secondary.light}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640361485591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary.light}\n+          avatarColor={theme.palette.secondary.main}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640361495819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary.main}\n+          avatarColor={theme.palette.secondary[200]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640361560748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[200]}\n+          avatarColor={theme.palette.secondary[300]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n         />\n"
+                },
+                {
+                    "date": 1640361639803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n+          avatarColor={theme.palette.primary[300]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n         />\n"
+                },
+                {
+                    "date": 1640361855341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n           avatarColor={theme.palette.secondary[300]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n+          icon='orders'\n         />\n       </Grid>\n       <Grid item xs={6} md={4}>\n         <CustomCard\n@@ -39,8 +40,9 @@\n           avatarColor={theme.palette.primary[300]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n+          icon='people'\n         />\n       </Grid>\n       <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n         {isLoading ? (\n"
+                },
+                {
+                    "date": 1640361896058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,8 @@\n           avatarColor={theme.palette.primary[300]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n-          icon='people'\n         />\n       </Grid>\n       <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n         {isLoading ? (\n"
+                },
+                {
+                    "date": 1640453014057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.primary[800]}\n+            avatarColor={theme.palette.primary[200]}\n             textColor={theme.palette.primary.contrastText}\n             descriptionColor={theme.palette.primary.light}\n             value={`203,500 MKD`}\n             description='Вкупна сума - Декември 2021'\n"
+                },
+                {
+                    "date": 1640453032120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n-          avatarColor={theme.palette.primary[300]}\n+          avatarColor={theme.palette.primary[800]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n         />\n@@ -49,9 +49,9 @@\n         ) : (\n           <IncomeCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n-            avatarColor={theme.palette.primary[200]}\n+            avatarColor={theme.palette.primary[800]}\n             textColor={theme.palette.primary.contrastText}\n             descriptionColor={theme.palette.primary.light}\n             value={`203,500 MKD`}\n             description='Вкупна сума - Декември 2021'\n"
+                },
+                {
+                    "date": 1640453042212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[300]}\n+          avatarColor={theme.palette.secondary[800]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n           icon='orders'\n"
+                },
+                {
+                    "date": 1640453062480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[800]}\n+          avatarColor={theme.palette.secondary.dark}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n           icon='orders'\n"
+                },
+                {
+                    "date": 1640453072254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary.dark}\n+          avatarColor={theme.palette.secondary[300]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n           icon='orders'\n@@ -36,9 +36,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n-          avatarColor={theme.palette.primary[800]}\n+          avatarColor={theme.palette.primary[300]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n         />\n"
+                },
+                {
+                    "date": 1640453082927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.primary.dark}\n           bgAfter={theme.palette.primary[800]}\n-          avatarColor={theme.palette.primary[300]}\n+          avatarColor={theme.palette.primary[800]}\n           value={46}\n           type='Број на партнери'\n           description='12 градови'\n         />\n"
+                },
+                {
+                    "date": 1640453106199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       <Grid item xs={6} md={4}>\n         <CustomCard\n           bgColor={theme.palette.secondary.dark}\n           bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[300]}\n+          avatarColor={theme.palette.secondary[800]}\n           value={278}\n           type='Нарачки'\n           description='Декември 2021'\n           icon='orders'\n"
+                },
+                {
+                    "date": 1640461193959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,74 +5,71 @@\n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n import IncomeLoadingCard from './IncomeCard/IncomeLoadingCard';\n import IncomeCard from './IncomeCard/IncomeCard';\n+import BarChart from './BarChart/BarChart';\n \n-const Item = styled(Paper)(({ theme }) => ({\n-  ...theme.typography.body2,\n-  padding: theme.spacing(10),\n-  textAlign: 'center',\n-  color: theme.palette.text.secondary,\n-}));\n-\n const Dashboard = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n \n   return (\n-    <Grid container spacing={2} className={classes.container}>\n-      <Grid item xs={6} md={4}>\n-        <CustomCard\n-          bgColor={theme.palette.secondary.dark}\n-          bgAfter={theme.palette.secondary[800]}\n-          avatarColor={theme.palette.secondary[800]}\n-          value={278}\n-          type='Нарачки'\n-          description='Декември 2021'\n-          icon='orders'\n-        />\n-      </Grid>\n-      <Grid item xs={6} md={4}>\n-        <CustomCard\n-          bgColor={theme.palette.primary.dark}\n-          bgAfter={theme.palette.primary[800]}\n-          avatarColor={theme.palette.primary[800]}\n-          value={46}\n-          type='Број на партнери'\n-          description='12 градови'\n-        />\n-      </Grid>\n-      <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n-        {isLoading ? (\n-          <IncomeLoadingCard />\n-        ) : (\n-          <IncomeCard\n+    <>\n+      <Grid container spacing={2} className={classes.container}>\n+        <Grid item xs={6} md={4}>\n+          <CustomCard\n+            bgColor={theme.palette.secondary.dark}\n+            bgAfter={theme.palette.secondary[800]}\n+            avatarColor={theme.palette.secondary[800]}\n+            value={278}\n+            type='Нарачки'\n+            description='Декември 2021'\n+            icon='orders'\n+          />\n+        </Grid>\n+        <Grid item xs={6} md={4}>\n+          <CustomCard\n             bgColor={theme.palette.primary.dark}\n-            bgAfter={theme.palette.primary[200]}\n+            bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n-            textColor={theme.palette.primary.contrastText}\n-            descriptionColor={theme.palette.primary.light}\n-            value={`203,500 MKD`}\n-            description='Вкупна сума - Декември 2021'\n+            value={46}\n+            type='Број на партнери'\n+            description='12 градови'\n           />\n-        )}\n-        {isLoading ? (\n-          <IncomeLoadingCard />\n-        ) : (\n-          <IncomeCard\n-            bgColor={theme.palette.orange.contrastText}\n-            bgAfter={theme.palette.orange.main}\n-            avatarColor={theme.palette.orange.main}\n-            textColor={theme.palette.text.primary}\n-            descriptionColor={theme.palette.text.secondary}\n-            value={`2,006,450 MKD`}\n-            description='Вкупна сума - 2021'\n-          />\n-        )}\n+        </Grid>\n+        <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n+          {isLoading ? (\n+            <IncomeLoadingCard />\n+          ) : (\n+            <IncomeCard\n+              bgColor={theme.palette.primary.dark}\n+              bgAfter={theme.palette.primary[200]}\n+              avatarColor={theme.palette.primary[800]}\n+              textColor={theme.palette.primary.contrastText}\n+              descriptionColor={theme.palette.primary.light}\n+              value={`203,500 MKD`}\n+              description='Вкупна сума - Декември 2021'\n+            />\n+          )}\n+          {isLoading ? (\n+            <IncomeLoadingCard />\n+          ) : (\n+            <IncomeCard\n+              bgColor={theme.palette.orange.contrastText}\n+              bgAfter={theme.palette.orange.main}\n+              avatarColor={theme.palette.orange.main}\n+              textColor={theme.palette.text.primary}\n+              descriptionColor={theme.palette.text.secondary}\n+              value={`2,006,450 MKD`}\n+              description='Вкупна сума - 2021'\n+            />\n+          )}\n+        </Grid>\n       </Grid>\n-    </Grid>\n+      <BarChart />\n+    </>\n   );\n };\n \n export default Dashboard;\n"
+                },
+                {
+                    "date": 1640461928347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <BarChart />\n+      {/* <BarChart /> */}\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1640461977372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,11 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      {/* <BarChart /> */}\n+      <Grid container spacing={2} className={classes.container}>\n+        <BarChart />\n+      </Grid>\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1640461988130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container spacing={2} className={classes.container}>\n+      <Grid container spacing={2} className={classes.barChartContainer}>\n         <BarChart />\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640461998432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container spacing={2} className={classes.barChartContainer}>\n+      <Grid container className={classes.barChartContainer}>\n         <BarChart />\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640462033973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container className={classes.barChartContainer}>\n+      <Grid container>\n         <BarChart />\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640462046548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container>\n+      <Grid container lg={12}>\n         <BarChart />\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640462052004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container lg={12}>\n+      <Grid container md={12}>\n         <BarChart />\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640462071548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,11 @@\n           )}\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n-        <BarChart />\n+        <Grid item xs={6} md={4}>\n+          <BarChart />\n+        </Grid>\n       </Grid>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1640462082116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n           )}\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n-        <Grid item xs={6} md={4}>\n+        <Grid item xs={12} md={4}>\n           <BarChart />\n         </Grid>\n       </Grid>\n     </>\n"
+                },
+                {
+                    "date": 1640530360332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,33 @@\n-import React, { useState } from 'react';\n+import React, { useState, useEffect, useCallback } from 'react';\n import { styled, useTheme } from '@material-ui/core/styles';\n import { Grid, Paper } from '@material-ui/core';\n \n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n import IncomeLoadingCard from './IncomeCard/IncomeLoadingCard';\n import IncomeCard from './IncomeCard/IncomeCard';\n import BarChart from './BarChart/BarChart';\n+import { getRequest } from '../../services/httpService';\n \n const Dashboard = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n+  const [naracki, setNaracki] = useState([]);\n \n+  useEffect(() => {\n+    onFetchNarackiByMonth();\n+  }, []);\n+\n+  const onFetchNarackiByMonth = useCallback(async (month, year) => {\n+    const result = await getRequest(`/web/naracki/month/${month}/${year}`);\n+    if (result.status === 200) {\n+      setNaracki(result.data);\n+    }\n+  }, []);\n+\n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n         <Grid item xs={6} md={4}>\n@@ -67,9 +80,9 @@\n           )}\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n-        <Grid item xs={12} md={4}>\n+        <Grid item xs={12} md={8}>\n           <BarChart />\n         </Grid>\n       </Grid>\n     </>\n"
+                },
+                {
+                    "date": 1640530373250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,10 @@\n       setNaracki(result.data);\n     }\n   }, []);\n \n+  console.log('naracki ', naracki);\n+\n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n         <Grid item xs={6} md={4}>\n"
+                },
+                {
+                    "date": 1640530420666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n   const [naracki, setNaracki] = useState([]);\n+  const [month, setMonth] = useState(7);\n+  const [year, setYear] = useState(7);\n \n   useEffect(() => {\n     onFetchNarackiByMonth();\n   }, []);\n"
+                },
+                {
+                    "date": 1640530466166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n   const [naracki, setNaracki] = useState([]);\n-  const [month, setMonth] = useState(7);\n-  const [year, setYear] = useState(7);\n+  const [month, setMonth] = useState('7');\n+  const [year, setYear] = useState('2020');\n \n   useEffect(() => {\n     onFetchNarackiByMonth();\n   }, []);\n"
+                },
+                {
+                    "date": 1640530487888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,13 @@\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n   const [naracki, setNaracki] = useState([]);\n-  const [month, setMonth] = useState('7');\n-  const [year, setYear] = useState('2020');\n+  const [month, setMonth] = useState(7);\n+  const [year, setYear] = useState(2020);\n \n   useEffect(() => {\n-    onFetchNarackiByMonth();\n+    onFetchNarackiByMonth(month, year);\n   }, []);\n \n   const onFetchNarackiByMonth = useCallback(async (month, year) => {\n     const result = await getRequest(`/web/naracki/month/${month}/${year}`);\n"
+                },
+                {
+                    "date": 1640734101959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,13 @@\n   const [month, setMonth] = useState(7);\n   const [year, setYear] = useState(2020);\n \n   useEffect(() => {\n-    onFetchNarackiByMonth(month, year);\n+    onFetchNaracki(month, year);\n   }, []);\n \n-  const onFetchNarackiByMonth = useCallback(async (month, year) => {\n-    const result = await getRequest(`/web/naracki/month/${month}/${year}`);\n+  const onFetchNaracki = useCallback(async (month, year) => {\n+    const result = await getRequest(`/web/naracki/count/all`);\n     if (result.status === 200) {\n       setNaracki(result.data);\n     }\n   }, []);\n"
+                },
+                {
+                    "date": 1640735198552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart />\n+          <BarChart data={naracki} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640735312545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart data={naracki} />\n+          <BarChart naracki={naracki} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640735657261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart naracki={naracki} />\n+          <BarChart userData={naracki} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640735723790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart userData={naracki} />\n+          <BarChart userData={(naracki, { ...naracki })} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640735731913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart userData={(naracki, { ...naracki })} />\n+          <BarChart userData={naracki} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640783640254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n-  const [naracki, setNaracki] = useState([]);\n   const [month, setMonth] = useState(7);\n   const [year, setYear] = useState(2020);\n+  const [naracki, setNaracki] = useState([]);\n \n   useEffect(() => {\n     onFetchNaracki(month, year);\n   }, []);\n"
+                },
+                {
+                    "date": 1640783692981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,23 @@\n   const [month, setMonth] = useState(7);\n   const [year, setYear] = useState(2020);\n   const [naracki, setNaracki] = useState([]);\n \n+  const status = [\n+    {\n+      value: 'today',\n+      label: 'Денес',\n+    },\n+    {\n+      value: 'month',\n+      label: 'Овој месец',\n+    },\n+    {\n+      value: 'year',\n+      label: 'Оваа година',\n+    },\n+  ];\n+\n   useEffect(() => {\n     onFetchNaracki(month, year);\n   }, []);\n \n"
+                },
+                {
+                    "date": 1640783712385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart userData={naracki} />\n+          <BarChart userData={naracki} status={status} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640783912791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   const [isLoading, setIsLoading] = useState(false);\n   const [month, setMonth] = useState(7);\n   const [year, setYear] = useState(2020);\n   const [naracki, setNaracki] = useState([]);\n+  const [filterValue, setFilterValue] = useState('today');\n \n   const status = [\n     {\n       value: 'today',\n@@ -36,8 +37,10 @@\n   useEffect(() => {\n     onFetchNaracki(month, year);\n   }, []);\n \n+  const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n+\n   const onFetchNaracki = useCallback(async (month, year) => {\n     const result = await getRequest(`/web/naracki/count/all`);\n     if (result.status === 200) {\n       setNaracki(result.data);\n@@ -100,9 +103,9 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart userData={naracki} status={status} />\n+          <BarChart userData={naracki} status={status} onChangeFilterValue={onChangeFilterValue} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640783949308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,14 @@\n         </Grid>\n       </Grid>\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n-          <BarChart userData={naracki} status={status} onChangeFilterValue={onChangeFilterValue} />\n+          <BarChart\n+            userData={naracki}\n+            status={status}\n+            onChangeFilterValue={onChangeFilterValue}\n+            filterValue={filterValue}\n+          />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640784215830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   const [isLoading, setIsLoading] = useState(false);\n   const [month, setMonth] = useState(7);\n   const [year, setYear] = useState(2020);\n   const [naracki, setNaracki] = useState([]);\n-  const [filterValue, setFilterValue] = useState('today');\n+  const [filterValue, setFilterValue] = useState('month');\n \n   const status = [\n     {\n       value: 'today',\n"
+                },
+                {
+                    "date": 1640785481498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,26 @@\n import IncomeCard from './IncomeCard/IncomeCard';\n import BarChart from './BarChart/BarChart';\n import { getRequest } from '../../services/httpService';\n \n+const formatDate = (date) => {\n+  var d = new Date(date),\n+    month = '' + (d.getMonth() + 1),\n+    day = '' + d.getDate(),\n+    year = d.getFullYear();\n+\n+  if (month.length < 2) month = '0' + month;\n+  if (day.length < 2) day = '0' + day;\n+\n+  return [year, month, day].join('-');\n+};\n+\n const Dashboard = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n-  const [month, setMonth] = useState(7);\n+  const [month, setMonth] = useState(formatDate(new Date()));\n   const [year, setYear] = useState(2020);\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n \n@@ -47,8 +59,9 @@\n     }\n   }, []);\n \n   console.log('naracki ', naracki);\n+  console.log('month ', month);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640785816714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\n   }, []);\n \n   console.log('naracki ', naracki);\n-  console.log('month ', month);\n+  console.log('month fValue', month, filterValue);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640785959477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n-  const [month, setMonth] = useState(formatDate(new Date()));\n+  const [today, setToday] = useState(formatDate(new Date()));\n+  const [month, setMonth] = useState(12);\n   const [year, setYear] = useState(2020);\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n \n@@ -46,17 +47,24 @@\n     },\n   ];\n \n   useEffect(() => {\n-    onFetchNaracki(month, year);\n+    onFetchNaracki(month, year, today);\n   }, []);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n-  const onFetchNaracki = useCallback(async (month, year) => {\n-    const result = await getRequest(`/web/naracki/count/all`);\n-    if (result.status === 200) {\n-      setNaracki(result.data);\n+  const onFetchNaracki = useCallback(async (month, year, today) => {\n+    if (filterValue === 'month') {\n+      const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n+      if (result.status === 200) {\n+        setNaracki(result.data);\n+      }\n+    } else {\n+      const result = await getRequest(`/web/naracki/count/all`);\n+      if (result.status === 200) {\n+        setNaracki(result.data);\n+      }\n     }\n   }, []);\n \n   console.log('naracki ', naracki);\n"
+                },
+                {
+                    "date": 1640785968731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(async (month, year, today) => {\n-    if (filterValue === 'month') {\n+    if (filterValue === 'today') {\n       const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n       if (result.status === 200) {\n         setNaracki(result.data);\n       }\n"
+                },
+                {
+                    "date": 1640786281849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n import BarChart from './BarChart/BarChart';\n import { getRequest } from '../../services/httpService';\n \n const formatDate = (date) => {\n-  var d = new Date(date),\n+  let d = new Date(date),\n     month = '' + (d.getMonth() + 1),\n     day = '' + d.getDate(),\n     year = d.getFullYear();\n \n@@ -20,16 +20,30 @@\n \n   return [year, month, day].join('-');\n };\n \n+const getMonth = (date) => {\n+  let d = new Date(date),\n+    month = '' + (d.getMonth() + 1);\n+\n+  return month;\n+};\n+\n+const getYear = (date) => {\n+  let d = new Date(date),\n+    year = d.getFullYear();\n+\n+  return year;\n+};\n+\n const Dashboard = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n \n   const [isLoading, setIsLoading] = useState(false);\n   const [today, setToday] = useState(formatDate(new Date()));\n-  const [month, setMonth] = useState(12);\n-  const [year, setYear] = useState(2020);\n+  const [month, setMonth] = useState(getMonth(new Date()));\n+  const [year, setYear] = useState(getYear(new Date()));\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n \n   const status = [\n@@ -67,9 +81,9 @@\n     }\n   }, []);\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue);\n+  console.log('month fValue', month, filterValue, year, month);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640786345356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,13 @@\n       const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n       if (result.status === 200) {\n         setNaracki(result.data);\n       }\n+    } else if (filterValue === 'month') {\n+      const result = await getRequest(`/web/naracki/count/${month}/${year}`);\n+      if (result.status === 200) {\n+        setNaracki(result.data);\n+      }\n     } else {\n       const result = await getRequest(`/web/naracki/count/all`);\n       if (result.status === 200) {\n         setNaracki(result.data);\n"
+                },
+                {
+                    "date": 1640786355797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   ];\n \n   useEffect(() => {\n     onFetchNaracki(month, year, today);\n-  }, []);\n+  }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(async (month, year, today) => {\n"
+                },
+                {
+                    "date": 1640786399625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n       if (result.status === 200) {\n         setNaracki(result.data);\n       }\n     }\n-  }, []);\n+  }, [filterValue]);\n \n   console.log('naracki ', naracki);\n   console.log('month fValue', month, filterValue, year, month);\n \n"
+                },
+                {
+                    "date": 1640786891258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,26 +66,34 @@\n   }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n-  const onFetchNaracki = useCallback(async (month, year, today) => {\n-    if (filterValue === 'today') {\n-      const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n-      if (result.status === 200) {\n-        setNaracki(result.data);\n+  const onFetchNaracki = useCallback(\n+    async (month, year, today) => {\n+      if (filterValue === 'today') {\n+        const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n+        if (result.status === 200) {\n+          setNaracki(result.data);\n+        }\n+      } else if (filterValue === 'month') {\n+        const result = await getRequest(`/web/naracki/count/${month}/${year}`);\n+        if (result.status === 200) {\n+          setNaracki(result.data);\n+        }\n+      } else if (filterValue === 'year') {\n+        const result = await getRequest(`/web/naracki/count/byYear/${year}`);\n+        if (result.status === 200) {\n+          setNaracki(result.data);\n+        }\n+      } else {\n+        const result = await getRequest(`/web/naracki/count/all`);\n+        if (result.status === 200) {\n+          setNaracki(result.data);\n+        }\n       }\n-    } else if (filterValue === 'month') {\n-      const result = await getRequest(`/web/naracki/count/${month}/${year}`);\n-      if (result.status === 200) {\n-        setNaracki(result.data);\n-      }\n-    } else {\n-      const result = await getRequest(`/web/naracki/count/all`);\n-      if (result.status === 200) {\n-        setNaracki(result.data);\n-      }\n-    }\n-  }, [filterValue]);\n+    },\n+    [filterValue]\n+  );\n \n   console.log('naracki ', naracki);\n   console.log('month fValue', month, filterValue, year, month);\n \n"
+                },
+                {
+                    "date": 1640789491389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,15 @@\n \n   return month;\n };\n \n+const getMonthName = (date) => {\n+  let d = new Date(date),\n+    month = '' + d.getMonthName();\n+\n+  return month;\n+};\n+\n const getYear = (date) => {\n   let d = new Date(date),\n     year = d.getFullYear();\n \n"
+                },
+                {
+                    "date": 1640789510286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month);\n+  console.log('month fValue', month, filterValue, year, month, getMonthName(new Date()));\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640789552626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month, getMonthName(new Date()));\n+  console.log('month fValue', month, filterValue, year, month, new Date().toLocaleString('default', { month: 'long' }));\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640789641259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,12 +28,11 @@\n   return month;\n };\n \n const getMonthName = (date) => {\n-  let d = new Date(date),\n-    month = '' + d.getMonthName();\n+  const monthName = new Date(date).toLocaleString('default', { month: 'long' });\n \n-  return month;\n+  return monthName;\n };\n \n const getYear = (date) => {\n   let d = new Date(date),\n@@ -101,9 +100,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month, new Date().toLocaleString('default', { month: 'long' }));\n+  console.log('month fValue', month, filterValue, year, month);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640789654623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month);\n+  console.log('month fValue', month, filterValue, year, month, getMonthName(new Date()));\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640789670673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month, getMonthName(new Date()));\n+  console.log('month fValue', month, filterValue, year, month);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n"
+                },
+                {
+                    "date": 1640789732172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,9 @@\n \n   const [isLoading, setIsLoading] = useState(false);\n   const [today, setToday] = useState(formatDate(new Date()));\n   const [month, setMonth] = useState(getMonth(new Date()));\n+  const [monthName, setMonthName] = useState(getMonthName(month));\n   const [year, setYear] = useState(getYear(new Date()));\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n \n"
+                },
+                {
+                    "date": 1640789851194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n     [filterValue]\n   );\n \n   console.log('naracki ', naracki);\n-  console.log('month fValue', month, filterValue, year, month);\n+  console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n       <Grid container spacing={2} className={classes.container}>\n@@ -111,9 +111,9 @@\n           <CustomCard\n             bgColor={theme.palette.secondary.dark}\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n-            value={278}\n+            value={naracki}\n             type='Нарачки'\n             description='Декември 2021'\n             icon='orders'\n           />\n"
+                },
+                {
+                    "date": 1640789856583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,9 +111,9 @@\n           <CustomCard\n             bgColor={theme.palette.secondary.dark}\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n-            value={naracki}\n+            value={naracki.naracki}\n             type='Нарачки'\n             description='Декември 2021'\n             icon='orders'\n           />\n"
+                },
+                {
+                    "date": 1640789881091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,9 +111,9 @@\n           <CustomCard\n             bgColor={theme.palette.secondary.dark}\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n-            value={naracki.naracki}\n+            value={naracki.naracki || 0}\n             type='Нарачки'\n             description='Декември 2021'\n             icon='orders'\n           />\n"
+                },
+                {
+                    "date": 1640790210708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,20 @@\n       label: 'Оваа година',\n     },\n   ];\n \n+  const period = () => {\n+    if (filterValue === 'today') {\n+      return 'Денес';\n+    } else if (filterValue === 'month') {\n+      return `${monthName} ${month}`;\n+    } else if (filterValue === 'year') {\n+      return `${year}`;\n+    } else {\n+      return 'Вкупно';\n+    }\n+  }\n+\n   useEffect(() => {\n     onFetchNaracki(month, year, today);\n   }, [filterValue]);\n \n@@ -115,8 +127,9 @@\n             value={naracki.naracki || 0}\n             type='Нарачки'\n             description='Декември 2021'\n             icon='orders'\n+            period={}\n           />\n         </Grid>\n         <Grid item xs={6} md={4}>\n           <CustomCard\n"
+                },
+                {
+                    "date": 1640790224504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,9 +127,9 @@\n             value={naracki.naracki || 0}\n             type='Нарачки'\n             description='Декември 2021'\n             icon='orders'\n-            period={}\n+            period={period}\n           />\n         </Grid>\n         <Grid item xs={6} md={4}>\n           <CustomCard\n"
+                },
+                {
+                    "date": 1640790245898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,10 +111,9 @@\n       }\n     },\n     [filterValue]\n   );\n-\n-  console.log('naracki ', naracki);\n+  \n   console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n"
+                },
+                {
+                    "date": 1640790255298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n   }\n \n   useEffect(() => {\n     onFetchNaracki(month, year, today);\n-  }, [filterValue]);\n+  }, []);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n@@ -111,9 +111,9 @@\n       }\n     },\n     [filterValue]\n   );\n-  \n+\n   console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n"
+                },
+                {
+                    "date": 1640790262966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n   }\n \n   useEffect(() => {\n     onFetchNaracki(month, year, today);\n-  }, []);\n+  }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n@@ -111,9 +111,9 @@\n       }\n     },\n     [filterValue]\n   );\n-\n+  \n   console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n"
+                },
+                {
+                    "date": 1640790445354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,9 @@\n   const [monthName, setMonthName] = useState(getMonthName(month));\n   const [year, setYear] = useState(getYear(new Date()));\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n+  const [period, setPeriod] = useState('Вкупно');\n \n   const status = [\n     {\n       value: 'today',\n@@ -67,21 +68,18 @@\n       label: 'Оваа година',\n     },\n   ];\n \n-  const period = () => {\n+  useEffect(() => {\n     if (filterValue === 'today') {\n-      return 'Денес';\n+      setPeriod('Денес');\n     } else if (filterValue === 'month') {\n-      return `${monthName} ${month}`;\n+      setPeriod(`${monthName} ${month}`);\n     } else if (filterValue === 'year') {\n-      return `${year}`;\n+      setPeriod(`${year}`);\n     } else {\n       return 'Вкупно';\n     }\n-  }\n-\n-  useEffect(() => {\n     onFetchNaracki(month, year, today);\n   }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n@@ -111,9 +109,9 @@\n       }\n     },\n     [filterValue]\n   );\n-  \n+\n   console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n"
+                },
+                {
+                    "date": 1640790509500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,11 +122,10 @@\n             bgAfter={theme.palette.secondary[800]}\n             avatarColor={theme.palette.secondary[800]}\n             value={naracki.naracki || 0}\n             type='Нарачки'\n-            description='Декември 2021'\n+            description={period}\n             icon='orders'\n-            period={period}\n           />\n         </Grid>\n         <Grid item xs={6} md={4}>\n           <CustomCard\n"
+                },
+                {
+                    "date": 1640816025866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -146,9 +146,9 @@\n               bgAfter={theme.palette.primary[200]}\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n-              value={`203,500 MKD`}\n+              value={naracki}\n               description='Вкупна сума - Декември 2021'\n             />\n           )}\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640816164645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,10 @@\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n   const [period, setPeriod] = useState('Вкупно');\n \n+  const { promet } = naracki;\n+\n   const status = [\n     {\n       value: 'today',\n       label: 'Денес',\n@@ -146,9 +148,9 @@\n               bgAfter={theme.palette.primary[200]}\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n-              value={naracki}\n+              value={promet}\n               description='Вкупна сума - Декември 2021'\n             />\n           )}\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640816182970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,9 +148,9 @@\n               bgAfter={theme.palette.primary[200]}\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n-              value={promet}\n+              value={`${promet} MKD`}\n               description='Вкупна сума - Декември 2021'\n             />\n           )}\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640816221037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -171,8 +171,9 @@\n       <Grid container md={12}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n+            promet={promet}\n             status={status}\n             onChangeFilterValue={onChangeFilterValue}\n             filterValue={filterValue}\n           />\n"
+                },
+                {
+                    "date": 1640816290250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,9 +148,9 @@\n               bgAfter={theme.palette.primary[200]}\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n-              value={`${promet} MKD`}\n+              value={promet}\n               description='Вкупна сума - Декември 2021'\n             />\n           )}\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640816362665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -149,9 +149,9 @@\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n               value={promet}\n-              description='Вкупна сума - Декември 2021'\n+              description={`Вкупна сума - ${period}`}\n             />\n           )}\n           {isLoading ? (\n             <IncomeLoadingCard />\n"
+                },
+                {
+                    "date": 1640818339880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import useStyles from './DashboardStyles';\n import CustomCard from './Card';\n import IncomeLoadingCard from './IncomeCard/IncomeLoadingCard';\n import IncomeCard from './IncomeCard/IncomeCard';\n+import PopularCard from './PopularCard/PopularCard';\n import BarChart from './BarChart/BarChart';\n import { getRequest } from '../../services/httpService';\n \n const formatDate = (date) => {\n@@ -15,9 +16,17 @@\n     day = '' + d.getDate(),\n     year = d.getFullYear();\n \n   if (month.length < 2) month = '0' + month;\n-  if (day.length < 2) day = '0' + day;\n+  if (day.length < 2) day = <Grid item xs={12} md={8}>\n+  <BarChart\n+    userData={naracki}\n+    promet={promet}\n+    status={status}\n+    onChangeFilterValue={onChangeFilterValue}\n+    filterValue={filterValue}\n+  />\n+</Grid>'0' + day;\n \n   return [year, month, day].join('-');\n };\n \n@@ -177,8 +186,11 @@\n             onChangeFilterValue={onChangeFilterValue}\n             filterValue={filterValue}\n           />\n         </Grid>\n+        <Grid item xs={12} md={4}>\n+          <PopularCard />\n+        </Grid>\n       </Grid>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1640818403496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,17 +16,9 @@\n     day = '' + d.getDate(),\n     year = d.getFullYear();\n \n   if (month.length < 2) month = '0' + month;\n-  if (day.length < 2) day = <Grid item xs={12} md={8}>\n-  <BarChart\n-    userData={naracki}\n-    promet={promet}\n-    status={status}\n-    onChangeFilterValue={onChangeFilterValue}\n-    filterValue={filterValue}\n-  />\n-</Grid>'0' + day;\n+  if (day.length < 2) day = '0' + day;\n \n   return [year, month, day].join('-');\n };\n \n"
+                },
+                {
+                    "date": 1640818495295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,9 +179,9 @@\n             filterValue={filterValue}\n           />\n         </Grid>\n         <Grid item xs={12} md={4}>\n-          <PopularCard />\n+          <PopularCard bgColor={theme.palette.primary.dark} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640818538141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,9 +179,17 @@\n             filterValue={filterValue}\n           />\n         </Grid>\n         <Grid item xs={12} md={4}>\n-          <PopularCard bgColor={theme.palette.primary.dark} />\n+        <IncomeCard\n+              bgColor={theme.palette.orange.contrastText}\n+              bgAfter={theme.palette.orange.main}\n+              avatarColor={theme.palette.orange.main}\n+              textColor={theme.palette.text.primary}\n+              descriptionColor={theme.palette.text.secondary}\n+              value={`2,006,450 MKD`}\n+              description='Вкупна сума - 2021'\n+            />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640818550108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,17 +179,9 @@\n             filterValue={filterValue}\n           />\n         </Grid>\n         <Grid item xs={12} md={4}>\n-        <IncomeCard\n-              bgColor={theme.palette.orange.contrastText}\n-              bgAfter={theme.palette.orange.main}\n-              avatarColor={theme.palette.orange.main}\n-              textColor={theme.palette.text.primary}\n-              descriptionColor={theme.palette.text.secondary}\n-              value={`2,006,450 MKD`}\n-              description='Вкупна сума - 2021'\n-            />\n+          <PopularCard bgColor={theme.palette.primary.dark} />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640818654039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12}>\n+      <Grid container md={12} className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818705677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n             type='Број на партнери'\n             description='12 градови'\n           />\n         </Grid>\n-        <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n+        <Grid item xs={6} md={4}>\n           {isLoading ? (\n             <IncomeLoadingCard />\n           ) : (\n             <IncomeCard\n"
+                },
+                {
+                    "date": 1640818717170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,18 +130,18 @@\n             icon='orders'\n           />\n         </Grid>\n         <Grid item xs={6} md={4}>\n-          <CustomCard\n+          {/* <CustomCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n             value={46}\n             type='Број на партнери'\n             description='12 градови'\n-          />\n+          /> */}\n         </Grid>\n-        <Grid item xs={6} md={4}>\n+        <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n           {isLoading ? (\n             <IncomeLoadingCard />\n           ) : (\n             <IncomeCard\n"
+                },
+                {
+                    "date": 1640818738684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,16 +130,16 @@\n             icon='orders'\n           />\n         </Grid>\n         <Grid item xs={6} md={4}>\n-          {/* <CustomCard\n+          <CustomCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n             value={46}\n             type='Број на партнери'\n             description='12 градови'\n-          /> */}\n+          />\n         </Grid>\n         <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n           {isLoading ? (\n             <IncomeLoadingCard />\n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} className={classes.midContainer}>\n+      <Grid container md={12} >\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818746756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} >\n+      <Grid container md={12} spacing={4}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818760046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={4}>\n+      <Grid container md={12} spacing={6}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818765256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={6}>\n+      <Grid container md={12} spacing={12}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818775332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={12}>\n+      <Grid container md={12}  className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818781581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12}  className={classes.midContainer}>\n+      <Grid container md={12} spacing={2} className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818789851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={2} className={classes.midContainer}>\n+      <Grid container md={12} className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818801497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} className={classes.midContainer}>\n+      <Grid container md={12} spacing={2} className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818881462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={2} className={classes.midContainer}>\n+      <Grid container md={12} spacing={2} className={classes.container}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640818902186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,9 +168,9 @@\n             />\n           )}\n         </Grid>\n       </Grid>\n-      <Grid container md={12} spacing={2} className={classes.container}>\n+      <Grid container md={12} spacing={2} className={classes.midContainer}>\n         <Grid item xs={12} md={8}>\n           <BarChart\n             userData={naracki}\n             promet={promet}\n"
+                },
+                {
+                    "date": 1640819063269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,9 +179,17 @@\n             filterValue={filterValue}\n           />\n         </Grid>\n         <Grid item xs={12} md={4}>\n-          <PopularCard bgColor={theme.palette.primary.dark} />\n+          <PopularCard\n+            bgColor={theme.palette.primary.dark}\n+            bgAfter={theme.palette.primary[200]}\n+            avatarColor={theme.palette.primary[800]}\n+            textColor={theme.palette.primary.contrastText}\n+            descriptionColor={theme.palette.primary.light}\n+            value={promet}\n+            description={`Вкупна сума - ${period}`}\n+          />\n         </Grid>\n       </Grid>\n     </>\n   );\n"
+                },
+                {
+                    "date": 1640904702412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,9 @@\n   const [year, setYear] = useState(getYear(new Date()));\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n   const [period, setPeriod] = useState('Вкупно');\n+  const [userWithMostNaracki, setUserWithMostNaracki] = useState({});\n \n   const { promet } = naracki;\n \n   const status = [\n@@ -89,8 +90,35 @@\n \n   const onFetchNaracki = useCallback(\n     async (month, year, today) => {\n       if (filterValue === 'today') {\n+        const result = await getRequest(`/web/mostNaracki/day/${today}`);\n+        if (result.status === 200) {\n+          setUserWithMostNaracki(result.data);\n+        }\n+      } else if (filterValue === 'month') {\n+        const result = await getRequest(`/web/mostNaracki/month/${month}/${year}`);\n+        if (result.status === 200) {\n+          setUserWithMostNaracki(result.data);\n+        }\n+      } else if (filterValue === 'year') {\n+        const result = await getRequest(`/web/mostNaracki/year/${year}`);\n+        if (result.status === 200) {\n+          setUserWithMostNaracki(result.data);\n+        }\n+      } else {\n+        const result = await getRequest(`/web/mostNaracki/all`);\n+        if (result.status === 200) {\n+          setUserWithMostNaracki(result.data);\n+        }\n+      }\n+    },\n+    [filterValue]\n+  );\n+\n+  const onFetchUserWithMostNaracki = useCallback(\n+    async (month, year, today) => {\n+      if (filterValue === 'today') {\n         const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n"
+                },
+                {
+                    "date": 1640904761970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -190,10 +190,10 @@\n               bgAfter={theme.palette.orange.main}\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n-              value={`2,006,450 MKD`}\n-              description='Вкупна сума - 2021'\n+              value={userWithMostNaracki?.naracki}\n+              description={`${userWithMostNaracki?.user.firstName} ${userWithMostNaracki?.user.lastName}`}\n             />\n           )}\n         </Grid>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640904775528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,11 @@\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data);\n         }\n       } else if (filterValue === 'month') {\n-        const result = await getRequest(`/web/mostNaracki/month/${month}/${year}`);\n+        const result = await getRequest(\n+          `/web/mostNaracki/month/${month}/${year}`\n+        );\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data);\n         }\n       } else if (filterValue === 'year') {\n@@ -191,9 +193,9 @@\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n               value={userWithMostNaracki?.naracki}\n-              description={`${userWithMostNaracki?.user.firstName} ${userWithMostNaracki?.user.lastName}`}\n+              description={`${userWithMostNaracki?.user?.firstName} ${userWithMostNaracki?.user?.lastName}`}\n             />\n           )}\n         </Grid>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640904876841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,62 +83,64 @@\n     } else {\n       return 'Вкупно';\n     }\n     onFetchNaracki(month, year, today);\n+    onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n     async (month, year, today) => {\n       if (filterValue === 'today') {\n-        const result = await getRequest(`/web/mostNaracki/day/${today}`);\n+        const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setNaracki(result.data);\n         }\n       } else if (filterValue === 'month') {\n-        const result = await getRequest(\n-          `/web/mostNaracki/month/${month}/${year}`\n-        );\n+        const result = await getRequest(`/web/naracki/count/${month}/${year}`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setNaracki(result.data);\n         }\n       } else if (filterValue === 'year') {\n-        const result = await getRequest(`/web/mostNaracki/year/${year}`);\n+        const result = await getRequest(`/web/naracki/count/byYear/${year}`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setNaracki(result.data);\n         }\n       } else {\n-        const result = await getRequest(`/web/mostNaracki/all`);\n+        const result = await getRequest(`/web/naracki/count/all`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setNaracki(result.data);\n         }\n       }\n     },\n+\n     [filterValue]\n   );\n \n   const onFetchUserWithMostNaracki = useCallback(\n     async (month, year, today) => {\n       if (filterValue === 'today') {\n-        const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n+        const result = await getRequest(`/web/mostNaracki/day/${today}`);\n         if (result.status === 200) {\n-          setNaracki(result.data);\n+          setUserWithMostNaracki(result.data);\n         }\n       } else if (filterValue === 'month') {\n-        const result = await getRequest(`/web/naracki/count/${month}/${year}`);\n+        const result = await getRequest(\n+          `/web/mostNaracki/month/${month}/${year}`\n+        );\n         if (result.status === 200) {\n-          setNaracki(result.data);\n+          setUserWithMostNaracki(result.data);\n         }\n       } else if (filterValue === 'year') {\n-        const result = await getRequest(`/web/naracki/count/byYear/${year}`);\n+        const result = await getRequest(`/web/mostNaracki/year/${year}`);\n         if (result.status === 200) {\n-          setNaracki(result.data);\n+          setUserWithMostNaracki(result.data);\n         }\n       } else {\n-        const result = await getRequest(`/web/naracki/count/all`);\n+        const result = await getRequest(`/web/mostNaracki/all`);\n         if (result.status === 200) {\n-          setNaracki(result.data);\n+          setUserWithMostNaracki(result.data);\n         }\n       }\n     },\n     [filterValue]\n"
+                },
+                {
+                    "date": 1640904926015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,26 +121,26 @@\n     async (month, year, today) => {\n       if (filterValue === 'today') {\n         const result = await getRequest(`/web/mostNaracki/day/${today}`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setUserWithMostNaracki(result.data[0]);\n         }\n       } else if (filterValue === 'month') {\n         const result = await getRequest(\n           `/web/mostNaracki/month/${month}/${year}`\n         );\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setUserWithMostNaracki(result.data[0]);\n         }\n       } else if (filterValue === 'year') {\n         const result = await getRequest(`/web/mostNaracki/year/${year}`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setUserWithMostNaracki(result.data[0]);\n         }\n       } else {\n         const result = await getRequest(`/web/mostNaracki/all`);\n         if (result.status === 200) {\n-          setUserWithMostNaracki(result.data);\n+          setUserWithMostNaracki(result.data[0]);\n         }\n       }\n     },\n     [filterValue]\n"
+                },
+                {
+                    "date": 1640904966522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -181,9 +181,9 @@\n               bgAfter={theme.palette.primary[200]}\n               avatarColor={theme.palette.primary[800]}\n               textColor={theme.palette.primary.contrastText}\n               descriptionColor={theme.palette.primary.light}\n-              value={promet}\n+              value={`${promet} MKD`}\n               description={`Вкупна сума - ${period}`}\n             />\n           )}\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640905003570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,9 +194,9 @@\n               bgAfter={theme.palette.orange.main}\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n-              value={userWithMostNaracki?.naracki}\n+              value={`${userWithMostNaracki?.naracki} нарачки`}\n               description={`${userWithMostNaracki?.user?.firstName} ${userWithMostNaracki?.user?.lastName}`}\n             />\n           )}\n         </Grid>\n"
+                },
+                {
+                    "date": 1640905094441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,9 +194,9 @@\n               bgAfter={theme.palette.orange.main}\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n-              value={`${userWithMostNaracki?.naracki} нарачки`}\n+              value={`Најголем број на нарачки - ${userWithMostNaracki?.naracki}`}\n               description={`${userWithMostNaracki?.user?.firstName} ${userWithMostNaracki?.user?.lastName}`}\n             />\n           )}\n         </Grid>\n"
+                },
+                {
+                    "date": 1640905151304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,12 @@\n     {\n       value: 'year',\n       label: 'Оваа година',\n     },\n+    {\n+      value: 'alltime',\n+      label: 'Цело време',\n+    },\n   ];\n \n   useEffect(() => {\n     if (filterValue === 'today') {\n"
+                },
+                {
+                    "date": 1640905204391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -116,9 +116,8 @@\n           setNaracki(result.data);\n         }\n       }\n     },\n-\n     [filterValue]\n   );\n \n   const onFetchUserWithMostNaracki = useCallback(\n"
+                },
+                {
+                    "date": 1640905250551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,8 +139,9 @@\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n         }\n       } else {\n+        console.log('ELSEEEEE');\n         const result = await getRequest(`/web/mostNaracki/all`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n         }\n"
+                },
+                {
+                    "date": 1640905258387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,8 +110,9 @@\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n       } else {\n+        console.log('ELSEEEEE 11');\n         const result = await getRequest(`/web/naracki/count/all`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n"
+                },
+                {
+                    "date": 1640905399242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n         const result = await getRequest(`/web/naracki/count/byYear/${year}`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n-      } else {\n+      } else if (filterValue === 'alltime') {\n         console.log('ELSEEEEE 11');\n         const result = await getRequest(`/web/naracki/count/all`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n"
+                },
+                {
+                    "date": 1640905404696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n         const result = await getRequest(`/web/mostNaracki/year/${year}`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n         }\n-      } else {\n+      } else if (filterValue === 'alltime') {\n         console.log('ELSEEEEE');\n         const result = await getRequest(`/web/mostNaracki/all`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n"
+                },
+                {
+                    "date": 1640905460899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     } else if (filterValue === 'month') {\n       setPeriod(`${monthName} ${month}`);\n     } else if (filterValue === 'year') {\n       setPeriod(`${year}`);\n-    } else {\n+    } else if (filterValue === 'alltime') {\n       return 'Вкупно';\n     }\n     onFetchNaracki(month, year, today);\n     onFetchUserWithMostNaracki(month, year, today);\n"
+                },
+                {
+                    "date": 1640905514055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,8 +77,9 @@\n     },\n   ];\n \n   useEffect(() => {\n+    console.log('FIRST USEEFECT FILTERVALUE ', filterValue)\n     if (filterValue === 'today') {\n       setPeriod('Денес');\n     } else if (filterValue === 'month') {\n       setPeriod(`${monthName} ${month}`);\n"
+                },
+                {
+                    "date": 1640905554618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,16 +77,15 @@\n     },\n   ];\n \n   useEffect(() => {\n-    console.log('FIRST USEEFECT FILTERVALUE ', filterValue)\n     if (filterValue === 'today') {\n       setPeriod('Денес');\n     } else if (filterValue === 'month') {\n       setPeriod(`${monthName} ${month}`);\n     } else if (filterValue === 'year') {\n       setPeriod(`${year}`);\n-    } else if (filterValue === 'alltime') {\n+    } else {\n       return 'Вкупно';\n     }\n     onFetchNaracki(month, year, today);\n     onFetchUserWithMostNaracki(month, year, today);\n"
+                },
+                {
+                    "date": 1640905565876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,8 +90,21 @@\n     onFetchNaracki(month, year, today);\n     onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n+  useEffect(() => {\n+    if (filterValue === 'today') {\n+      setPeriod('Денес');\n+    } else if (filterValue === 'month') {\n+      setPeriod(`${monthName} ${month}`);\n+    } else if (filterValue === 'year') {\n+      setPeriod(`${year}`);\n+    } else {\n+      return 'Вкупно';\n+    }\n+    onFetchUserWithMostNaracki(month, year, today);\n+  }, [filterValue]);\n+\n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n     async (month, year, today) => {\n"
+                },
+                {
+                    "date": 1640905573562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,8 @@\n     } else {\n       return 'Вкупно';\n     }\n     onFetchNaracki(month, year, today);\n-    onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n   useEffect(() => {\n     if (filterValue === 'today') {\n"
+                },
+                {
+                    "date": 1640905624728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -211,9 +211,9 @@\n               bgAfter={theme.palette.orange.main}\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n-              value={`Најголем број на нарачки - ${userWithMostNaracki?.naracki}`}\n+              value={`Најголем број на нарачки - ${userWithMostNaracki?.naracki || 0}`}\n               description={`${userWithMostNaracki?.user?.firstName} ${userWithMostNaracki?.user?.lastName}`}\n             />\n           )}\n         </Grid>\n"
+                },
+                {
+                    "date": 1640905648903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -212,9 +212,9 @@\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n               value={`Најголем број на нарачки - ${userWithMostNaracki?.naracki || 0}`}\n-              description={`${userWithMostNaracki?.user?.firstName} ${userWithMostNaracki?.user?.lastName}`}\n+              description={`${userWithMostNaracki?.user?.firstName || ''} ${userWithMostNaracki?.user?.lastName || ''}`}\n             />\n           )}\n         </Grid>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640905700961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,20 +87,8 @@\n     } else {\n       return 'Вкупно';\n     }\n     onFetchNaracki(month, year, today);\n-  }, [filterValue]);\n-\n-  useEffect(() => {\n-    if (filterValue === 'today') {\n-      setPeriod('Денес');\n-    } else if (filterValue === 'month') {\n-      setPeriod(`${monthName} ${month}`);\n-    } else if (filterValue === 'year') {\n-      setPeriod(`${year}`);\n-    } else {\n-      return 'Вкупно';\n-    }\n     onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n"
+                },
+                {
+                    "date": 1640905723920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,9 @@\n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n     async (month, year, today) => {\n+      console.log('ON FETCH NARACKI ', filterValue);\n       if (filterValue === 'today') {\n         const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n"
+                },
+                {
+                    "date": 1640905733671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,8 +123,9 @@\n   );\n \n   const onFetchUserWithMostNaracki = useCallback(\n     async (month, year, today) => {\n+      console.log('ON FETCH MOST ', filterValue);\n       if (filterValue === 'today') {\n         const result = await getRequest(`/web/mostNaracki/day/${today}`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n"
+                },
+                {
+                    "date": 1640905818605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,8 +86,10 @@\n       setPeriod(`${year}`);\n     } else {\n       return 'Вкупно';\n     }\n+\n+    console.log('11111 ue ', filterValue);\n     onFetchNaracki(month, year, today);\n     onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n"
+                },
+                {
+                    "date": 1640905868172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,12 +84,11 @@\n       setPeriod(`${monthName} ${month}`);\n     } else if (filterValue === 'year') {\n       setPeriod(`${year}`);\n     } else {\n-      return 'Вкупно';\n+      setPeriod('Вкупно');\n     }\n \n-    console.log('11111 ue ', filterValue);\n     onFetchNaracki(month, year, today);\n     onFetchUserWithMostNaracki(month, year, today);\n   }, [filterValue]);\n \n"
+                },
+                {
+                    "date": 1640905891353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,8 @@\n   const onChangeFilterValue = (e) => setFilterValue(e.target.value);\n \n   const onFetchNaracki = useCallback(\n     async (month, year, today) => {\n-      console.log('ON FETCH NARACKI ', filterValue);\n       if (filterValue === 'today') {\n         const result = await getRequest(`/web/naracki/count/byDay/${today}`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n@@ -111,10 +110,9 @@\n         const result = await getRequest(`/web/naracki/count/byYear/${year}`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n-      } else if (filterValue === 'alltime') {\n-        console.log('ELSEEEEE 11');\n+      } else {\n         const result = await getRequest(`/web/naracki/count/all`);\n         if (result.status === 200) {\n           setNaracki(result.data);\n         }\n@@ -124,9 +122,8 @@\n   );\n \n   const onFetchUserWithMostNaracki = useCallback(\n     async (month, year, today) => {\n-      console.log('ON FETCH MOST ', filterValue);\n       if (filterValue === 'today') {\n         const result = await getRequest(`/web/mostNaracki/day/${today}`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n@@ -142,10 +139,9 @@\n         const result = await getRequest(`/web/mostNaracki/year/${year}`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n         }\n-      } else if (filterValue === 'alltime') {\n-        console.log('ELSEEEEE');\n+      } else {\n         const result = await getRequest(`/web/mostNaracki/all`);\n         if (result.status === 200) {\n           setUserWithMostNaracki(result.data[0]);\n         }\n"
+                },
+                {
+                    "date": 1640906466818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,9 @@\n   const [naracki, setNaracki] = useState([]);\n   const [filterValue, setFilterValue] = useState('month');\n   const [period, setPeriod] = useState('Вкупно');\n   const [userWithMostNaracki, setUserWithMostNaracki] = useState({});\n+  const [brojNaPartneri, setBrojNaPartneri] = useState(0);\n \n   const { promet } = naracki;\n \n   const status = [\n@@ -77,8 +78,12 @@\n     },\n   ];\n \n   useEffect(() => {\n+    onFetchNumberOfPartners();\n+  }, []);\n+\n+  useEffect(() => {\n     if (filterValue === 'today') {\n       setPeriod('Денес');\n     } else if (filterValue === 'month') {\n       setPeriod(`${monthName} ${month}`);\n@@ -149,8 +154,15 @@\n     },\n     [filterValue]\n   );\n \n+  const onFetchNumberOfPartners = useCallback(async () => {\n+    const result = await getRequest(`/brojNaPartneri`);\n+    if (result.status === 200) {\n+      setBrojNaPartneri(result.data[0]);\n+    }\n+  }, []);\n+\n   console.log('month fValue', month, filterValue, year, month, monthName);\n \n   return (\n     <>\n@@ -198,10 +210,14 @@\n               bgAfter={theme.palette.orange.main}\n               avatarColor={theme.palette.orange.main}\n               textColor={theme.palette.text.primary}\n               descriptionColor={theme.palette.text.secondary}\n-              value={`Најголем број на нарачки - ${userWithMostNaracki?.naracki || 0}`}\n-              description={`${userWithMostNaracki?.user?.firstName || ''} ${userWithMostNaracki?.user?.lastName || ''}`}\n+              value={`Најголем број на нарачки - ${\n+                userWithMostNaracki?.naracki || 0\n+              }`}\n+              description={`${userWithMostNaracki?.user?.firstName || ''} ${\n+                userWithMostNaracki?.user?.lastName || ''\n+              }`}\n             />\n           )}\n         </Grid>\n       </Grid>\n"
+                },
+                {
+                    "date": 1640906479999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,9 +182,9 @@\n           <CustomCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n-            value={46}\n+            value={brojNaPartneri}\n             type='Број на партнери'\n             description='12 градови'\n           />\n         </Grid>\n"
+                },
+                {
+                    "date": 1640906489514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,9 +182,9 @@\n           <CustomCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n-            value={brojNaPartneri}\n+            value={brojNaPartneri || 0}\n             type='Број на партнери'\n             description='12 градови'\n           />\n         </Grid>\n"
+                },
+                {
+                    "date": 1640906532261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,9 +157,9 @@\n \n   const onFetchNumberOfPartners = useCallback(async () => {\n     const result = await getRequest(`/brojNaPartneri`);\n     if (result.status === 200) {\n-      setBrojNaPartneri(result.data[0]);\n+      setBrojNaPartneri(result.data[0]?.brojNaPartneri);\n     }\n   }, []);\n \n   console.log('month fValue', month, filterValue, year, month, monthName);\n"
+                },
+                {
+                    "date": 1640906587315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,9 +184,9 @@\n             bgAfter={theme.palette.primary[800]}\n             avatarColor={theme.palette.primary[800]}\n             value={brojNaPartneri || 0}\n             type='Број на партнери'\n-            description='12 градови'\n+            description='6 градови'\n           />\n         </Grid>\n         <Grid className={classes.incomeCardsContainer} item xs={6} md={4}>\n           {isLoading ? (\n"
+                },
+                {
+                    "date": 1640944315057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,9 +230,9 @@\n             onChangeFilterValue={onChangeFilterValue}\n             filterValue={filterValue}\n           />\n         </Grid>\n-        <Grid item xs={12} md={4}>\n+        {/* <Grid item xs={12} md={4}>\n           <PopularCard\n             bgColor={theme.palette.primary.dark}\n             bgAfter={theme.palette.primary[200]}\n             avatarColor={theme.palette.primary[800]}\n@@ -240,9 +240,9 @@\n             descriptionColor={theme.palette.primary.light}\n             value={promet}\n             description={`Вкупна сума - ${period}`}\n           />\n-        </Grid>\n+        </Grid> */}\n       </Grid>\n     </>\n   );\n };\n"
+                }
+            ],
+            "date": 1640278253765,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Typography } from '@material-ui/core';\n\nimport useStyles from './DashboardStyles';\n\nconst Dashboard = (props) => {\n  const classes = useStyles();\n\n  return (\n    <div className={classes.container}>\n      <Typography variant='h5' className={classes.title}>\n        Dashboard\n      </Typography>\n    </div>\n  );\n};\n\nexport default Dashboard;\n"
+        }
+    ]
+}

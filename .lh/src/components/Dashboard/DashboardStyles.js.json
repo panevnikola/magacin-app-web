@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/components/Dashboard/DashboardStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1640278275837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640302283808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    padding: theme.spacing(3),\n+    // padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640302291776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    // padding: theme.spacing(3),\n+    padding: theme.spacing(1),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640302296831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    padding: theme.spacing(1),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640302303955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n+    padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640302319768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n+    justifyContent: 'center'\n     padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n"
+                },
+                {
+                    "date": 1640302338101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    justifyContent: 'center'\n+    justifyContent: 'center',\n+    alignItems: 'flex-start',\n     padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n"
+                },
+                {
+                    "date": 1640302347666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    justifyContent: 'center',\n+    justifyContent: 'flex-start',\n     alignItems: 'flex-start',\n-    padding: theme.spacing(3),\n+    // padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640302361557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,8 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     flexGrow: 1,\n-    justifyContent: 'flex-start',\n-    alignItems: 'flex-start',\n-    // padding: theme.spacing(3),\n     marginTop: 60,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640358327146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,12 @@\n   container: {\n     flexGrow: 1,\n     marginTop: 60,\n   },\n+  incomeCardsContainer: {\n+    display: 'flex',\n+    flexDirection: 'column',\n+    justifyContent: 'space-between',\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640462016482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,10 @@\n     display: 'flex',\n     flexDirection: 'column',\n     justifyContent: 'space-between',\n   },\n+  barChartContainer: {\n+    flexGrow: 1,\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640462026293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,7 @@\n     display: 'flex',\n     flexDirection: 'column',\n     justifyContent: 'space-between',\n   },\n-  barChartContainer: {\n-    flexGrow: 1,\n-  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640818650680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,10 @@\n     display: 'flex',\n     flexDirection: 'column',\n     justifyContent: 'space-between',\n   },\n+  midContainer: {\n+    marginTop: theme.spacing(4),\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640818870970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,7 @@\n     display: 'flex',\n     flexDirection: 'column',\n     justifyContent: 'space-between',\n   },\n-  midContainer: {\n-    marginTop: theme.spacing(4),\n-  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640818903916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,10 @@\n     display: 'flex',\n     flexDirection: 'column',\n     justifyContent: 'space-between',\n   },\n+  midContainer: {\n+    marginTop: theme.spacing(4),\n+  },\n }));\n \n export default useStyles;\n"
+                }
+            ],
+            "date": 1640278275837,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  container: {\n    flexGrow: 1,\n    padding: theme.spacing(3),\n    marginTop: 60,\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

@@ -1,0 +1,694 @@
+{
+    "sourceFile": "src/components/Sidebar/Sidebar.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 169,
+            "patches": [
+                {
+                    "date": 1640264662331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640264676476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n             backgroundColor: location.pathname === '/artikli' ? '#ccc' : null,\n           }}\n         />\n       </List>\n-      {showNotificationButton && (\n+      {!showNotificationButton && (\n         <div className={classes.btnContainer}>\n           <Button\n             style={{ backgroundColor: 'white' }}\n             color='primary'\n@@ -158,11 +158,11 @@\n   icon: {\n     color: theme.palette.primary.contrastText,\n   },\n   btnContainer: {\n-    // marginTop: 5,\n-    // marginRight: 15,\n-    // marginLeft: 15,\n+    marginTop: 5,\n+    marginRight: 15,\n+    marginLeft: 15,\n   },\n }));\n \n export default Sidebar;\n"
+                },
+                {
+                    "date": 1640264692737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n     flexShrink: 0,\n   },\n   drawerPaper: {\n     width: drawerWidth,\n-    background: theme.palette.primary.main,\n+    // background: theme.palette.primary.main,\n     opacity: 0.9,\n   },\n   drawerHeader: {\n     display: 'flex',\n"
+                },
+                {
+                    "date": 1640264963691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n     flexShrink: 0,\n   },\n   drawerPaper: {\n     width: drawerWidth,\n-    // background: theme.palette.primary.main,\n+    background: theme.palette.primary.main,\n     opacity: 0.9,\n   },\n   drawerHeader: {\n     display: 'flex',\n"
+                },
+                {
+                    "date": 1640264975215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n     flexShrink: 0,\n   },\n   drawerPaper: {\n     width: drawerWidth,\n-    background: theme.palette.primary.main,\n+    background: theme.palette.primary.main.light,\n     opacity: 0.9,\n   },\n   drawerHeader: {\n     display: 'flex',\n"
+                },
+                {
+                    "date": 1640264981444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -140,9 +140,8 @@\n   },\n   drawerPaper: {\n     width: drawerWidth,\n     background: theme.palette.primary.main.light,\n-    opacity: 0.9,\n   },\n   drawerHeader: {\n     display: 'flex',\n     alignItems: 'center',\n"
+                },
+                {
+                    "date": 1640264990906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -151,9 +151,9 @@\n     justifyContent: 'flex-end',\n   },\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.primary.contrastText,\n+    color: theme.palette.secondary.main,\n   },\n   icon: {\n     color: theme.palette.primary.contrastText,\n   },\n"
+                },
+                {
+                    "date": 1640265059413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n-            backgroundColor: location.pathname === '/grupi' ? '#ccc' : null,\n+            backgroundColor: location.pathname === '/grupi' ? theme.palette.primary.secondary.light : null,\n           }}\n         />\n \n         <NavLink to='/artikli' className={classes.link}>\n"
+                },
+                {
+                    "date": 1640265083620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n-            backgroundColor: location.pathname === '/grupi' ? theme.palette.primary.secondary.light : null,\n+            backgroundColor: location.pathname === '/grupi' ? theme.palette.secondary.light : null,\n           }}\n         />\n \n         <NavLink to='/artikli' className={classes.link}>\n"
+                },
+                {
+                    "date": 1640265093261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n-            backgroundColor: location.pathname === '/grupi' ? theme.palette.secondary.light : null,\n+            backgroundColor: location.pathname === '/grupi' ? theme.palette.secondary.main : null,\n           }}\n         />\n \n         <NavLink to='/artikli' className={classes.link}>\n"
+                },
+                {
+                    "date": 1640265298313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link}>\n+        <NavLink to='/naracki' className={`${classes.link} selected: ${classes.active}`}>\n           <ListItem button key={1} selected={location.pathname === '/naracki'}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n@@ -153,8 +153,11 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n+  active: {\n+    backgroundColor: theme.palette.secondary.main\n+  },\n   icon: {\n     color: theme.palette.primary.contrastText,\n   },\n   btnContainer: {\n"
+                },
+                {
+                    "date": 1640265373161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={`${classes.link} selected: ${classes.active}`}>\n+        <NavLink to='/naracki' className={{ selected: classes.active }}>\n           <ListItem button key={1} selected={location.pathname === '/naracki'}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n"
+                },
+                {
+                    "date": 1640265388262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,9 @@\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n   active: {\n-    backgroundColor: theme.palette.secondary.main\n+    background: theme.palette.secondary.main\n   },\n   icon: {\n     color: theme.palette.primary.contrastText,\n   },\n"
+                },
+                {
+                    "date": 1640265416484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,10 +50,10 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={{ selected: classes.active }}>\n-          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n+        <NavLink to='/naracki' className={classes.link}>\n+          <ListItem button key={1} selected={location.pathname === '/naracki'} className={{ selected: classes.active }}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n"
+                },
+                {
+                    "date": 1640265495511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n       </div>\n       <Divider />\n       <List>\n         <NavLink to='/naracki' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/naracki'} className={{ selected: classes.active }}>\n+          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n@@ -90,9 +90,9 @@\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n-            backgroundColor: location.pathname === '/grupi' ? theme.palette.secondary.main : null,\n+            backgroundColor: location.pathname === '/grupi' ? '#ccc' : null,\n           }}\n         />\n \n         <NavLink to='/artikli' className={classes.link}>\n@@ -153,11 +153,8 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n-  active: {\n-    background: theme.palette.secondary.main\n-  },\n   icon: {\n     color: theme.palette.primary.contrastText,\n   },\n   btnContainer: {\n"
+                },
+                {
+                    "date": 1640265564199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             backgroundColor: location.pathname === '/naracki' ? '#ccc' : null,\n           }}\n         />\n         <NavLink to='/partneri' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/partneri'}>\n+          <ListItem className={classes.listItem} button key={1} selected={location.pathname === '/partneri'}>\n             <ListItemIcon className={classes.icon}>\n               <GroupIcon />\n             </ListItemIcon>\n             <ListItemText primary='Партнери' />\n@@ -149,8 +149,13 @@\n     // necessary for content to be below app bar\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n+  listItem: {\n+    '&$selected, &$selected:hover': {\n+      backgroundColor: theme.palette.primary.main,\n+    },\n+  },\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640265616967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n   icon: {\n-    color: theme.palette.primary.contrastText,\n+    color: theme.palette.primary.main,\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640265622257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n   icon: {\n-    color: theme.palette.primary.main,\n+    color: theme.palette.secondary.main,\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640265784297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n import { useLocation, NavLink } from 'react-router-dom';\n-import { makeStyles, useTheme } from '@material-ui/core/styles';\n+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';\n import Drawer from '@material-ui/core/Drawer';\n import List from '@material-ui/core/List';\n import Divider from '@material-ui/core/Divider';\n import IconButton from '@material-ui/core/IconButton';\n@@ -51,14 +51,14 @@\n       </div>\n       <Divider />\n       <List>\n         <NavLink to='/naracki' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n+          <CustomListItem button key={1} selected={location.pathname === '/naracki'}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n-          </ListItem>\n+          </CustomListItem>\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n@@ -126,8 +126,25 @@\n     </Drawer>\n   );\n };\n \n+const CustomListItem = withStyles({\n+  // selected and (selected + hover) states\n+  '&& .Mui-selected, && .Mui-selected:hover': {\n+    backgroundColor: 'red',\n+    '&, & .MuiListItemIcon-root': {\n+      color: 'pink',\n+    },\n+  },\n+  // hover states\n+  '& .MuiListItemButton-root:hover': {\n+    backgroundColor: 'orange',\n+    '&, & .MuiListItemIcon-root': {\n+      color: 'yellow',\n+    },\n+  },\n+});\n+\n const useStyles = makeStyles((theme) => ({\n   menuButton: {\n     marginRight: theme.spacing(2),\n   },\n"
+                },
+                {
+                    "date": 1640265831584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,14 +51,14 @@\n       </div>\n       <Divider />\n       <List>\n         <NavLink to='/naracki' className={classes.link}>\n-          <CustomListItem button key={1} selected={location.pathname === '/naracki'}>\n+          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n-          </CustomListItem>\n+          </ListItem>\n         </NavLink>\n         <Divider\n           variant='middle'\n           style={{\n"
+                },
+                {
+                    "date": 1640266066129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,14 @@\n       </div>\n       <Divider />\n       <List>\n         <NavLink to='/naracki' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n+          <ListItem\n+            button\n+            key={1}\n+            classes={{ root: classes.root, selected: classes.selected }}\n+            selected\n+          >\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n@@ -65,9 +70,14 @@\n             backgroundColor: location.pathname === '/naracki' ? '#ccc' : null,\n           }}\n         />\n         <NavLink to='/partneri' className={classes.link}>\n-          <ListItem className={classes.listItem} button key={1} selected={location.pathname === '/partneri'}>\n+          <ListItem\n+            className={classes.listItem}\n+            button\n+            key={1}\n+            selected={location.pathname === '/partneri'}\n+          >\n             <ListItemIcon className={classes.icon}>\n               <GroupIcon />\n             </ListItemIcon>\n             <ListItemText primary='Партнери' />\n@@ -126,25 +136,8 @@\n     </Drawer>\n   );\n };\n \n-const CustomListItem = withStyles({\n-  // selected and (selected + hover) states\n-  '&& .Mui-selected, && .Mui-selected:hover': {\n-    backgroundColor: 'red',\n-    '&, & .MuiListItemIcon-root': {\n-      color: 'pink',\n-    },\n-  },\n-  // hover states\n-  '& .MuiListItemButton-root:hover': {\n-    backgroundColor: 'orange',\n-    '&, & .MuiListItemIcon-root': {\n-      color: 'yellow',\n-    },\n-  },\n-});\n-\n const useStyles = makeStyles((theme) => ({\n   menuButton: {\n     marginRight: theme.spacing(2),\n   },\n@@ -166,13 +159,17 @@\n     // necessary for content to be below app bar\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n-  listItem: {\n-    '&$selected, &$selected:hover': {\n-      backgroundColor: theme.palette.primary.main,\n+  root: {\n+    '&$selected': {\n+      backgroundColor: 'red',\n+      '&:hover': {\n+        backgroundColor: 'yellow',\n+      }\n     },\n   },\n+  selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640266082578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,9 +167,8 @@\n         backgroundColor: 'yellow',\n       }\n     },\n   },\n-  selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640266088572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,8 +167,9 @@\n         backgroundColor: 'yellow',\n       }\n     },\n   },\n+  selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640266099206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,9 +161,9 @@\n     justifyContent: 'flex-end',\n   },\n   root: {\n     '&$selected': {\n-      backgroundColor: 'red',\n+      backgroundColor: theme.palette.secondary.main,\n       '&:hover': {\n         backgroundColor: 'yellow',\n       }\n     },\n"
+                },
+                {
+                    "date": 1640266125708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -161,11 +161,13 @@\n     justifyContent: 'flex-end',\n   },\n   root: {\n     '&$selected': {\n-      backgroundColor: theme.palette.secondary.main,\n+      color: theme.palette.secondary.main,\n+      backgroundColor: theme.palette.secondary.light,\n       '&:hover': {\n-        backgroundColor: 'yellow',\n+        color: theme.palette.secondary.main,\n+        backgroundColor: theme.palette.secondary.light,\n       }\n     },\n   },\n   selected: {},\n"
+                },
+                {
+                    "date": 1640266152486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,8 +163,9 @@\n   root: {\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n+      borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       }\n"
+                },
+                {
+                    "date": 1640266179547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,14 +63,8 @@\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n-        <Divider\n-          variant='middle'\n-          style={{\n-            backgroundColor: location.pathname === '/naracki' ? '#ccc' : null,\n-          }}\n-        />\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n             className={classes.listItem}\n             button\n"
+                },
+                {
+                    "date": 1640266209209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,12 +65,12 @@\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n-            className={classes.listItem}\n             button\n             key={1}\n-            selected={location.pathname === '/partneri'}\n+            classes={{ root: classes.root, selected: classes.selected }}\n+            selected\n           >\n             <ListItemIcon className={classes.icon}>\n               <GroupIcon />\n             </ListItemIcon>\n"
+                },
+                {
+                    "date": 1640266224574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.root, selected: classes.selected }}\n-            selected\n+            selected={location.pathname === '/partneri'}\n           >\n             <ListItemIcon className={classes.icon}>\n               <GroupIcon />\n             </ListItemIcon>\n"
+                },
+                {
+                    "date": 1640266230361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.root, selected: classes.selected }}\n-            selected\n+            selected={location.pathname === '/naracki'}\n           >\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n             </ListItemIcon>\n"
+                },
+                {
+                    "date": 1640271968975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n-            classes={{ root: classes.root, selected: classes.selected }}\n+            classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/naracki'}\n           >\n             <ListItemIcon className={classes.icon}>\n               <ListAltIcon />\n@@ -84,9 +84,14 @@\n           }}\n         />\n \n         <NavLink to='/grupi' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/grupi'}>\n+          <ListItem\n+            button\n+            key={1}\n+            classes={{ root: classes.listItem, selected: classes.selected }}\n+            selected={location.pathname === '/grupi'}\n+          >\n             <ListItemIcon className={classes.icon}>\n               <GroupWorkIcon />\n             </ListItemIcon>\n             <ListItemText primary='Групи' />\n@@ -99,9 +104,14 @@\n           }}\n         />\n \n         <NavLink to='/artikli' className={classes.link}>\n-          <ListItem button key={1} selected={location.pathname === '/artikli'}>\n+          <ListItem\n+            button\n+            key={1}\n+            classes={{ root: classes.listItem, selected: classes.selected }}\n+            selected={location.pathname === '/artikli'}\n+          >\n             <ListItemIcon className={classes.icon}>\n               <LibraryBooksIcon />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n@@ -153,17 +163,17 @@\n     // necessary for content to be below app bar\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n-  root: {\n+  listItem: {\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n-      }\n+      },\n     },\n   },\n   selected: {},\n   link: {\n"
+                },
+                {
+                    "date": 1640271991460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,14 +76,8 @@\n             </ListItemIcon>\n             <ListItemText primary='Партнери' />\n           </ListItem>\n         </NavLink>\n-        <Divider\n-          variant='middle'\n-          style={{\n-            backgroundColor: location.pathname === '/partneri' ? '#ccc' : null,\n-          }}\n-        />\n \n         <NavLink to='/grupi' className={classes.link}>\n           <ListItem\n             button\n@@ -96,14 +90,8 @@\n             </ListItemIcon>\n             <ListItemText primary='Групи' />\n           </ListItem>\n         </NavLink>\n-        <Divider\n-          variant='middle'\n-          style={{\n-            backgroundColor: location.pathname === '/grupi' ? '#ccc' : null,\n-          }}\n-        />\n \n         <NavLink to='/artikli' className={classes.link}>\n           <ListItem\n             button\n@@ -116,14 +104,8 @@\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n         </NavLink>\n-        <Divider\n-          variant='middle'\n-          style={{\n-            backgroundColor: location.pathname === '/artikli' ? '#ccc' : null,\n-          }}\n-        />\n       </List>\n       {!showNotificationButton && (\n         <div className={classes.btnContainer}>\n           <Button\n"
+                },
+                {
+                    "date": 1640272005131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.secondary.main,\n+    // color: theme.palette.secondary.main,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272093730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    // color: theme.palette.secondary.main,\n+    color: theme.palette.secondary.main,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272461085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.secondary.main,\n+    color: theme.typography.fontWeightBold,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272591021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.typography.fontWeightBold,\n+    color: theme.palette.grey.main,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272750366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey.main,\n+    color: theme.palette.neutral.main,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272771943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.neutral.main,\n+    color: theme.palette.grey.main,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272785448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey.main,\n+    color: theme.palette.grey.dark,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272794444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey.dark,\n+    color: theme.palette.grey[800],\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272805710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey[800],\n+    color: theme.palette.grey[200],\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272816341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey[200],\n+    color: theme.palette.grey.light,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272833731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey.light,\n+    color: theme.palette.grey[800],\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272895041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey[800],\n+    color: theme.palette.grey.dark,\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272957445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n-            classes={{ root: classes.root, selected: classes.selected }}\n+            classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/partneri'}\n           >\n             <ListItemIcon className={classes.icon}>\n               <GroupIcon />\n@@ -159,9 +159,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey.dark,\n+    color: theme.palette.grey[800],\n   },\n   icon: {\n     color: theme.palette.secondary.main,\n   },\n"
+                },
+                {
+                    "date": 1640272976963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,9 +162,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   icon: {\n-    color: theme.palette.secondary.main,\n+    color: theme.palette.grey[800],\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640272987790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,8 +163,17 @@\n     color: theme.palette.grey[800],\n   },\n   icon: {\n     color: theme.palette.grey[800],\n+    '&$selected': {\n+      color: theme.palette.secondary.main,\n+      backgroundColor: theme.palette.secondary.light,\n+      borderRadius: 15,\n+      '&:hover': {\n+        color: theme.palette.secondary.main,\n+        backgroundColor: theme.palette.secondary.light,\n+      },\n+    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640273007019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,13 +165,10 @@\n   icon: {\n     color: theme.palette.grey[800],\n     '&$selected': {\n       color: theme.palette.secondary.main,\n-      backgroundColor: theme.palette.secondary.light,\n-      borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n-        backgroundColor: theme.palette.secondary.light,\n       },\n     },\n   },\n   btnContainer: {\n"
+                },
+                {
+                    "date": 1640273058569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n-            <ListItemIcon className={classes.icon}>\n+            <ListItemIcon classes={{ root: classes.icon, selected: classes.selected }}>\n               <LibraryBooksIcon />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n"
+                },
+                {
+                    "date": 1640273075170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n-            <ListItemIcon classes={{ root: classes.icon, selected: classes.selected }}>\n+            <ListItemIcon className={classes.icon}>\n               <LibraryBooksIcon />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n"
+                },
+                {
+                    "date": 1640273087208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n-            <ListItemIcon className={classes.icon}>\n+            <ListItemIcon className={classes.icon} selected={location.pathname === '/artikli'}>\n               <LibraryBooksIcon />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n"
+                },
+                {
+                    "date": 1640273103851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n-            <ListItemIcon className={classes.icon} selected={location.pathname === '/artikli'}>\n+            <ListItemIcon classes={{ root: classes.icon, selected: classes.selected }} selected={location.pathname === '/artikli'}>\n               <LibraryBooksIcon />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n"
+                },
+                {
+                    "date": 1640273152365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,10 +98,10 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n-            <ListItemIcon classes={{ root: classes.icon, selected: classes.selected }} selected={location.pathname === '/artikli'}>\n-              <LibraryBooksIcon />\n+            <ListItemIcon>\n+              <LibraryBooksIcon classes={{ root: classes.icon, selected: classes.selected }} selected={location.pathname === '/artikli'} />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640273165444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,9 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n             <ListItemIcon>\n-              <LibraryBooksIcon classes={{ root: classes.icon, selected: classes.selected }} selected={location.pathname === '/artikli'} />\n+              <LibraryBooksIcon color='primary' />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640273171514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,9 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n             <ListItemIcon>\n-              <LibraryBooksIcon color='primary' />\n+              <LibraryBooksIcon color='secondary' />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640273217955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,11 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/artikli'}\n           >\n             <ListItemIcon>\n-              <LibraryBooksIcon color='secondary' />\n+              <LibraryBooksIcon\n+                color={location.pathname === `/artikli` && `secondary`}\n+              />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640273248222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n             selected={location.pathname === '/artikli'}\n           >\n             <ListItemIcon>\n               <LibraryBooksIcon\n-                color={location.pathname === `/artikli` && `secondary`}\n+                color={location.pathname === `/artikli` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n             <ListItemText primary='Артикли' />\n           </ListItem>\n"
+                },
+                {
+                    "date": 1640273296431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/naracki'}\n           >\n-            <ListItemIcon className={classes.icon}>\n-              <ListAltIcon />\n+            <ListItemIcon>\n+              <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n             <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n@@ -70,10 +70,10 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/partneri'}\n           >\n-            <ListItemIcon className={classes.icon}>\n-              <GroupIcon />\n+            <ListItemIcon>\n+              <GroupIcon color={location.pathname === `/partneri` ? `secondary` : ''} />\n             </ListItemIcon>\n             <ListItemText primary='Партнери' />\n           </ListItem>\n         </NavLink>\n@@ -84,10 +84,10 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/grupi'}\n           >\n-            <ListItemIcon className={classes.icon}>\n-              <GroupWorkIcon />\n+            <ListItemIcon>\n+              <GroupWorkIcon color={location.pathname === `/grupi` ? `secondary` : ''} />\n             </ListItemIcon>\n             <ListItemText primary='Групи' />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640273307197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,17 +163,8 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  icon: {\n-    color: theme.palette.grey[800],\n-    '&$selected': {\n-      color: theme.palette.secondary.main,\n-      '&:hover': {\n-        color: theme.palette.secondary.main,\n-      },\n-    },\n-  },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n     marginLeft: 15,\n"
+                },
+                {
+                    "date": 1640273322208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';\n import GroupWorkIcon from '@material-ui/icons/GroupWork';\n import Button from '@material-ui/core/Button';\n \n-const drawerWidth = 240;\n+const drawerWidth = 260;\n \n const Sidebar = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n"
+                },
+                {
+                    "date": 1640273334120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';\n import GroupWorkIcon from '@material-ui/icons/GroupWork';\n import Button from '@material-ui/core/Button';\n \n-const drawerWidth = 260;\n+const drawerWidth = 240;\n \n const Sidebar = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n"
+                },
+                {
+                    "date": 1640273358176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';\n import GroupWorkIcon from '@material-ui/icons/GroupWork';\n import Button from '@material-ui/core/Button';\n \n-const drawerWidth = 240;\n+const drawerWidth = 260;\n \n const Sidebar = (props) => {\n   const classes = useStyles();\n   const theme = useTheme();\n@@ -137,9 +137,9 @@\n     flexShrink: 0,\n   },\n   drawerPaper: {\n     width: drawerWidth,\n-    background: theme.palette.primary.main.light,\n+    background: theme.palette.primary.main,\n   },\n   drawerHeader: {\n     display: 'flex',\n     alignItems: 'center',\n"
+                },
+                {
+                    "date": 1640273386940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -137,9 +137,9 @@\n     flexShrink: 0,\n   },\n   drawerPaper: {\n     width: drawerWidth,\n-    background: theme.palette.primary.main,\n+    background: theme.palette.primary.contrastText,\n   },\n   drawerHeader: {\n     display: 'flex',\n     alignItems: 'center',\n@@ -148,8 +148,9 @@\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n+    marginRight: 10,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273405837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -149,8 +149,9 @@\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n     marginRight: 10,\n+    marginLeft: 10,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273417895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,10 +148,9 @@\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n-    marginRight: 10,\n-    marginLeft: 10,\n+    marginInline: 20,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273442356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,9 +148,9 @@\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n-    marginInline: 20,\n+    width: '100%',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273448299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,9 +148,9 @@\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n-    width: '100%',\n+    width: '80%',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273460756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,9 +148,10 @@\n     ...theme.mixins.toolbar,\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n-    width: '80%',\n+    width: '90%',\n+    display: 'flex',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273469214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,8 +150,9 @@\n   },\n   listItem: {\n     width: '90%',\n     display: 'flex',\n+    alignSelf: 'center',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273490375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -149,10 +149,9 @@\n     justifyContent: 'flex-end',\n   },\n   listItem: {\n     width: '90%',\n-    display: 'flex',\n-    alignSelf: 'center',\n+    margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640273528813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,8 +154,9 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n+      fontWeight: theme.typography.fontWeightBold,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640273546290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,9 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n-      fontWeight: theme.typography.fontWeightBold,\n+      fontWeight: 900,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640273571438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,9 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n-      fontWeight: 900,\n+      fontSize: 30,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640273576711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,8 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n-      fontSize: 30,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640273597212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,8 +164,17 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n+    '&$selected': {\n+      color: theme.palette.secondary.main,\n+      backgroundColor: theme.palette.secondary.light,\n+      borderRadius: 15,\n+      '&:hover': {\n+        color: theme.palette.secondary.main,\n+        backgroundColor: theme.palette.secondary.light,\n+      },\n+    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640273607236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n     '&$selected': {\n       color: theme.palette.secondary.main,\n-      backgroundColor: theme.palette.secondary.light,\n+      backgroundColor: 'red',\n       borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n"
+                },
+                {
+                    "date": 1640273631506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' />\n+            <ListItemText primary='Нарачки' classes={{ root: classes.listItem, selected: classes.selected }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640273640132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' classes={{ root: classes.listItem, selected: classes.selected }} />\n+            <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640273675203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' />\n+            <ListItemText primary='Нарачки' className />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n@@ -166,13 +166,10 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n     '&$selected': {\n       color: theme.palette.secondary.main,\n-      backgroundColor: 'red',\n-      borderRadius: 15,\n       '&:hover': {\n-        color: theme.palette.secondary.main,\n-        backgroundColor: theme.palette.secondary.light,\n+        color: theme.palette.primary.main,\n       },\n     },\n   },\n   btnContainer: {\n"
+                },
+                {
+                    "date": 1640273693598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' className />\n+            <ListItemText primary='Нарачки' classes={{ root: classes.listItem, selected: classes.selected }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640273711969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' classes={{ root: classes.listItem, selected: classes.selected }} />\n+            <ListItemText primary='Нарачки' classes={{ root: classes.link, selected: classes.selected }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640273751690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' classes={{ root: classes.link, selected: classes.selected }} />\n+            <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n@@ -164,14 +164,8 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n-    '&$selected': {\n-      color: theme.palette.secondary.main,\n-      '&:hover': {\n-        color: theme.palette.primary.main,\n-      },\n-    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640273862925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link}>\n+        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `secondary` : '' }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273871702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `secondary` : '' }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `main` : '' }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273884396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `main` : '' }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `red` : 'yellow' }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273905745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ color: location.pathname === `/naracki` ? `red` : 'yellow' }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? 900 : 200 }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273923564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? 900 : 200 }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? '900' : 200 }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273932915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? '900' : 200 }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? '900' : '200' }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273956539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ fontWeight: location.pathname === `/naracki` ? '900' : '200' }}>\n+        <NavLink to='/naracki' className={classes.link} style={{ fontSize: location.pathname === `/naracki` ? 25 : 16 }}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640273992963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,8 +164,9 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n+    fontWeight: theme.typography.subtitle1.fontWeight\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640273998058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n-    fontWeight: theme.typography.subtitle1.fontWeight\n+    fontWeight: '900'\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274004768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,9 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n-    fontWeight: '900'\n+    fontWeight: 900\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274012367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -164,9 +164,8 @@\n   selected: {},\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n-    fontWeight: 900\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274018318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,8 +150,9 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n+    fontWeight: 900,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274023876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,9 +150,8 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n-    fontWeight: 900,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274048580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link} style={{ fontSize: location.pathname === `/naracki` ? 25 : 16 }}>\n+        <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640274062627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' />\n+            <ListItemText primary='Нарачки' style={{ fontSize: location.pathname === `/naracki` ? 25 : 16 }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274109563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' style={{ fontSize: location.pathname === `/naracki` ? 25 : 16 }} />\n+            <ListItemText primary='Нарачки' className={classes.listTitle} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n@@ -165,8 +165,11 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n+  listTitle: {\n+    fontWeight: 900\n+  },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n     marginLeft: 15,\n"
+                },
+                {
+                    "date": 1640274117551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listTitle: {\n-    fontWeight: 900\n+    fontWeight: '900'\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274184371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,11 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listTitle: {\n-    fontWeight: '900'\n+    'span': {\n+      fontWeight: 900\n+    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274194123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listTitle: {\n-    'span': {\n+    '&span': {\n       fontWeight: 900\n     },\n   },\n   btnContainer: {\n"
+                },
+                {
+                    "date": 1640274268071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' className={classes.listTitle} />\n+            <ListItemText primary='Нарачки' dense={true} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274341880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' dense={true} />\n+            <ListItemText primary='Нарачки' type=\"body2\" />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274350397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' type=\"body2\" />\n+            <ListItemText primary='Нарачки' type=\"subtitle1\" />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274362359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' type=\"subtitle1\" />\n+            <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274381412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' />\n+            <ListItemText primary='Нарачки' style={{ fontSize: 33 }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274390337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' style={{ fontSize: 33 }} />\n+            <ListItemText primary='Нарачкsssи' style={{ fontSize: 33 }} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274420256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачкsssи' style={{ fontSize: 33 }} />\n+            <ListItemText primary='Нарачки' secondary='Nikola Panev' />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274433334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' secondary='Nikola Panev' />\n+            <ListItemText primary='Нарачки' />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n"
+                },
+                {
+                    "date": 1640274451097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,8 +150,9 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n+    padding: 10,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274460646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,9 +150,9 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n-    padding: 10,\n+    padding: 15,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274467725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,9 +150,9 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n-    padding: 15,\n+    padding: 5,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274475773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -150,9 +150,8 @@\n   },\n   listItem: {\n     width: '90%',\n     margin: 'auto',\n-    padding: 5,\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 15,\n"
+                },
+                {
+                    "date": 1640274563015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n           >\n             <ListItemIcon>\n               <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' />\n+            <ListItemText primary='Нарачки' classes={{ primary: classes.listItemText}} />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n@@ -165,12 +165,10 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  listTitle: {\n-    '&span': {\n-      fontWeight: 900\n-    },\n+  listItemText:{\n+    fontSize:'0.7em',\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274571469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -166,9 +166,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listItemText:{\n-    fontSize:'0.7em',\n+    fontSize: '0.7em',\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274629275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,11 +58,19 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/naracki'}\n           >\n             <ListItemIcon>\n-              <ListAltIcon color={location.pathname === `/naracki` ? `secondary` : ''} />\n+              <ListAltIcon\n+                color={location.pathname === `/naracki` ? `secondary` : ''}\n+              />\n             </ListItemIcon>\n-            <ListItemText primary='Нарачки' classes={{ primary: classes.listItemText}} />\n+            <ListItemText\n+              primary='Нарачки'\n+              classes={{\n+                primary: classes.listItemText,\n+                selected: location.pathname === `/naracki`,\n+              }}\n+            />\n           </ListItem>\n         </NavLink>\n         <NavLink to='/partneri' className={classes.link}>\n           <ListItem\n@@ -71,9 +79,11 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/partneri'}\n           >\n             <ListItemIcon>\n-              <GroupIcon color={location.pathname === `/partneri` ? `secondary` : ''} />\n+              <GroupIcon\n+                color={location.pathname === `/partneri` ? `secondary` : ''}\n+              />\n             </ListItemIcon>\n             <ListItemText primary='Партнери' />\n           </ListItem>\n         </NavLink>\n@@ -85,9 +95,11 @@\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n-              <GroupWorkIcon color={location.pathname === `/grupi` ? `secondary` : ''} />\n+              <GroupWorkIcon\n+                color={location.pathname === `/grupi` ? `secondary` : ''}\n+              />\n             </ListItemIcon>\n             <ListItemText primary='Групи' />\n           </ListItem>\n         </NavLink>\n@@ -165,9 +177,9 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  listItemText:{\n+  listItemText: {\n     fontSize: '0.7em',\n   },\n   btnContainer: {\n     marginTop: 5,\n"
+                },
+                {
+                    "date": 1640274647554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n                 primary: classes.listItemText,\n-                selected: location.pathname === `/naracki`,\n+                selectedItem: location.pathname === `/naracki`,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n@@ -173,8 +173,11 @@\n       },\n     },\n   },\n   selected: {},\n+  selectedItem: {\n+    fontSize: '1.7em',\n+  },\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n"
+                },
+                {
+                    "date": 1640274674154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -173,17 +173,20 @@\n       },\n     },\n   },\n   selected: {},\n-  selectedItem: {\n-    fontSize: '1.7em',\n-  },\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listItemText: {\n     fontSize: '0.7em',\n+    '&$selected': {\n+      fontSize: '1.7em',\n+      '&:hover': {\n+        fontSize: '1.7em',\n+      },\n+    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274708121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n                 primary: classes.listItemText,\n-                selectedItem: location.pathname === `/naracki`,\n+                selected: classes.selected,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640274716829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n                 primary: classes.listItemText,\n-                selected: classes.selected,\n+                selected: classes.selectedItem,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640274738073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,8 +177,11 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n+  selectedItem: {\n+    fontSize: '1.7em'\n+  },\n   listItemText: {\n     fontSize: '0.7em',\n     '&$selected': {\n       fontSize: '1.7em',\n"
+                },
+                {
+                    "date": 1640274757212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n                 primary: classes.listItemText,\n-                selected: classes.selectedItem,\n+                selectedItem: location.pathname === `/naracki`,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n@@ -177,19 +177,10 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  selectedItem: {\n-    fontSize: '1.7em'\n-  },\n   listItemText: {\n     fontSize: '0.7em',\n-    '&$selected': {\n-      fontSize: '1.7em',\n-      '&:hover': {\n-        fontSize: '1.7em',\n-      },\n-    },\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640274796137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,11 +64,10 @@\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Нарачки'\n-              classes={{\n-                primary: classes.listItemText,\n-                selectedItem: location.pathname === `/naracki`,\n+              style={{\n+                fontSize: location.pathname === `/naracki` ? '0.7em' : '1.7em',\n               }}\n             />\n           </ListItem>\n         </NavLink>\n@@ -177,11 +176,8 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  listItemText: {\n-    fontSize: '0.7em',\n-  },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n     marginLeft: 15,\n"
+                },
+                {
+                    "date": 1640274932838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,10 +64,11 @@\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Нарачки'\n-              style={{\n-                fontSize: location.pathname === `/naracki` ? '0.7em' : '1.7em',\n+              classes={{\n+                primary: classes.listItemText,\n+                selectedItem: location.pathname === `/naracki`,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n@@ -176,8 +177,11 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n+  listItemText: {\n+    fontWeight: theme.typography.subtitle1.fontWeight,\n+  },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n     marginLeft: 15,\n"
+                },
+                {
+                    "date": 1640274945418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,8 @@\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n                 primary: classes.listItemText,\n-                selectedItem: location.pathname === `/naracki`,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640275267987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,12 @@\n             </ListItemIcon>\n             <ListItemText\n               primary='Нарачки'\n               classes={{\n-                primary: classes.listItemText,\n+                primary:\n+                  location.pathname === `/naracki`\n+                    ? classes.listItemTextActive\n+                    : classes.listItemText,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640275285157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,8 +182,11 @@\n   },\n   listItemText: {\n     fontWeight: theme.typography.subtitle1.fontWeight,\n   },\n+  listItemTextActive: {\n+    fontWeight: theme.typography.subtitle1.fontWeight,\n+  },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n     marginLeft: 15,\n"
+                },
+                {
+                    "date": 1640275298669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -180,9 +180,9 @@\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n   listItemText: {\n-    fontWeight: theme.typography.subtitle1.fontWeight,\n+    fontWeight: 200,\n   },\n   listItemTextActive: {\n     fontWeight: theme.typography.subtitle1.fontWeight,\n   },\n"
+                },
+                {
+                    "date": 1640275318035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,9 +183,9 @@\n   listItemText: {\n     fontWeight: 200,\n   },\n   listItemTextActive: {\n-    fontWeight: theme.typography.subtitle1.fontWeight,\n+    fontWeight: 500,\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640275324796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,9 +183,9 @@\n   listItemText: {\n     fontWeight: 200,\n   },\n   listItemTextActive: {\n-    fontWeight: 500,\n+    fontWeight: 900,\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640275340131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -179,13 +179,10 @@\n   link: {\n     textDecoration: 'none',\n     color: theme.palette.grey[800],\n   },\n-  listItemText: {\n-    fontWeight: 200,\n-  },\n   listItemTextActive: {\n-    fontWeight: 900,\n+    fontWeight: theme.typography.subtitle1.fontWeight,\n   },\n   btnContainer: {\n     marginTop: 5,\n     marginRight: 15,\n"
+                },
+                {
+                    "date": 1640275349529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n               classes={{\n                 primary:\n                   location.pathname === `/naracki`\n                     ? classes.listItemTextActive\n-                    : classes.listItemText,\n+                    : null,\n               }}\n             />\n           </ListItem>\n         </NavLink>\n"
+                },
+                {
+                    "date": 1640275405117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,17 @@\n               <GroupIcon\n                 color={location.pathname === `/partneri` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n-            <ListItemText primary='Партнери' />\n+            <ListItemText\n+              primary='Партнери'\n+              classes={{\n+                primary:\n+                  location.pathname === `/partneri`\n+                    ? classes.listItemTextActive\n+                    : null,\n+              }}\n+            />\n           </ListItem>\n         </NavLink>\n \n         <NavLink to='/grupi' className={classes.link}>\n@@ -101,9 +109,17 @@\n               <GroupWorkIcon\n                 color={location.pathname === `/grupi` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n-            <ListItemText primary='Групи' />\n+            <ListItemText\n+              primary='Групи'\n+              classes={{\n+                primary:\n+                  location.pathname === `/grupi`\n+                    ? classes.listItemTextActive\n+                    : null,\n+              }}\n+            />\n           </ListItem>\n         </NavLink>\n \n         <NavLink to='/artikli' className={classes.link}>\n@@ -117,9 +133,17 @@\n               <LibraryBooksIcon\n                 color={location.pathname === `/artikli` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n-            <ListItemText primary='Артикли' />\n+            <ListItemText\n+              primary='Артикли'\n+              classes={{\n+                primary:\n+                  location.pathname === `/artikli`\n+                    ? classes.listItemTextActive\n+                    : null,\n+              }}\n+            />\n           </ListItem>\n         </NavLink>\n       </List>\n       {!showNotificationButton && (\n"
+                },
+                {
+                    "date": 1640275419259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n-      borderRadius: 15,\n+      // borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640275446020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n-      // borderRadius: 15,\n+      borderRadius: 15,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640275453118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n-      borderRadius: 15,\n+      borderRadius: 20,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640275458231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n-      borderRadius: 20,\n+      borderRadius: 50,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640275468917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -191,9 +191,9 @@\n     margin: 'auto',\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n-      borderRadius: 50,\n+      borderRadius: 10,\n       '&:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n"
+                },
+                {
+                    "date": 1640275480297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,9 +192,9 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 10,\n-      '&:hover': {\n+      '&$:hover': {\n         color: theme.palette.secondary.main,\n         backgroundColor: theme.palette.secondary.light,\n       },\n     },\n"
+                },
+                {
+                    "date": 1640275498947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -192,13 +192,13 @@\n     '&$selected': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 10,\n-      '&$:hover': {\n-        color: theme.palette.secondary.main,\n-        backgroundColor: theme.palette.secondary.light,\n-      },\n     },\n+    '&:hover': {\n+      color: theme.palette.secondary.main,\n+      backgroundColor: theme.palette.secondary.light,\n+    },\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n"
+                },
+                {
+                    "date": 1640275510844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -196,8 +196,9 @@\n     },\n     '&:hover': {\n       color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n+      borderRadius: 10,\n     },\n   },\n   selected: {},\n   link: {\n"
+                },
+                {
+                    "date": 1640275558822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,9 +194,8 @@\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 10,\n     },\n     '&:hover': {\n-      color: theme.palette.secondary.main,\n       backgroundColor: theme.palette.secondary.light,\n       borderRadius: 10,\n     },\n   },\n"
+                },
+                {
+                    "date": 1640277859980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n import GroupIcon from '@material-ui/icons/Group';\n import ListAltIcon from '@material-ui/icons/ListAlt';\n import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';\n import GroupWorkIcon from '@material-ui/icons/GroupWork';\n+import DashboardIcon from '@material-ui/icons/Dashboard';\n import Button from '@material-ui/core/Button';\n \n const drawerWidth = 260;\n \n@@ -50,8 +51,31 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n+      <NavLink to='/naracki' className={classes.link}>\n+          <ListItem\n+            button\n+            key={1}\n+            classes={{ root: classes.listItem, selected: classes.selected }}\n+            selected={location.pathname === '/naracki'}\n+          >\n+            <ListItemIcon>\n+              <DashboardIcon\n+                color={location.pathname === `/naracki` ? `secondary` : ''}\n+              />\n+            </ListItemIcon>\n+            <ListItemText\n+              primary='Dashboard'\n+              classes={{\n+                primary:\n+                  location.pathname === `/naracki`\n+                    ? classes.listItemTextActive\n+                    : null,\n+              }}\n+            />\n+          </ListItem>\n+        </NavLink>\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640277880980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,13 +58,13 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/naracki'}\n           >\n-            <ListItemIcon>\n+            {/* <ListItemIcon>\n               <DashboardIcon\n                 color={location.pathname === `/naracki` ? `secondary` : ''}\n               />\n-            </ListItemIcon>\n+            </ListItemIcon> */}\n             <ListItemText\n               primary='Dashboard'\n               classes={{\n                 primary:\n"
+                },
+                {
+                    "date": 1640277898471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,9 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n+        <Divider />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640277912430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n-        <Divider />\n+        <Divider style={{ width: '80%' }} />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640277927025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n-        <Divider style={{ width: '80%' }} />\n+        <Divider style={{ width: '80%', display: 'flex', alignSelf: 'center' }} />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640277938265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n-        <Divider style={{ width: '80%', display: 'flex', alignSelf: 'center' }} />\n+        <Divider style={{ width: '80%', margin: 'auto' }} />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640277944588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n-        <Divider style={{ width: '80%', margin: 'auto' }} />\n+        <Divider style={{ width: '90%', margin: 'auto' }} />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640278017453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\n import { useLocation, NavLink } from 'react-router-dom';\n import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';\n+import Typography from '@material-ui/core/Typography';\n import Drawer from '@material-ui/core/Drawer';\n import List from '@material-ui/core/List';\n import Divider from '@material-ui/core/Divider';\n import IconButton from '@material-ui/core/IconButton';\n@@ -41,8 +42,9 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n+        <Typography>Magacin Web App</Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n"
+                },
+                {
+                    "date": 1640278039064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography>Magacin Web App</Typography>\n+        <Typography variant='subtitle1'>Magacin Web App</Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n"
+                },
+                {
+                    "date": 1640278048845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='subtitle1'>Magacin Web App</Typography>\n+        <Typography variant='h5'>Magacin Web App</Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n"
+                },
+                {
+                    "date": 1640278066875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='h5'>Magacin Web App</Typography>\n+        <Typography variant='h6' color='secondary'>Magacin Web App</Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n"
+                },
+                {
+                    "date": 1640278114296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,20 +42,24 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='h6' color='secondary'>Magacin Web App</Typography>\n+        <Typography variant='h6' color='secondary'>\n+          Magacin Web App\n+        </Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n             <ChevronRightIcon />\n           )}\n         </IconButton>\n       </div>\n+      <br />\n       <Divider />\n+      <br />\n       <List>\n-      <NavLink to='/naracki' className={classes.link}>\n+        <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640278126255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,24 +42,20 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='h6' color='secondary'>\n-          Magacin Web App\n-        </Typography>\n+        <Typography variant='h6' color='secondary'>Magacin Web App</Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n             <ChevronRightIcon />\n           )}\n         </IconButton>\n       </div>\n-      <br />\n       <Divider />\n-      <br />\n       <List>\n-        <NavLink to='/naracki' className={classes.link}>\n+      <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n"
+                },
+                {
+                    "date": 1640278132489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,13 +60,13 @@\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n             selected={location.pathname === '/naracki'}\n           >\n-            {/* <ListItemIcon>\n+            <ListItemIcon>\n               <DashboardIcon\n                 color={location.pathname === `/naracki` ? `secondary` : ''}\n               />\n-            </ListItemIcon> */}\n+            </ListItemIcon>\n             <ListItemText\n               primary='Dashboard'\n               classes={{\n                 primary:\n"
+                },
+                {
+                    "date": 1640278151291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,11 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='h6' color='secondary'>Magacin Web App</Typography>\n+        <Typography variant='h6' color='secondary'>\n+          Magacin Web App\n+        </Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n             <ChevronLeftIcon className={classes.icon} />\n           ) : (\n@@ -53,9 +55,9 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-      <NavLink to='/naracki' className={classes.link}>\n+        <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n@@ -76,9 +78,11 @@\n               }}\n             />\n           </ListItem>\n         </NavLink>\n+        <br />\n         <Divider style={{ width: '90%', margin: 'auto' }} />\n+        <br />\n         <NavLink to='/naracki' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n"
+                },
+                {
+                    "date": 1640278171201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,9 @@\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Dashboard'\n+              secondary='Home'\n               classes={{\n                 primary:\n                   location.pathname === `/naracki`\n                     ? classes.listItemTextActive\n"
+                },
+                {
+                    "date": 1640278177867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,10 +68,10 @@\n                 color={location.pathname === `/naracki` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n             <ListItemText\n-              primary='Dashboard'\n-              secondary='Home'\n+              primary='Home'\n+              secondary='Dashboard'\n               classes={{\n                 primary:\n                   location.pathname === `/naracki`\n                     ? classes.listItemTextActive\n"
+                },
+                {
+                    "date": 1640278340151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,26 +55,26 @@\n         </IconButton>\n       </div>\n       <Divider />\n       <List>\n-        <NavLink to='/naracki' className={classes.link}>\n+        <NavLink to='/home' className={classes.link}>\n           <ListItem\n             button\n             key={1}\n             classes={{ root: classes.listItem, selected: classes.selected }}\n-            selected={location.pathname === '/naracki'}\n+            selected={location.pathname === '/home'}\n           >\n             <ListItemIcon>\n               <DashboardIcon\n-                color={location.pathname === `/naracki` ? `secondary` : ''}\n+                color={location.pathname === `/home` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Home'\n               secondary='Dashboard'\n               classes={{\n                 primary:\n-                  location.pathname === `/naracki`\n+                  location.pathname === `/home`\n                     ? classes.listItemTextActive\n                     : null,\n               }}\n             />\n"
+                },
+                {
+                    "date": 1640302675466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -233,9 +233,9 @@\n   },\n   selected: {},\n   link: {\n     textDecoration: 'none',\n-    color: theme.palette.grey[800],\n+    color: theme.palette.text.secondary,\n   },\n   listItemTextActive: {\n     fontWeight: theme.typography.subtitle1.fontWeight,\n   },\n"
+                },
+                {
+                    "date": 1640302743177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : ''}\n+                color={location.pathname === `/grupi` ? `secondary` : theme.palette.text.secondary}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302756800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : theme.palette.text.secondary}\n+                color={location.pathname === `/grupi` ? `secondary` : 'red'}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302774063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : 'red'}\n+                color={location.pathname === `/grupi` ? `secondary` : `red`}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302782726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : `red`}\n+                color={location.pathname === `/grupi` ? `secondary` : `primary`}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302788530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : `primary`}\n+                color={location.pathname === `/grupi` ? `secondary` : `black`}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302794938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : `black`}\n+                color={location.pathname === `/grupi` ? `secondary` : theme.palette.text.secondary}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302803951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : theme.palette.text.secondary}\n+                color={location.pathname === `/grupi` ? `secondary` : theme.palette.primary.main}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640302826178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,9 +138,9 @@\n             selected={location.pathname === '/grupi'}\n           >\n             <ListItemIcon>\n               <GroupWorkIcon\n-                color={location.pathname === `/grupi` ? `secondary` : theme.palette.primary.main}\n+                color={location.pathname === `/grupi` ? `secondary` : ''}\n               />\n             </ListItemIcon>\n             <ListItemText\n               primary='Групи'\n"
+                },
+                {
+                    "date": 1640360543973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         paper: classes.drawerPaper,\n       }}\n     >\n       <div className={classes.drawerHeader}>\n-        <Typography variant='h6' color='secondary'>\n+        <Typography variant='h6'>\n           Magacin Web App\n         </Typography>\n         <IconButton onClick={closeSidebar}>\n           {theme.direction === 'ltr' ? (\n"
+                }
+            ],
+            "date": 1640264662330,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { useLocation, NavLink } from 'react-router-dom';\nimport { makeStyles, useTheme } from '@material-ui/core/styles';\nimport Drawer from '@material-ui/core/Drawer';\nimport List from '@material-ui/core/List';\nimport Divider from '@material-ui/core/Divider';\nimport IconButton from '@material-ui/core/IconButton';\nimport ChevronLeftIcon from '@material-ui/icons/ChevronLeft';\nimport ChevronRightIcon from '@material-ui/icons/ChevronRight';\nimport ListItem from '@material-ui/core/ListItem';\nimport ListItemIcon from '@material-ui/core/ListItemIcon';\nimport ListItemText from '@material-ui/core/ListItemText';\nimport GroupIcon from '@material-ui/icons/Group';\nimport ListAltIcon from '@material-ui/icons/ListAlt';\nimport LibraryBooksIcon from '@material-ui/icons/LibraryBooks';\nimport GroupWorkIcon from '@material-ui/icons/GroupWork';\nimport Button from '@material-ui/core/Button';\n\nconst drawerWidth = 240;\n\nconst Sidebar = (props) => {\n  const classes = useStyles();\n  const theme = useTheme();\n  const location = useLocation();\n\n  const {\n    closeSidebar,\n    open,\n    showNotificationButton,\n    askForNotificationPermission,\n  } = props;\n\n  return (\n    <Drawer\n      className={classes.drawer}\n      variant='persistent'\n      anchor='left'\n      open={open}\n      classes={{\n        paper: classes.drawerPaper,\n      }}\n    >\n      <div className={classes.drawerHeader}>\n        <IconButton onClick={closeSidebar}>\n          {theme.direction === 'ltr' ? (\n            <ChevronLeftIcon className={classes.icon} />\n          ) : (\n            <ChevronRightIcon />\n          )}\n        </IconButton>\n      </div>\n      <Divider />\n      <List>\n        <NavLink to='/naracki' className={classes.link}>\n          <ListItem button key={1} selected={location.pathname === '/naracki'}>\n            <ListItemIcon className={classes.icon}>\n              <ListAltIcon />\n            </ListItemIcon>\n            <ListItemText primary='Нарачки' />\n          </ListItem>\n        </NavLink>\n        <Divider\n          variant='middle'\n          style={{\n            backgroundColor: location.pathname === '/naracki' ? '#ccc' : null,\n          }}\n        />\n        <NavLink to='/partneri' className={classes.link}>\n          <ListItem button key={1} selected={location.pathname === '/partneri'}>\n            <ListItemIcon className={classes.icon}>\n              <GroupIcon />\n            </ListItemIcon>\n            <ListItemText primary='Партнери' />\n          </ListItem>\n        </NavLink>\n        <Divider\n          variant='middle'\n          style={{\n            backgroundColor: location.pathname === '/partneri' ? '#ccc' : null,\n          }}\n        />\n\n        <NavLink to='/grupi' className={classes.link}>\n          <ListItem button key={1} selected={location.pathname === '/grupi'}>\n            <ListItemIcon className={classes.icon}>\n              <GroupWorkIcon />\n            </ListItemIcon>\n            <ListItemText primary='Групи' />\n          </ListItem>\n        </NavLink>\n        <Divider\n          variant='middle'\n          style={{\n            backgroundColor: location.pathname === '/grupi' ? '#ccc' : null,\n          }}\n        />\n\n        <NavLink to='/artikli' className={classes.link}>\n          <ListItem button key={1} selected={location.pathname === '/artikli'}>\n            <ListItemIcon className={classes.icon}>\n              <LibraryBooksIcon />\n            </ListItemIcon>\n            <ListItemText primary='Артикли' />\n          </ListItem>\n        </NavLink>\n        <Divider\n          variant='middle'\n          style={{\n            backgroundColor: location.pathname === '/artikli' ? '#ccc' : null,\n          }}\n        />\n      </List>\n      {showNotificationButton && (\n        <div className={classes.btnContainer}>\n          <Button\n            style={{ backgroundColor: 'white' }}\n            color='primary'\n            type='button'\n            fullWidth\n            onClick={askForNotificationPermission}\n          >\n            Enable notifications\n          </Button>\n        </div>\n      )}\n    </Drawer>\n  );\n};\n\nconst useStyles = makeStyles((theme) => ({\n  menuButton: {\n    marginRight: theme.spacing(2),\n  },\n  hide: {\n    display: 'none',\n  },\n  drawer: {\n    width: drawerWidth,\n    flexShrink: 0,\n  },\n  drawerPaper: {\n    width: drawerWidth,\n    background: theme.palette.primary.main,\n    opacity: 0.9,\n  },\n  drawerHeader: {\n    display: 'flex',\n    alignItems: 'center',\n    padding: theme.spacing(0, 1),\n    // necessary for content to be below app bar\n    ...theme.mixins.toolbar,\n    justifyContent: 'flex-end',\n  },\n  link: {\n    textDecoration: 'none',\n    color: theme.palette.primary.contrastText,\n  },\n  icon: {\n    color: theme.palette.primary.contrastText,\n  },\n  btnContainer: {\n    // marginTop: 5,\n    // marginRight: 15,\n    // marginLeft: 15,\n  },\n}));\n\nexport default Sidebar;\n"
+        }
+    ]
+}

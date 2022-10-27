@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Dashboard/PopularCard/PopularCard.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1640818266998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640818275963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,16 +17,16 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n-        title={}\n+        title={'T'}\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n-          {type}\n+          {'type'}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.description}>\n-          {description}\n+          {'description'}\n         </Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640818286589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n-        title={'T'}\n+        title={'Popular Articles'}\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n           {'type'}\n"
+                },
+                {
+                    "date": 1640818415310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n } from '@material-ui/core';\n import AssignmentIcon from '@material-ui/icons/Assignment';\n import PeopleIcon from '@material-ui/icons/People';\n \n-import useStyles from './CardStyles';\n+import useStyles from './PopularCardStyles';\n \n const PopularCard = () => {\n   const classes = useStyles();\n \n"
+                },
+                {
+                    "date": 1640818472374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './PopularCardStyles';\n \n-const PopularCard = () => {\n-  const classes = useStyles();\n+const PopularCard = ({ bgColor }) => {\n+  const classes = useStyles({ bgColor });\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n"
+                },
+                {
+                    "date": 1640819043852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,59 @@\n import React from 'react';\n import {\n+  Avatar,\n   Card,\n-  CardHeader,\n-  CardContent,\n+  List,\n+  ListItem,\n+  ListItemAvatar,\n+  ListItemText,\n   Typography,\n-  ListItemAvatar,\n-  Avatar,\n } from '@material-ui/core';\n-import AssignmentIcon from '@material-ui/icons/Assignment';\n-import PeopleIcon from '@material-ui/icons/People';\n+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './PopularCardStyles';\n \n-const PopularCard = ({ bgColor }) => {\n-  const classes = useStyles({ bgColor });\n+const PopularCard = ({\n+  bgColor,\n+  bgAfter,\n+  textColor,\n+  descriptionColor,\n+  avatarColor,\n+  value,\n+  description,\n+}) => {\n+  const classes = useStyles({\n+    bgColor,\n+    bgAfter,\n+    avatarColor,\n+    textColor,\n+    descriptionColor,\n+  });\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader\n-        title={'Popular Articles'}\n-      />\n-      <CardContent>\n-        <Typography variant='h5' className={classes.type}>\n-          {'type'}\n-        </Typography>\n-        <Typography variant='subtitle1' className={classes.description}>\n-          {'description'}\n-        </Typography>\n-      </CardContent>\n+      <List className={classes.list}>\n+        <ListItem className={classes.list} alignItems='center' disableGutters>\n+          <ListItemAvatar>\n+            <Avatar className={classes.avatar} variant='rounded'>\n+              <TableChartOutlinedIcon fontSize='inherit' />\n+            </Avatar>\n+          </ListItemAvatar>\n+          <ListItemText\n+            className={classes.listItemText}\n+            primary={\n+              <Typography className={classes.value} variant='subtitle1'>\n+                {value} MKD\n+              </Typography>\n+            }\n+            secondary={\n+              <Typography className={classes.description} variant='subtitle2'>\n+                {description}\n+              </Typography>\n+            }\n+          />\n+        </ListItem>\n+      </List>\n     </Card>\n   );\n };\n \n"
+                }
+            ],
+            "date": 1640818266998,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport {\n  Card,\n  CardHeader,\n  CardContent,\n  Typography,\n  ListItemAvatar,\n  Avatar,\n} from '@material-ui/core';\nimport AssignmentIcon from '@material-ui/icons/Assignment';\nimport PeopleIcon from '@material-ui/icons/People';\n\nimport useStyles from './CardStyles';\n\nconst PopularCard = () => {\n  const classes = useStyles();\n\n  return (\n    <Card className={classes.card}>\n      <CardHeader\n        title={}\n      />\n      <CardContent>\n        <Typography variant='h5' className={classes.type}>\n          {type}\n        </Typography>\n        <Typography variant='subtitle1' className={classes.description}>\n          {description}\n        </Typography>\n      </CardContent>\n    </Card>\n  );\n};\n\nexport default PopularCard;\n"
+        }
+    ]
+}

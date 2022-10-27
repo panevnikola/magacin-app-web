@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/UI/ConfirmationDialog.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1643827975493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643828120986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n       result.status !== 203 ||\n       result.status !== 204\n     ) {\n       onDeleteMessage('Грешка при бришење на артиклот.');\n+      return;\n     }\n \n     if (result.status === 200) {\n       setTimeout(() => {\n"
+                },
+                {
+                    "date": 1643828197877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,27 +14,21 @@\n   const [isLoading, setIsLoading] = useState(false);\n \n   const handleDelete = async () => {\n     setIsLoading(true);\n-    const result = await deleteRequest(`/${path}`, `/${item.id}`);\n \n-    if (\n-      result.status !== 200 ||\n-      result.status !== 201 ||\n-      result.status !== 202 ||\n-      result.status !== 203 ||\n-      result.status !== 204\n-    ) {\n+    try {\n+      const result = await deleteRequest(`/${path}`, `/${item.id}`);\n+\n+      if (result.status === 200) {\n+        setTimeout(() => {\n+          setIsLoading(false);\n+          handleClose();\n+        }, 1000);\n+      }\n+    } catch (error) {\n       onDeleteMessage('Грешка при бришење на артиклот.');\n-      return;\n     }\n-\n-    if (result.status === 200) {\n-      setTimeout(() => {\n-        setIsLoading(false);\n-        handleClose();\n-      }, 1000);\n-    }\n   };\n \n   return (\n     <Dialog\n"
+                },
+                {
+                    "date": 1643828262403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,19 @@\n   const handleDelete = async () => {\n     setIsLoading(true);\n \n     try {\n-      const result = await deleteRequest(`/${path}`, `/${item.id}`);\n+      await deleteRequest(`/${path}`, `/${item.id}`);\n \n-      if (result.status === 200) {\n-        setTimeout(() => {\n-          setIsLoading(false);\n-          handleClose();\n-        }, 1000);\n-      }\n+      setIsLoading(false);\n+      handleClose();\n+\n+      // if (result.status === 200 || result.status === 201 ) {\n+      //   setTimeout(() => {\n+      //     setIsLoading(false);\n+      //     handleClose();\n+      //   }, 1000);\n+      // }\n     } catch (error) {\n       onDeleteMessage('Грешка при бришење на артиклот.');\n     }\n   };\n"
+                },
+                {
+                    "date": 1643828279331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,11 @@\n       //     handleClose();\n       //   }, 1000);\n       // }\n     } catch (error) {\n+      setIsLoading(false);\n       onDeleteMessage('Грешка при бришење на артиклот.');\n+      handleClose();\n     }\n   };\n \n   return (\n"
+                },
+                {
+                    "date": 1643828303097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n       // }\n     } catch (error) {\n       setIsLoading(false);\n       onDeleteMessage('Грешка при бришење на артиклот.');\n-      handleClose();\n     }\n   };\n \n   return (\n"
+                },
+                {
+                    "date": 1643828326245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,19 +16,16 @@\n   const handleDelete = async () => {\n     setIsLoading(true);\n \n     try {\n-      await deleteRequest(`/${path}`, `/${item.id}`);\n+      const result = await deleteRequest(`/${path}`, `/${item.id}`);\n \n-      setIsLoading(false);\n-      handleClose();\n-\n-      // if (result.status === 200 || result.status === 201 ) {\n-      //   setTimeout(() => {\n-      //     setIsLoading(false);\n-      //     handleClose();\n-      //   }, 1000);\n-      // }\n+      if (result.status === 200 || result.status === 201) {\n+        setTimeout(() => {\n+          setIsLoading(false);\n+          handleClose();\n+        }, 1000);\n+      }\n     } catch (error) {\n       setIsLoading(false);\n       onDeleteMessage('Грешка при бришење на артиклот.');\n     }\n"
+                },
+                {
+                    "date": 1643828381311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n           handleClose();\n         }, 1000);\n       }\n     } catch (error) {\n+      console.log('ON CATCH Error ', error);\n       setIsLoading(false);\n       onDeleteMessage('Грешка при бришење на артиклот.');\n     }\n   };\n"
+                },
+                {
+                    "date": 1643828405032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,17 +18,15 @@\n \n     try {\n       const result = await deleteRequest(`/${path}`, `/${item.id}`);\n \n-      if (result.status === 200 || result.status === 201) {\n+      if (result.status === 200 || result.status === 201 ) {\n         setTimeout(() => {\n           setIsLoading(false);\n           handleClose();\n         }, 1000);\n       }\n     } catch (error) {\n-      console.log('ON CATCH Error ', error);\n-      setIsLoading(false);\n       onDeleteMessage('Грешка при бришење на артиклот.');\n     }\n   };\n \n"
+                },
+                {
+                    "date": 1643828443633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,20 +14,19 @@\n   const [isLoading, setIsLoading] = useState(false);\n \n   const handleDelete = async () => {\n     setIsLoading(true);\n+    const result = await deleteRequest(`/${path}`, `/${item.id}`);\n \n-    try {\n-      const result = await deleteRequest(`/${path}`, `/${item.id}`);\n-\n-      if (result.status === 200 || result.status === 201 ) {\n-        setTimeout(() => {\n-          setIsLoading(false);\n-          handleClose();\n-        }, 1000);\n-      }\n-    } catch (error) {\n+    if (result.status === 200) {\n+      setTimeout(() => {\n+        setIsLoading(false);\n+        handleClose();\n+      }, 1000);\n+    } else {\n       onDeleteMessage('Грешка при бришење на артиклот.');\n+      setIsLoading(false);\n+      handleClose();\n     }\n   };\n \n   return (\n"
+                },
+                {
+                    "date": 1643828459878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,13 @@\n         setIsLoading(false);\n         handleClose();\n       }, 1000);\n     } else {\n-      onDeleteMessage('Грешка при бришење на артиклот.');\n-      setIsLoading(false);\n-      handleClose();\n+      setTimeout(() => {\n+        onDeleteMessage('Грешка при бришење на артиклот.');\n+        setIsLoading(false);\n+        handleClose();\n+      }, 1000);\n     }\n   };\n \n   return (\n"
+                },
+                {
+                    "date": 1643828797760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,15 @@\n     const result = await deleteRequest(`/${path}`, `/${item.id}`);\n \n     if (result.status === 200) {\n       setTimeout(() => {\n+        onDeleteMessage('Артиклот е успешно избришан.', 1);\n         setIsLoading(false);\n         handleClose();\n       }, 1000);\n     } else {\n       setTimeout(() => {\n-        onDeleteMessage('Грешка при бришење на артиклот.');\n+        onDeleteMessage('Грешка при бришење на артиклот.', 0);\n         setIsLoading(false);\n         handleClose();\n       }, 1000);\n     }\n"
+                }
+            ],
+            "date": 1643827975493,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\nimport Button from '@material-ui/core/Button';\nimport Dialog from '@material-ui/core/Dialog';\nimport DialogActions from '@material-ui/core/DialogActions';\nimport DialogContent from '@material-ui/core/DialogContent';\nimport DialogContentText from '@material-ui/core/DialogContentText';\nimport DialogTitle from '@material-ui/core/DialogTitle';\nimport CircularProgress from '@material-ui/core/CircularProgress';\n\nimport { deleteRequest } from '../../services/httpService';\n\nconst ConfirmationDialog = (props) => {\n  const { open, handleClose, item, text, path, onDeleteMessage } = props;\n  const [isLoading, setIsLoading] = useState(false);\n\n  const handleDelete = async () => {\n    setIsLoading(true);\n    const result = await deleteRequest(`/${path}`, `/${item.id}`);\n\n    if (\n      result.status !== 200 ||\n      result.status !== 201 ||\n      result.status !== 202 ||\n      result.status !== 203 ||\n      result.status !== 204\n    ) {\n      onDeleteMessage('Грешка при бришење на артиклот.');\n    }\n\n    if (result.status === 200) {\n      setTimeout(() => {\n        setIsLoading(false);\n        handleClose();\n      }, 1000);\n    }\n  };\n\n  return (\n    <Dialog\n      open={open}\n      onClose={() => handleClose()}\n      aria-labelledby='draggable-dialog-title'\n    >\n      <DialogTitle style={{ cursor: 'move' }} id='draggable-dialog-title'>\n        {text}\n      </DialogTitle>\n      <DialogContent>\n        <DialogContentText>{item.ime}</DialogContentText>\n      </DialogContent>\n      <DialogActions>\n        {isLoading ? (\n          <div style={{ marginRight: 230, marginBottom: 10 }}>\n            <CircularProgress color='secondary' />\n          </div>\n        ) : (\n          <div>\n            <Button autoFocus onClick={() => handleClose()} color='primary'>\n              NE\n            </Button>\n            <Button\n              onClick={() => handleDelete()}\n              color='primary'\n              variant='contained'\n              style={{ backgroundColor: '#f44336' }}\n            >\n              DA\n            </Button>\n          </div>\n        )}\n      </DialogActions>\n    </Dialog>\n  );\n};\n\nexport default ConfirmationDialog;\n"
+        }
+    ]
+}

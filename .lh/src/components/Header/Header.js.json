@@ -1,0 +1,238 @@
+{
+    "sourceFile": "src/components/Header/Header.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 55,
+            "patches": [
+                {
+                    "date": 1640272104579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640272109824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.primary.main,\n+    background: theme.palette.primary.light,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640272117247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.primary.light,\n+    // background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640272136189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    // background: theme.palette.primary.contrastText,\n+    background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.primary.main,\n+    color: theme.palette.primary.dark,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272150071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.primary.dark,\n+    color: theme.palette.primary[800],\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272167934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.primary[800],\n+    color: theme.palette.primary[200],\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272175644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.primary[200],\n+    color: theme.palette.primary.dark,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272181669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.primary.dark,\n+    color: theme.palette.secondary[800],\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272204761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.secondary[800],\n+    color: theme.palette.secondary.main,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272213249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.secondary.main,\n+    color: theme.palette.secondary.dark,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272276733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n             <Typography variant='body2' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='primary' type='button' fullWidth onClick={logout}>\n+          <Button color='secondary' type='button' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n@@ -131,9 +131,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.secondary.dark,\n+    color: theme.palette.secondary[800],\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640272285478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n             <Typography variant='body2' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary' type='button' fullWidth onClick={logout}>\n+          <Button color='secondary[800]' type='button' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640272293338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n             <Typography variant='body2' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary[800]' type='button' fullWidth onClick={logout}>\n+          <Button color='secondary.dark' type='button' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640272300097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n             <Typography variant='body2' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary.dark' type='button' fullWidth onClick={logout}>\n+          <Button color='primary' type='button' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640275593651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import IconButton from '@material-ui/core/IconButton';\n import MenuIcon from '@material-ui/icons/Menu';\n import Button from '@material-ui/core/Button';\n \n-const drawerWidth = 240;\n+const drawerWidth = 260;\n \n const Header = (props) => {\n   const classes = useStyles();\n   const history = useHistory();\n@@ -90,9 +90,9 @@\n             <Typography variant='body2' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='primary' type='button' fullWidth onClick={logout}>\n+          <Button color='secondary' type='button' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640277692744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,16 @@\n         </Typography>\n       );\n     }\n \n+    if (location.pathname === '/artikli') {\n+      return (\n+        <Typography variant='h6' noWrap className={classes.textColor}>\n+          Артикли\n+        </Typography>\n+      );\n+    }\n+\n     return (\n       <Typography variant='h6' noWrap className={classes.textColor}>\n         Magacin Web App\n       </Typography>\n"
+                },
+                {
+                    "date": 1640360271353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.secondary[800],\n+    color: theme.palette.text.primary,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360279643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.text.primary,\n+    color: theme.palette.text.secondary,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360287161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.text.secondary,\n+    color: theme.palette.text.primary,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360312002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n           <RenderTitle />\n         </div>\n         <div className={classes.toolbarRightSide}>\n           <div className={classes.username}>\n-            <Typography variant='body2' noWrap className={classes.textColor}>\n+            <Typography variant='subtitle1' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n           <Button color='secondary' type='button' fullWidth onClick={logout}>\n"
+                },
+                {
+                    "date": 1640360331089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n             <Typography variant='subtitle1' noWrap className={classes.textColor}>\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary' type='button' fullWidth onClick={logout}>\n+          <Button color='secondary' type='button' variant='subtitle1' fullWidth onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640360352280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,14 +94,24 @@\n           <RenderTitle />\n         </div>\n         <div className={classes.toolbarRightSide}>\n           <div className={classes.username}>\n-            <Typography variant='subtitle1' noWrap className={classes.textColor}>\n+            <Typography\n+              variant='subtitle1'\n+              noWrap\n+              className={classes.textColor}\n+            >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary' type='button' variant='subtitle1' fullWidth onClick={logout}>\n-            Logout\n+          <Button color='secondary' type='button' fullWidth onClick={logout}>\n+            <Typography\n+              variant='subtitle1'\n+              noWrap\n+              className={classes.textColor}\n+            >\n+              Logout\n+            </Typography>\n           </Button>\n         </div>\n       </Toolbar>\n     </AppBar>\n"
+                },
+                {
+                    "date": 1640360357821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             </Typography>\n           </div>\n           <Button color='secondary' type='button' fullWidth onClick={logout}>\n             <Typography\n-              variant='subtitle1'\n+              variant='subtitle2'\n               noWrap\n               className={classes.textColor}\n             >\n               Logout\n"
+                },
+                {
+                    "date": 1640360367154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             </Typography>\n           </div>\n           <Button color='secondary' type='button' fullWidth onClick={logout}>\n             <Typography\n-              variant='subtitle2'\n+              variant='h6'\n               noWrap\n               className={classes.textColor}\n             >\n               Logout\n"
+                },
+                {
+                    "date": 1640360383564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,11 +104,10 @@\n             </Typography>\n           </div>\n           <Button color='secondary' type='button' fullWidth onClick={logout}>\n             <Typography\n-              variant='h6'\n+              variant='subtitle1'\n               noWrap\n-              className={classes.textColor}\n             >\n               Logout\n             </Typography>\n           </Button>\n"
+                },
+                {
+                    "date": 1640360389308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,12 +102,13 @@\n             >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button color='secondary' type='button' fullWidth onClick={logout}>\n+          <Button type='button' fullWidth onClick={logout}>\n             <Typography\n               variant='subtitle1'\n               noWrap\n+              className={classes.textColor}\n             >\n               Logout\n             </Typography>\n           </Button>\n"
+                },
+                {
+                    "date": 1640360397870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,15 +103,9 @@\n               Hello {username}\n             </Typography>\n           </div>\n           <Button type='button' fullWidth onClick={logout}>\n-            <Typography\n-              variant='subtitle1'\n-              noWrap\n-              className={classes.textColor}\n-            >\n-              Logout\n-            </Typography>\n+            Logout\n           </Button>\n         </div>\n       </Toolbar>\n     </AppBar>\n"
+                },
+                {
+                    "date": 1640360423885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,9 +143,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.text.primary,\n+    // color: theme.palette.text.primary,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360456175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,9 +143,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    // color: theme.palette.text.primary,\n+    color: theme.palette.text.primary,\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n@@ -153,8 +153,9 @@\n     alignItems: 'center',\n   },\n   username: {\n     marginRight: 20,\n+    fontWeight: theme.typography.fontWeightBold\n   },\n }));\n \n export default Header;\n"
+                },
+                {
+                    "date": 1640360461925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,9 +153,9 @@\n     alignItems: 'center',\n   },\n   username: {\n     marginRight: 20,\n-    fontWeight: theme.typography.fontWeightBold\n+    fontWeight: theme.typography.fontWeightLight\n   },\n }));\n \n export default Header;\n"
+                },
+                {
+                    "date": 1640360481993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,9 +153,8 @@\n     alignItems: 'center',\n   },\n   username: {\n     marginRight: 20,\n-    fontWeight: theme.typography.fontWeightLight\n   },\n }));\n \n export default Header;\n"
+                },
+                {
+                    "date": 1640360491564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -144,8 +144,9 @@\n     display: 'none',\n   },\n   textColor: {\n     color: theme.palette.text.primary,\n+    fontWeight: theme.typography.fontWeightLight\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360501449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -144,9 +144,9 @@\n     display: 'none',\n   },\n   textColor: {\n     color: theme.palette.text.primary,\n-    fontWeight: theme.typography.fontWeightLight\n+    fontWeight: theme.typography.fontWeightMedium\n   },\n   toolbarRightSide: {\n     display: 'flex',\n     flexDirection: 'row',\n"
+                },
+                {
+                    "date": 1640360517774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -143,9 +143,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.text.primary,\n+    color: theme.palette.text.secondary,\n     fontWeight: theme.typography.fontWeightMedium\n   },\n   toolbarRightSide: {\n     display: 'flex',\n"
+                },
+                {
+                    "date": 1640360585395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,12 +113,12 @@\n };\n \n const useStyles = makeStyles((theme) => ({\n   appBar: {\n-    transition: theme.transitions.create(['margin', 'width'], {\n-      easing: theme.transitions.easing.sharp,\n-      duration: theme.transitions.duration.leavingScreen,\n-    }),\n+    // transition: theme.transitions.create(['margin', 'width'], {\n+    //   easing: theme.transitions.easing.sharp,\n+    //   duration: theme.transitions.duration.leavingScreen,\n+    // }),\n     background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n@@ -143,9 +143,9 @@\n   hide: {\n     display: 'none',\n   },\n   textColor: {\n-    color: theme.palette.text.secondary,\n+    color: theme.palette.text.primary,\n     fontWeight: theme.typography.fontWeightMedium\n   },\n   toolbarRightSide: {\n     display: 'flex',\n"
+                },
+                {
+                    "date": 1640360594528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,12 +113,12 @@\n };\n \n const useStyles = makeStyles((theme) => ({\n   appBar: {\n-    // transition: theme.transitions.create(['margin', 'width'], {\n-    //   easing: theme.transitions.easing.sharp,\n-    //   duration: theme.transitions.duration.leavingScreen,\n-    // }),\n+    transition: theme.transitions.create(['margin', 'width'], {\n+      easing: theme.transitions.easing.sharp,\n+      duration: theme.transitions.duration.leavingScreen,\n+    }),\n     background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n"
+                },
+                {
+                    "date": 1640360603802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.primary.contrastText,\n+    // background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360612998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    // background: theme.palette.primary.contrastText,\n+    background: theme.palette.primary.light,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360627724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.primary.light,\n+    background: theme.palette.orange.light,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360635654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.orange.light,\n+    background: theme.palette.orange[200],\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360641327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.orange[200],\n+    background: theme.palette.secondary.light,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360660918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,9 +117,9 @@\n     transition: theme.transitions.create(['margin', 'width'], {\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n-    background: theme.palette.secondary.light,\n+    background: theme.palette.primary.contrastText,\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360679392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,8 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n+    boxShadow: 'none'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360698492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: 'none'\n+    boxShadow: '10px 0 10px 0'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360708081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: '10px 0 10px 0'\n+    boxShadow: '1px 0 1px 0 black'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360715137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: '1px 0 1px 0 black'\n+    boxShadow: '2px black'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360720577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: '2px black'\n+    boxShadow: '1px black'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360731633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: '1px black'\n+    boxShadow: '12px secondary'\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360748643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: '12px secondary'\n+    boxShadow: 1\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360754705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: 1\n+    boxShadow: 121\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360773176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,8 @@\n       easing: theme.transitions.easing.sharp,\n       duration: theme.transitions.duration.leavingScreen,\n     }),\n     background: theme.palette.primary.contrastText,\n-    boxShadow: 121\n   },\n   appBarShift: {\n     width: `calc(100% - ${drawerWidth}px)`,\n     marginLeft: drawerWidth,\n"
+                },
+                {
+                    "date": 1640360800173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,8 +66,16 @@\n         </Typography>\n       );\n     }\n \n+    if (location.pathname === '/home') {\n+      return (\n+        <Typography variant='h6' noWrap className={classes.textColor}>\n+          Dashboard\n+        </Typography>\n+      );\n+    }\n+\n     return (\n       <Typography variant='h6' noWrap className={classes.textColor}>\n         Magacin Web App\n       </Typography>\n"
+                },
+                {
+                    "date": 1640362699194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n             >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button type='button' fullWidth onClick={logout}>\n+          <Button type='button' fullWidth variant='outlined' onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640362709928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n             >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button type='button' fullWidth variant='outlined' onClick={logout}>\n+          <Button type='button' fullWidth variant='text' onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640362715611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n             >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button type='button' fullWidth variant='text' onClick={logout}>\n+          <Button type='button' fullWidth variant='container' onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                },
+                {
+                    "date": 1640362730160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n             >\n               Hello {username}\n             </Typography>\n           </div>\n-          <Button type='button' fullWidth variant='container' onClick={logout}>\n+          <Button type='button' fullWidth variant='outlined' onClick={logout}>\n             Logout\n           </Button>\n         </div>\n       </Toolbar>\n"
+                }
+            ],
+            "date": 1640272104579,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\nimport { useHistory, useLocation } from 'react-router-dom';\nimport clsx from 'clsx';\nimport { makeStyles } from '@material-ui/core/styles';\nimport AppBar from '@material-ui/core/AppBar';\nimport Toolbar from '@material-ui/core/Toolbar';\nimport Typography from '@material-ui/core/Typography';\nimport IconButton from '@material-ui/core/IconButton';\nimport MenuIcon from '@material-ui/icons/Menu';\nimport Button from '@material-ui/core/Button';\n\nconst drawerWidth = 240;\n\nconst Header = (props) => {\n  const classes = useStyles();\n  const history = useHistory();\n  const location = useLocation();\n\n  const { openSidebar, open } = props;\n\n  const [username, setUsername] = useState(localStorage.getItem('username'));\n\n  const redirectToLogin = () => {\n    let path = '/';\n    history.replace(path);\n  };\n\n  const logout = () => {\n    localStorage.removeItem('token');\n    localStorage.removeItem('username');\n    localStorage.removeItem('firstName');\n    localStorage.removeItem('lastName');\n    redirectToLogin();\n    // setUsername(''); // to be deleted!\n  };\n\n  const RenderTitle = () => {\n    if (location.pathname === '/naracki') {\n      return (\n        <Typography variant='h6' noWrap className={classes.textColor}>\n          Нарачки\n        </Typography>\n      );\n    }\n\n    if (location.pathname === '/partneri') {\n      return (\n        <Typography variant='h6' noWrap className={classes.textColor}>\n          Деловни Партнери\n        </Typography>\n      );\n    }\n\n    if (location.pathname === '/grupi') {\n      return (\n        <Typography variant='h6' noWrap className={classes.textColor}>\n          Групи\n        </Typography>\n      );\n    }\n\n    return (\n      <Typography variant='h6' noWrap className={classes.textColor}>\n        Magacin Web App\n      </Typography>\n    );\n  };\n\n  return (\n    <AppBar\n      position='fixed'\n      className={clsx(classes.appBar, {\n        [classes.appBarShift]: open,\n      })}\n    >\n      <Toolbar className={classes.toolbarContainer}>\n        <div className={classes.toolbarLeftSide}>\n          <IconButton\n            aria-label='open drawer'\n            onClick={openSidebar}\n            edge='start'\n            className={clsx(classes.menuButton, open && classes.hide)}\n          >\n            <MenuIcon />\n          </IconButton>\n          <RenderTitle />\n        </div>\n        <div className={classes.toolbarRightSide}>\n          <div className={classes.username}>\n            <Typography variant='body2' noWrap className={classes.textColor}>\n              Hello {username}\n            </Typography>\n          </div>\n          <Button color='primary' type='button' fullWidth onClick={logout}>\n            Logout\n          </Button>\n        </div>\n      </Toolbar>\n    </AppBar>\n  );\n};\n\nconst useStyles = makeStyles((theme) => ({\n  appBar: {\n    transition: theme.transitions.create(['margin', 'width'], {\n      easing: theme.transitions.easing.sharp,\n      duration: theme.transitions.duration.leavingScreen,\n    }),\n    background: theme.palette.primary.main,\n  },\n  appBarShift: {\n    width: `calc(100% - ${drawerWidth}px)`,\n    marginLeft: drawerWidth,\n    transition: theme.transitions.create(['margin', 'width'], {\n      easing: theme.transitions.easing.easeOut,\n      duration: theme.transitions.duration.enteringScreen,\n    }),\n  },\n  toolbarContainer: {\n    display: 'flex',\n    justifyContent: 'space-between',\n  },\n  toolbarLeftSide: {\n    display: 'flex',\n    flexDirection: 'row',\n    alignItems: 'center',\n  },\n  menuButton: {\n    marginRight: theme.spacing(2),\n  },\n  hide: {\n    display: 'none',\n  },\n  textColor: {\n    color: theme.palette.primary.main,\n  },\n  toolbarRightSide: {\n    display: 'flex',\n    flexDirection: 'row',\n    justifyContent: 'space-between',\n    alignItems: 'center',\n  },\n  username: {\n    marginRight: 20,\n  },\n}));\n\nexport default Header;\n"
+        }
+    ]
+}

@@ -1,0 +1,322 @@
+{
+    "sourceFile": "src/components/Dashboard/CardStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 76,
+            "patches": [
+                {
+                    "date": 1640302948667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640303034848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    width: '100%',\n-    overflow: 'auto',\n-    marginTop: theme.spacing(3),\n+    border: '1px solid',\n+    borderColor: theme.palette.primary[200] + 75,\n+    ':hover': {\n+      boxShadow: '0 2px 14px 0 rgb(32 40 45 / 8%)',\n+    },\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640303144139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,41 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    border: '1px solid',\n-    borderColor: theme.palette.primary[200] + 75,\n-    ':hover': {\n-      boxShadow: '0 2px 14px 0 rgb(32 40 45 / 8%)',\n+    backgroundColor: theme.palette.secondary.dark,\n+    color: '#fff',\n+    overflow: 'hidden',\n+    position: 'relative',\n+    '&:after': {\n+        content: '\"\"',\n+        position: 'absolute',\n+        width: 210,\n+        height: 210,\n+        background: theme.palette.secondary[800],\n+        borderRadius: '50%',\n+        top: -85,\n+        right: -95,\n+        [theme.breakpoints.down('sm')]: {\n+            top: -105,\n+            right: -140\n+        }\n     },\n+    '&:before': {\n+        content: '\"\"',\n+        position: 'absolute',\n+        width: 210,\n+        height: 210,\n+        background: theme.palette.secondary[800],\n+        borderRadius: '50%',\n+        top: -125,\n+        right: -15,\n+        opacity: 0.5,\n+        [theme.breakpoints.down('sm')]: {\n+            top: -155,\n+            right: -70\n+        }\n+    }\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304523955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,7 +35,11 @@\n             right: -70\n         }\n     }\n   },\n+  content: {\n+      justifyContent: 'flex-end',\n+      alignItems: 'flex-end'\n+  }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304533386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,40 +6,41 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     '&:after': {\n-        content: '\"\"',\n-        position: 'absolute',\n-        width: 210,\n-        height: 210,\n-        background: theme.palette.secondary[800],\n-        borderRadius: '50%',\n-        top: -85,\n-        right: -95,\n-        [theme.breakpoints.down('sm')]: {\n-            top: -105,\n-            right: -140\n-        }\n+      content: '\"\"',\n+      position: 'absolute',\n+      width: 210,\n+      height: 210,\n+      background: theme.palette.secondary[800],\n+      borderRadius: '50%',\n+      top: -85,\n+      right: -95,\n+      [theme.breakpoints.down('sm')]: {\n+        top: -105,\n+        right: -140,\n+      },\n     },\n     '&:before': {\n-        content: '\"\"',\n-        position: 'absolute',\n-        width: 210,\n-        height: 210,\n-        background: theme.palette.secondary[800],\n-        borderRadius: '50%',\n-        top: -125,\n-        right: -15,\n-        opacity: 0.5,\n-        [theme.breakpoints.down('sm')]: {\n-            top: -155,\n-            right: -70\n-        }\n-    }\n+      content: '\"\"',\n+      position: 'absolute',\n+      width: 210,\n+      height: 210,\n+      background: theme.palette.secondary[800],\n+      borderRadius: '50%',\n+      top: -125,\n+      right: -15,\n+      opacity: 0.5,\n+      [theme.breakpoints.down('sm')]: {\n+        top: -155,\n+        right: -70,\n+      },\n+    },\n   },\n   content: {\n-      justifyContent: 'flex-end',\n-      alignItems: 'flex-end'\n-  }\n+    display: 'flex',\n+    justifyContent: 'flex-end',\n+    alignItems: 'flex-end',\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304539646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n     },\n   },\n   content: {\n     display: 'flex',\n+    flex: 1,\n     justifyContent: 'flex-end',\n     alignItems: 'flex-end',\n   },\n }));\n"
+                },
+                {
+                    "date": 1640304553563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n   },\n   content: {\n     display: 'flex',\n     flex: 1,\n+    flexDirection: 'row',\n     justifyContent: 'flex-end',\n     alignItems: 'flex-end',\n   },\n }));\n"
+                },
+                {
+                    "date": 1640304561264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,10 @@\n   },\n   content: {\n     display: 'flex',\n     flex: 1,\n-    flexDirection: 'row',\n-    justifyContent: 'flex-end',\n+    flexDirection: 'column',\n+    justifyContent: 'flex-start',\n     alignItems: 'flex-end',\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640304583348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n+    minHeight: 200,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n@@ -39,10 +40,10 @@\n   content: {\n     display: 'flex',\n     flex: 1,\n     flexDirection: 'column',\n-    justifyContent: 'flex-start',\n-    alignItems: 'flex-end',\n+    justifyContent: 'flex-end',\n+    alignItems: 'flex-start',\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304589558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    minHeight: 200,\n+    minHeight: 120,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640304598054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    minHeight: 120,\n+    minHeight: 170,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640304604688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     display: 'flex',\n     flex: 1,\n     flexDirection: 'column',\n     justifyContent: 'flex-end',\n-    alignItems: 'flex-start',\n+    alignItems: 'flex-end',\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304613649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,10 @@\n   content: {\n     display: 'flex',\n     flex: 1,\n     flexDirection: 'column',\n-    justifyContent: 'flex-end',\n-    alignItems: 'flex-end',\n+    justifyContent: 'center',\n+    alignItems: 'flex-start',\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640304633043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,14 +36,7 @@\n         right: -70,\n       },\n     },\n   },\n-  content: {\n-    display: 'flex',\n-    flex: 1,\n-    flexDirection: 'column',\n-    justifyContent: 'center',\n-    alignItems: 'flex-start',\n-  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352373180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,10 @@\n         right: -70,\n       },\n     },\n   },\n+  content: {\n+      margin: 'auto'\n+  }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352384797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n       },\n     },\n   },\n   content: {\n-      margin: 'auto'\n+      marginTop: 'auto'\n   }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352396615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n       },\n     },\n   },\n   content: {\n-      marginTop: 'auto'\n+      marginTop: 80\n   }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352403170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n       },\n     },\n   },\n   content: {\n-      marginTop: 80\n+      marginTop: 50\n   }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352486968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,10 +36,7 @@\n         right: -70,\n       },\n     },\n   },\n-  content: {\n-      marginTop: 50\n-  }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352493604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    minHeight: 170,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352506201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n+    padding: theme.spacing(3)\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352515111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(3)\n+    padding: theme.spacing(1),\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352522592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(1),\n+    padding: theme.spacing(3),\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352696055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(3),\n+    padding: theme.spacing(1),\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n@@ -36,7 +36,10 @@\n         right: -70,\n       },\n     },\n   },\n+  title: {\n+      fontSize: 18\n+  }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352709106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n       },\n     },\n   },\n   title: {\n-      fontSize: 18\n+      fontWeight: 'bold'\n   }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352768351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n+    borderRadius: '50%',\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352777146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n-    borderRadius: '50%',\n+    borderRadius: 0,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352783436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n-    borderRadius: 0,\n+    borderRadius: 15,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352789429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n-    borderRadius: 15,\n+    borderRadius: 5,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352796996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n-    borderRadius: 5,\n+    borderRadius: 15,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640352912426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n-    borderRadius: 15,\n+    borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n@@ -37,9 +37,9 @@\n         right: -70,\n       },\n     },\n   },\n-  title: {\n+  name: {\n       fontWeight: 'bold'\n   }\n }));\n \n"
+                },
+                {
+                    "date": 1640352933732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,11 @@\n         right: -70,\n       },\n     },\n   },\n+  value: {\n+      fontWeight: theme.typography.fontWeightLight\n+  },\n   name: {\n       fontWeight: 'bold'\n   }\n }));\n"
+                },
+                {
+                    "date": 1640352938953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-      fontWeight: theme.typography.fontWeightLight\n+      fontWeight: theme.typography.fontWeightMedium\n   },\n   name: {\n       fontWeight: 'bold'\n   }\n"
+                },
+                {
+                    "date": 1640352948392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,12 +38,12 @@\n       },\n     },\n   },\n   value: {\n-      fontWeight: theme.typography.fontWeightMedium\n+      fontWeight: theme.typography.fontWeightBold\n   },\n   name: {\n-      fontWeight: 'bold'\n+      fontWeight: theme.typography.fontWeightBold\n   }\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352971609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,12 +38,13 @@\n       },\n     },\n   },\n   value: {\n-      fontWeight: theme.typography.fontWeightBold\n+    fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n-      fontWeight: theme.typography.fontWeightBold\n-  }\n+    fontWeight: theme.typography.fontWeightBold,\n+    color: theme.palette.text.primary\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640352984437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n-    color: theme.palette.text.primary\n+    color: theme.palette.text.contrastText\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640353016463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,13 +38,13 @@\n       },\n     },\n   },\n   value: {\n+      fontSize: 18\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n-    color: theme.palette.text.contrastText\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640353021675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-      fontSize: 18\n+    // fontSize: 18,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353028792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    // fontSize: 18,\n+    fontSize: 18,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353036718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    fontSize: 18,\n+    // fontSize: 24,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353042591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    // fontSize: 24,\n+    fontSize: 28,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353049666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    fontSize: 28,\n+    fontSize: 32,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353056251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    fontSize: 32,\n+    fontSize: 34,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353061733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       },\n     },\n   },\n   value: {\n-    fontSize: 34,\n+    fontSize: 36,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   name: {\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640353093565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,12 +38,12 @@\n       },\n     },\n   },\n   value: {\n-    fontSize: 36,\n+    fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n-  name: {\n+  type: {\n     fontWeight: theme.typography.fontWeightBold,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640353102669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,7 +44,10 @@\n   },\n   type: {\n     fontWeight: theme.typography.fontWeightBold,\n   },\n+  month: {\n+    opacity: 0.5,\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640353110791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   type: {\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   month: {\n-    opacity: 0.5,\n+    opacity: 0.9,\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640353319937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n-const useStyles = makeStyles((theme) => ({\n+const useStyles = makeStyles(({ theme, props }) => ({\n   card: {\n-    backgroundColor: theme.palette.secondary.dark,\n+    backgroundColor: props.bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n@@ -45,9 +45,9 @@\n   type: {\n     fontWeight: theme.typography.fontWeightBold,\n   },\n   month: {\n-    opacity: 0.9,\n+    opacity: 0.8,\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640353334146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n-const useStyles = makeStyles(({ theme, props }) => ({\n+const useStyles = makeStyles((theme, props) => ({\n   card: {\n     backgroundColor: props.bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n"
+                },
+                {
+                    "date": 1640353380793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n-const useStyles = makeStyles((theme, props) => ({\n+const useStyles = makeStyles((theme) => ({\n   card: {\n-    backgroundColor: props.bgColor,\n+    backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n"
+                },
+                {
+                    "date": 1640353389778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    backgroundColor: theme.palette.secondary.dark,\n+    // backgroundColor: theme.palette.secondary.dark,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n"
+                },
+                {
+                    "date": 1640353415355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n     // backgroundColor: theme.palette.secondary.dark,\n+    backgroundColor: (props) => props.bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n"
+                },
+                {
+                    "date": 1640353499716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    // backgroundColor: theme.palette.secondary.dark,\n     backgroundColor: (props) => props.bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n"
+                },
+                {
+                    "date": 1640353507451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: theme.palette.secondary[800],\n+    //   background: theme.palette.secondary[800],\n       borderRadius: '50%',\n       top: -85,\n       right: -95,\n       [theme.breakpoints.down('sm')]: {\n"
+                },
+                {
+                    "date": 1640353541881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-    //   background: theme.palette.secondary[800],\n+      background: (props) => props.bgColor,\n       borderRadius: '50%',\n       top: -85,\n       right: -95,\n       [theme.breakpoints.down('sm')]: {\n"
+                },
+                {
+                    "date": 1640353558380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: (props) => props.bgColor,\n+      background: (props) => props.bgAfter,\n       borderRadius: '50%',\n       top: -85,\n       right: -95,\n       [theme.breakpoints.down('sm')]: {\n@@ -26,9 +26,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: theme.palette.secondary[800],\n+      background: (props) => props.bgAfter,\n       borderRadius: '50%',\n       top: -125,\n       right: -15,\n       opacity: 0.5,\n"
+                },
+                {
+                    "date": 1640353687237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: (props) => props.bgAfter,\n+      background: ({ bgAfter }) => bgAfter,\n       borderRadius: '50%',\n       top: -125,\n       right: -15,\n       opacity: 0.5,\n"
+                },
+                {
+                    "date": 1640353710086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    backgroundColor: (props) => props.bgColor,\n+    backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n@@ -12,9 +12,9 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: (props) => props.bgAfter,\n+      background: ({ bgAfter }) => bgAfter,\n       borderRadius: '50%',\n       top: -85,\n       right: -95,\n       [theme.breakpoints.down('sm')]: {\n"
+                },
+                {
+                    "date": 1640353923147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n   },\n   type: {\n     fontWeight: theme.typography.fontWeightBold,\n   },\n-  month: {\n+  description: {\n     opacity: 0.8,\n   },\n }));\n \n"
+                },
+                {
+                    "date": 1640354970527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       position: 'absolute',\n       width: 210,\n       height: 210,\n       background: ({ bgAfter }) => bgAfter,\n-      borderRadius: '50%',\n+      borderRadius: '30%',\n       top: -125,\n       right: -15,\n       opacity: 0.5,\n       [theme.breakpoints.down('sm')]: {\n"
+                },
+                {
+                    "date": 1640354977444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       position: 'absolute',\n       width: 210,\n       height: 210,\n       background: ({ bgAfter }) => bgAfter,\n-      borderRadius: '30%',\n+      borderRadius: '50%',\n       top: -125,\n       right: -15,\n       opacity: 0.5,\n       [theme.breakpoints.down('sm')]: {\n"
+                },
+                {
+                    "date": 1640361424795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,7 +47,11 @@\n   },\n   description: {\n     opacity: 0.8,\n   },\n+  avatar: {\n+    backgroundColor: ({ avatarColor }) => avatarColor,\n+    color: theme.palette.primary.contrastText,\n+  },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640361665129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n+    marginBlock: 10\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640361674373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    marginBlock: 10\n+    // marginBottom: 10\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640361682784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    // marginBottom: 10\n+    marginBottom: 0\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640361936138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(1),\n+    // padding: theme.spacing(1),\n     borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n@@ -50,9 +50,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    marginBottom: 0\n+    marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640361947034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    // padding: theme.spacing(1),\n+    padding: theme.spacing(1),\n     borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n"
+                },
+                {
+                    "date": 1640361957148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    marginBottom: 5\n+    // marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640362047747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,11 @@\n         right: -70,\n       },\n     },\n   },\n+  cardHeader: {\n+    flexDirection: 'row'\n+  },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n@@ -50,9 +53,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    // marginBottom: 5\n+    marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640362060425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,10 @@\n       },\n     },\n   },\n   cardHeader: {\n-    flexDirection: 'row'\n+    display: 'flex',\n+    flexDirection: 'column'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640362085258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     },\n   },\n   cardHeader: {\n     display: 'flex',\n-    flexDirection: 'column'\n+    flexDirection: 'row'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n@@ -54,9 +54,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    marginBottom: 5\n+    // marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640362096126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     },\n   },\n   cardHeader: {\n     display: 'flex',\n-    flexDirection: 'row'\n+    // flexDirection: 'row'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n@@ -54,9 +54,9 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    // marginBottom: 5\n+    marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640362105042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     },\n   },\n   cardHeader: {\n     display: 'flex',\n-    // flexDirection: 'row'\n+    flexDirection: 'row'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640362129969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     },\n   },\n   cardHeader: {\n     display: 'flex',\n-    flexDirection: 'row'\n+    flexDirection: 'column'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n"
+                },
+                {
+                    "date": 1640362144792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     },\n   },\n   cardHeader: {\n     display: 'flex',\n-    flexDirection: 'column'\n+    flexDirection: 'row'\n   },\n   value: {\n     fontSize: 38,\n     fontWeight: theme.typography.fontWeightBold,\n@@ -54,9 +54,8 @@\n   },\n   avatar: {\n     backgroundColor: ({ avatarColor }) => avatarColor,\n     color: theme.palette.primary.contrastText,\n-    marginBottom: 5\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640819088698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(1),\n+    // padding: theme.spacing(1),\n     borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n"
+                },
+                {
+                    "date": 1640819097262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n     backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    // padding: theme.spacing(1),\n+    padding: theme.spacing(1),\n     borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n-      width: 210,\n-      height: 210,\n+      // width: 210,\n+      // height: 210,\n       background: ({ bgAfter }) => bgAfter,\n       borderRadius: '50%',\n       top: -85,\n       right: -95,\n"
+                }
+            ],
+            "date": 1640302948667,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  card: {\n    width: '100%',\n    overflow: 'auto',\n    marginTop: theme.spacing(3),\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

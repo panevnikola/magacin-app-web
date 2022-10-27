@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/Dashboard/IncomeCard/IncomeLoadingCardStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1640356590447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640356597575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.primary.dark,\n     color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: 12,\n+    padding: 2,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640356636327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n       right: -130,\n     },\n   },\n   list: {\n-    paddingTop: 0,\n-    paddingBottom: 0,\n+    padding: '0 10px 0 10px';\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356641750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       right: -130,\n     },\n   },\n   list: {\n-    padding: '0 10px 0 10px';\n+    padding: '0 10px 0 10px'\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356653116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n       right: -130,\n     },\n   },\n   list: {\n-    padding: '0 10px 0 10px'\n+    paddingTop: 0,\n+    paddingBottom: 0,\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356659918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n   },\n   list: {\n     paddingTop: 0,\n     paddingBottom: 0,\n+    paddingLeft: 10\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356665496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   },\n   list: {\n     paddingTop: 0,\n     paddingBottom: 0,\n-    paddingLeft: 10\n+    marginLeft: 10\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356673508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.primary.dark,\n     color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: 2,\n+    margin: 2,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n@@ -30,9 +30,8 @@\n   },\n   list: {\n     paddingTop: 0,\n     paddingBottom: 0,\n-    marginLeft: 10\n   },\n }));\n \n export default useStyles;\n"
+                },
+                {
+                    "date": 1640356678610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.primary.dark,\n     color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n-    margin: 2,\n+    padding: 2,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640356684140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.primary.dark,\n     color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: 2,\n+    padding: 32,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n"
+                },
+                {
+                    "date": 1640356716702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     backgroundColor: theme.palette.primary.dark,\n     color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: 32,\n+    padding: 2,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n@@ -28,8 +28,9 @@\n       right: -130,\n     },\n   },\n   list: {\n+    paddingBlock: 20,\n     paddingTop: 0,\n     paddingBottom: 0,\n   },\n }));\n"
+                },
+                {
+                    "date": 1640356722211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       right: -130,\n     },\n   },\n   list: {\n-    paddingBlock: 20,\n+    paddingInline: 20,\n     paddingTop: 0,\n     paddingBottom: 0,\n   },\n }));\n"
+                }
+            ],
+            "date": 1640356590447,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  card: {\n    backgroundColor: theme.palette.primary.dark,\n    color: theme.palette.primary.light,\n    overflow: 'hidden',\n    position: 'relative',\n    padding: 12,\n    '&:after': {\n      content: '\"\"',\n      position: 'absolute',\n      width: 210,\n      height: 210,\n      background: `linear-gradient(210.04deg, ${theme.palette.primary[200]} -50.94%, rgba(144, 202, 249, 0) 83.49%)`,\n      borderRadius: '50%',\n      top: -30,\n      right: -180,\n    },\n    '&:before': {\n      content: '\"\"',\n      position: 'absolute',\n      width: 210,\n      height: 210,\n      background: `linear-gradient(140.9deg, ${theme.palette.primary[200]} -14.02%, rgba(144, 202, 249, 0) 77.58%)`,\n      borderRadius: '50%',\n      top: -160,\n      right: -130,\n    },\n  },\n  list: {\n    paddingTop: 0,\n    paddingBottom: 0,\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

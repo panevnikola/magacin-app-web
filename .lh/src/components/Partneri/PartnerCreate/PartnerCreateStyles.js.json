@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/components/Partneri/PartnerCreate/PartnerCreateStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1643125621381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643125626769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n-    padding: theme.spacing(6),\n+    padding: theme.spacing(10),\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125635769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     padding: theme.spacing(10),\n   },\n   card: {\n     flexGrow: 1,\n-    padding: theme.spacing(8),\n-    margin: theme.spacing(8),\n+    // padding: theme.spacing(8),\n+    // margin: theme.spacing(8),\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125641623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n-    padding: theme.spacing(10),\n+    padding: theme.spacing(12),\n   },\n   card: {\n     flexGrow: 1,\n-    // padding: theme.spacing(8),\n-    // margin: theme.spacing(8),\n+    padding: theme.spacing(8),\n+    margin: theme.spacing(8),\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125650180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n-    padding: theme.spacing(12),\n+    padding: theme.spacing(2),\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125655815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     padding: theme.spacing(2),\n   },\n   card: {\n     flexGrow: 1,\n-    padding: theme.spacing(8),\n+    padding: theme.spacing(18),\n     margin: theme.spacing(8),\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n"
+                },
+                {
+                    "date": 1643125663199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n-    padding: theme.spacing(2),\n+    padding: theme.spacing(4),\n   },\n   card: {\n     flexGrow: 1,\n-    padding: theme.spacing(18),\n+    padding: theme.spacing(8),\n     margin: theme.spacing(8),\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n"
+                },
+                {
+                    "date": 1643125688470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n-    padding: theme.spacing(4),\n+    padding: theme.spacing(2),\n+    margin: '70px 50px'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125695103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    margin: '70px 50px'\n+    margin: '70px 100px'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125710159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    margin: '70px 100px'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125716021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n+    width: 600\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125721655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    width: 600\n+    width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125734747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n+    display: 'flex'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125740523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    display: 'flex'\n+    display: 'flex',\n+    justifyContent: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125746533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n     display: 'flex',\n-    justifyContent: 'center'\n+    alignItems: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125757113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n     display: 'flex',\n-    alignItems: 'center'\n+    flexDirection: 'row',\n+    justifyContent: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n"
+                },
+                {
+                    "date": 1643125763681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n     display: 'flex',\n-    flexDirection: 'row',\n+    flexDirection: 'column',\n     justifyContent: 'center'\n   },\n   card: {\n     flexGrow: 1,\n"
+                },
+                {
+                    "date": 1643125775540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,16 @@\n     marginTop: 70,\n     padding: theme.spacing(2),\n     display: 'flex',\n     flexDirection: 'column',\n-    justifyContent: 'center'\n+    justifyContent: 'center',\n+    alignItems: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    width: 1000\n+    // width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125790396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    // width: 1000\n+    width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125813345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    width: 1000\n+    maxWidth: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125828072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    maxWidth: 1000\n+    width: 1200\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125849702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,18 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    display: 'flex',\n-    flexDirection: 'column',\n-    justifyContent: 'center',\n-    alignItems: 'center'\n+    // display: 'flex',\n+    // flexDirection: 'column',\n+    // justifyContent: 'center',\n+    // alignItems: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    width: 1200\n+    // width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125858704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n+    alignSelf: 'center'\n     // width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n"
+                },
+                {
+                    "date": 1643125863950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    alignSelf: 'center'\n-    // width: 1000\n+    alignSelf: 'center',\n+    width: 1000\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125872095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n+    display: 'flex',\n     alignSelf: 'center',\n     width: 1000\n   },\n   inputField: {\n"
+                },
+                {
+                    "date": 1643125878319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    display: 'flex',\n     alignSelf: 'center',\n     width: 1000\n   },\n   inputField: {\n"
+                },
+                {
+                    "date": 1643125885147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    // display: 'flex',\n+    display: 'flex',\n     // flexDirection: 'column',\n     // justifyContent: 'center',\n     // alignItems: 'center'\n   },\n"
+                },
+                {
+                    "date": 1643125900394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,17 @@\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n     display: 'flex',\n-    // flexDirection: 'column',\n+    flexDirection: 'column',\n     // justifyContent: 'center',\n     // alignItems: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n+    display: 'flex',\n     alignSelf: 'center',\n     width: 1000\n   },\n   inputField: {\n"
+                },
+                {
+                    "date": 1643125909665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    display: 'flex',\n     alignSelf: 'center',\n-    width: 1000\n+    width: 1000,\n+    margin: 'auto'\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125915625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n     alignSelf: 'center',\n     width: 1000,\n-    margin: 'auto'\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                },
+                {
+                    "date": 1643125939753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,13 @@\n const useStyles = makeStyles((theme) => ({\n   container: {\n     marginTop: 70,\n     padding: theme.spacing(2),\n-    display: 'flex',\n-    flexDirection: 'column',\n-    // justifyContent: 'center',\n-    // alignItems: 'center'\n   },\n   card: {\n     flexGrow: 1,\n     padding: theme.spacing(8),\n     margin: theme.spacing(8),\n-    alignSelf: 'center',\n-    width: 1000,\n   },\n   inputField: {\n     marginBottom: theme.spacing(3),\n   },\n"
+                }
+            ],
+            "date": 1643125621381,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  container: {\n    marginTop: 70,\n    padding: theme.spacing(6),\n  },\n  card: {\n    flexGrow: 1,\n    padding: theme.spacing(8),\n    margin: theme.spacing(8),\n  },\n  inputField: {\n    marginBottom: theme.spacing(3),\n  },\n  buttonSave: {\n    marginTop: theme.spacing(1),\n  },\n  buttonCancel: {\n    marginTop: theme.spacing(1),\n    marginLeft: theme.spacing(1),\n  },\n  buttons: {\n    // display: 'flex',\n    // justifyContent: 'space-between',\n  },\n  spinner: {\n    marginLeft: 160,\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

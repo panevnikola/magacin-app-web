@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/Dashboard/PopularCard/PopularCardStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1640818221722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640818450860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    backgroundColor: ({ bgColor }) => bgColor,\n+    // backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(1),\n"
+                },
+                {
+                    "date": 1640818988959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { makeStyles } from '@material-ui/core/styles';\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n-    // backgroundColor: ({ bgColor }) => bgColor,\n+    backgroundColor: ({ bgColor }) => bgColor,\n     color: '#fff',\n     overflow: 'hidden',\n     position: 'relative',\n-    padding: theme.spacing(1),\n+    padding: theme.spacing(2),\n     borderRadius: 10,\n     '&:after': {\n       content: '\"\"',\n       position: 'absolute',\n"
+                },
+                {
+                    "date": 1640819010208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const useStyles = makeStyles((theme) => ({\n   card: {\n     backgroundColor: ({ bgColor }) => bgColor,\n-    color: '#fff',\n+    color: theme.palette.primary.light,\n     overflow: 'hidden',\n     position: 'relative',\n     padding: theme.spacing(2),\n     borderRadius: 10,\n@@ -12,50 +12,46 @@\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: ({ bgAfter }) => bgAfter,\n+      background: ({ bgAfter }) => `linear-gradient(210.04deg, ${bgAfter} -50.94%, rgba(144, 202, 249, 0) 83.49%)`,\n       borderRadius: '50%',\n-      top: -85,\n-      right: -95,\n-      [theme.breakpoints.down('sm')]: {\n-        top: -105,\n-        right: -140,\n-      },\n+      top: -30,\n+      right: -180,\n     },\n     '&:before': {\n       content: '\"\"',\n       position: 'absolute',\n       width: 210,\n       height: 210,\n-      background: ({ bgAfter }) => bgAfter,\n+      background: ({ bgAfter }) => `linear-gradient(140.9deg, ${bgAfter} -14.02%, rgba(144, 202, 249, 0) 77.58%)`,\n       borderRadius: '50%',\n-      top: -125,\n-      right: -15,\n-      opacity: 0.5,\n-      [theme.breakpoints.down('sm')]: {\n-        top: -155,\n-        right: -70,\n-      },\n+      top: -160,\n+      right: -130,\n     },\n   },\n-  cardHeader: {\n-    display: 'flex',\n-    flexDirection: 'row',\n+  avatar: {\n+    backgroundColor: ({ avatarColor }) => avatarColor,\n+    color: theme.palette.primary.contrastText,\n   },\n+  list: {\n+    paddingTop: 0,\n+    paddingBottom: 0,\n+  },\n+  listItemText: {\n+    paddingTop: 0,\n+    paddingBottom: 0,\n+    marginTop: 0.45,\n+    marginBottom: 0.45,\n+  },\n   value: {\n-    fontSize: 38,\n+    color: ({ textColor }) => textColor,\n     fontWeight: theme.typography.fontWeightBold,\n   },\n-  type: {\n-    fontWeight: theme.typography.fontWeightBold,\n-  },\n   description: {\n-    opacity: 0.8,\n+    color: ({ descriptionColor }) => descriptionColor,\n+    marginBottom: 1,\n+    opacity: 0.7,\n   },\n-  avatar: {\n-    backgroundColor: ({ avatarColor }) => avatarColor,\n-    color: theme.palette.primary.contrastText,\n-  },\n }));\n \n export default useStyles;\n"
+                }
+            ],
+            "date": 1640818221722,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  card: {\n    backgroundColor: ({ bgColor }) => bgColor,\n    color: '#fff',\n    overflow: 'hidden',\n    position: 'relative',\n    padding: theme.spacing(1),\n    borderRadius: 10,\n    '&:after': {\n      content: '\"\"',\n      position: 'absolute',\n      width: 210,\n      height: 210,\n      background: ({ bgAfter }) => bgAfter,\n      borderRadius: '50%',\n      top: -85,\n      right: -95,\n      [theme.breakpoints.down('sm')]: {\n        top: -105,\n        right: -140,\n      },\n    },\n    '&:before': {\n      content: '\"\"',\n      position: 'absolute',\n      width: 210,\n      height: 210,\n      background: ({ bgAfter }) => bgAfter,\n      borderRadius: '50%',\n      top: -125,\n      right: -15,\n      opacity: 0.5,\n      [theme.breakpoints.down('sm')]: {\n        top: -155,\n        right: -70,\n      },\n    },\n  },\n  cardHeader: {\n    display: 'flex',\n    flexDirection: 'row',\n  },\n  value: {\n    fontSize: 38,\n    fontWeight: theme.typography.fontWeightBold,\n  },\n  type: {\n    fontWeight: theme.typography.fontWeightBold,\n  },\n  description: {\n    opacity: 0.8,\n  },\n  avatar: {\n    backgroundColor: ({ avatarColor }) => avatarColor,\n    color: theme.palette.primary.contrastText,\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

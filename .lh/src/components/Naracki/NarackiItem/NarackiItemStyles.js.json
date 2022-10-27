@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/Naracki/NarackiItem/NarackiItemStyles.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1640956014440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640956054740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   row: {\n     display: 'flex',\n     alignItems: 'center',\n     justifyContent: 'space-between',\n-    // borderBottom: '1px solid #ebeced',\n+    borderBottom: '2px solid #ebeced',\n     textAlign: 'left',\n     maxWidth: '50%'\n   },\n   firstPart: {\n"
+                },
+                {
+                    "date": 1640956060074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   row: {\n     display: 'flex',\n     alignItems: 'center',\n     justifyContent: 'space-between',\n-    borderBottom: '2px solid #ebeced',\n+    borderBottom: '1px dotted #ebeced',\n     textAlign: 'left',\n     maxWidth: '50%'\n   },\n   firstPart: {\n"
+                },
+                {
+                    "date": 1640956067440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   row: {\n     display: 'flex',\n     alignItems: 'center',\n     justifyContent: 'space-between',\n-    borderBottom: '1px dotted #ebeced',\n+    borderBottom: '1px solid red',\n     textAlign: 'left',\n     maxWidth: '50%'\n   },\n   firstPart: {\n"
+                }
+            ],
+            "date": 1640956014440,
+            "name": "Commit-0",
+            "content": "import { makeStyles } from '@material-ui/core/styles';\n\nconst useStyles = makeStyles((theme) => ({\n  row: {\n    display: 'flex',\n    alignItems: 'center',\n    justifyContent: 'space-between',\n    // borderBottom: '1px solid #ebeced',\n    textAlign: 'left',\n    maxWidth: '50%'\n  },\n  firstPart: {\n    display: 'flex',\n    alignItems: 'center',\n    justifyContent: 'center',\n  },\n  imageContainer: {\n    marginRight: 10,\n  },\n  image: {\n    width: 60,\n    height: 60,\n    resize: 'contain',\n    borderColor: '#FFF',\n    borderRadius: 85,\n    borderWidth: 3,\n  },\n  content: {\n    padding: 15,\n  },\n  contentLast: {\n    display: 'flex',\n    flexDirection: 'column',\n    justifyContent: 'center',\n    alignItems: 'flex-end',\n    padding: 15,\n  },\n}));\n\nexport default useStyles;\n"
+        }
+    ]
+}

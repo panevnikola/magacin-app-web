@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Grupi/Grupi.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642498707351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642498707351,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Typography } from '@material-ui/core';\n\nimport useStyles from './GrupiStyles';\nimport GrupiForm from './GrupiForm';\n\nconst Grupi = (props) => {\n  const classes = useStyles();\n\n  return (\n    <div className={classes.container}>\n      <GrupiForm />\n    </div>\n  );\n};\n\nexport default Grupi;\n"
+        }
+    ]
+}

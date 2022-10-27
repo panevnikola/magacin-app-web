@@ -1,0 +1,322 @@
+{
+    "sourceFile": "src/components/Dashboard/Card.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 76,
+            "patches": [
+                {
+                    "date": 1640302601232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640302986721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n import React from 'react';\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n+import useStyles from './CardStyles';\n+\n const CustomCard = () => {\n-  return <Card>Card</Card>;\n+  const classes = useStyles();\n+\n+  return <Card className={classes.card}>Card</Card>;\n };\n \n export default CustomCard;\n"
+                },
+                {
+                    "date": 1640303089330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,14 @@\n \n const CustomCard = () => {\n   const classes = useStyles();\n \n-  return <Card className={classes.card}>Card</Card>;\n+  return (\n+    <Card className={classes.card}>\n+      <CardHeader\n+        title={<Typography variant='h3'>Card Title</Typography>}\n+      />\n+    </Card>\n+  );\n };\n \n export default CustomCard;\n"
+                },
+                {
+                    "date": 1640303096768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n-        title={<Typography variant='h3'>Card Title</Typography>}\n+        title={<Typography variant='h5'>Card Title</Typography>}\n       />\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640303764972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,12 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader\n-        title={<Typography variant='h5'>Card Title</Typography>}\n-      />\n+      <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n+      <CardContent>\n+        <Typography>$500</Typography>\n+      </CardContent>\n     </Card>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1640303771417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n       <CardContent>\n-        <Typography>$500</Typography>\n+        <Typography variant='h7'>$500</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640303782395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n+      <CardHeader title={<Typography variant='h3'>Card Title</Typography>} />\n       <CardContent>\n-        <Typography variant='h7'>$500</Typography>\n+        <Typography variant='h4'>$500</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640303788286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h3'>Card Title</Typography>} />\n+      <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n       <CardContent>\n-        <Typography variant='h4'>$500</Typography>\n+        <Typography variant='h6'>$500</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640303805465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n       <CardContent>\n+        <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>$500</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640304328422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>Card Title</Typography>} />\n+      <CardHeader title={<Typography variant='h4'>May 2021</Typography>} />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>$500</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304340317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>May 2021</Typography>} />\n+      <CardHeader title={<Typography variant='h4'>May</Typography>} />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>$500</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304350949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>May</Typography>} />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n-        <Typography variant='h6'>$500</Typography>\n+        <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640304400350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>May</Typography>} />\n+      <CardHeader title={<Typography variant='h4'>Септември</Typography>} secondary='2021' />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304405807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>Септември</Typography>} secondary='2021' />\n+      <CardHeader title={<Typography variant='h4'>Септември</Typography>} subtitle='2021' />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304415231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>Септември</Typography>} subtitle='2021' />\n+      <CardHeader title={<Typography variant='h4' secondary='2021'>Септември</Typography>} />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304421350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4' secondary='2021'>Септември</Typography>} />\n+      <CardHeader title={<Typography variant='h4' subtitle='2021'>Септември</Typography>} />\n       <CardContent>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304450164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,12 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4' subtitle='2021'>Септември</Typography>} />\n       <CardContent>\n+        <Typography variant='h4' subtitle='2021'>\n+          Септември\n+        </Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640304466370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,10 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n+      <CardHeader title={<Typography variant='h4'></Typography>} />\n       <CardContent>\n-        <Typography variant='h4' subtitle='2021'>\n-          Септември\n-        </Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640304479264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'></Typography>} />\n       <CardContent>\n+      <Typography variant='h4'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640304486146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'></Typography>} />\n       <CardContent>\n-      <Typography variant='h4'>September</Typography>\n+        <Typography variant='h4'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640304493092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'></Typography>} />\n       <CardContent>\n         <Typography variant='h4'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n"
+                },
+                {
+                    "date": 1640304499042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardContent>\n+      <CardContent className={classes.content}>\n         <Typography variant='h4'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304623269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardContent className={classes.content}>\n+      <CardContent>\n         <Typography variant='h4'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640304637999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardContent>\n-        <Typography variant='h4'>September</Typography>\n+        <Typography variant='h3'>September</Typography>\n         <Typography variant='h6'>Partner</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640352325529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardContent>\n-        <Typography variant='h3'>September</Typography>\n-        <Typography variant='h6'>Partner</Typography>\n+        <Typography variant='h4'>Вкупно нарачки</Typography>\n+        <Typography variant='h6'>Овој месец</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352354761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardContent>\n+      <CardContent className={classes.content}>\n         <Typography variant='h4'>Вкупно нарачки</Typography>\n         <Typography variant='h6'>Овој месец</Typography>\n         <Typography variant='h6'>254</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640352479112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardContent className={classes.content}>\n-        <Typography variant='h4'>Вкупно нарачки</Typography>\n-        <Typography variant='h6'>Овој месец</Typography>\n-        <Typography variant='h6'>254</Typography>\n+      <CardHeader title={<Typography variant='h4'>267</Typography>} />\n+      <CardContent>\n+        <Typography variant='h6'>Нарачки</Typography>\n+        <Typography variant='h6'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640352536070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h6'>Нарачки</Typography>\n+        <Typography variant='h5'>Нарачки</Typography>\n         <Typography variant='h6'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352542758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n         <Typography variant='h5'>Нарачки</Typography>\n-        <Typography variant='h6'>Декември 2021</Typography>\n+        <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640352548621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n         <Typography variant='h5'>Нарачки</Typography>\n-        <Typography variant='subtitle1'>Декември 2021</Typography>\n+        <Typography variant='subtitle2'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640352557467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h5'>Нарачки</Typography>\n-        <Typography variant='subtitle2'>Декември 2021</Typography>\n+        <Typography variant='h6'>Нарачки</Typography>\n+        <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640352568924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h6'>Нарачки</Typography>\n+        <Typography variant='title1'>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352626708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='title1'>Нарачки</Typography>\n+        <Typography variant='caption'>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352635217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='caption'>Нарачки</Typography>\n+        <Typography variant='body1'>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352650934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='body1'>Нарачки</Typography>\n+        <Typography variant='h4'>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352660035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h4'>Нарачки</Typography>\n+        <Typography variant='h6'>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352682183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h6'>Нарачки</Typography>\n+        <Typography variant='h6' className={classes.title}>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352720805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4'>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h6' className={classes.title}>Нарачки</Typography>\n+        <Typography variant='h5' className={classes.title}>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352907627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4'>267</Typography>} />\n+      <CardHeader title={<Typography variant='h4' className={classes.value}>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h5' className={classes.title}>Нарачки</Typography>\n+        <Typography variant='h5' className={classes.name}>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640352998145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4' className={classes.value}>267</Typography>} />\n+      <CardHeader title={<Typography variant='h3' className={classes.value}>267</Typography>} />\n       <CardContent>\n         <Typography variant='h5' className={classes.name}>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640353008369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h3' className={classes.value}>267</Typography>} />\n+      <CardHeader title={<Typography variant='h4' className={classes.value}>267</Typography>} />\n       <CardContent>\n         <Typography variant='h5' className={classes.name}>Нарачки</Typography>\n         <Typography variant='subtitle1'>Декември 2021</Typography>\n       </CardContent>\n"
+                },
+                {
+                    "date": 1640353088801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader title={<Typography variant='h4' className={classes.value}>267</Typography>} />\n       <CardContent>\n-        <Typography variant='h5' className={classes.name}>Нарачки</Typography>\n-        <Typography variant='subtitle1'>Декември 2021</Typography>\n+        <Typography variant='h5' className={classes.type}>Нарачки</Typography>\n+        <Typography variant='subtitle1' className={classes.month}>Декември 2021</Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640353289745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,27 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = () => {\n+const CustomCard = (props) => {\n   const classes = useStyles();\n \n   return (\n     <Card className={classes.card}>\n-      <CardHeader title={<Typography variant='h4' className={classes.value}>267</Typography>} />\n+      <CardHeader\n+        title={\n+          <Typography variant='h4' className={classes.value}>\n+            267\n+          </Typography>\n+        }\n+      />\n       <CardContent>\n-        <Typography variant='h5' className={classes.type}>Нарачки</Typography>\n-        <Typography variant='subtitle1' className={classes.month}>Декември 2021</Typography>\n+        <Typography variant='h5' className={classes.type}>\n+          Нарачки\n+        </Typography>\n+        <Typography variant='subtitle1' className={classes.month}>\n+          Декември 2021\n+        </Typography>\n       </CardContent>\n     </Card>\n   );\n };\n"
+                },
+                {
+                    "date": 1640353491807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n import useStyles from './CardStyles';\n \n const CustomCard = (props) => {\n-  const classes = useStyles();\n+  const classes = useStyles(props);\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n"
+                },
+                {
+                    "date": 1640353594917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,17 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = (props) => {\n+const CustomCard = ({value, ...props}) => {\n   const classes = useStyles(props);\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n           <Typography variant='h4' className={classes.value}>\n-            267\n+            {value}\n           </Typography>\n         }\n       />\n       <CardContent>\n"
+                },
+                {
+                    "date": 1640353622593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({value, ...props}) => {\n+const CustomCard = ({value, props}) => {\n   const classes = useStyles(props);\n \n   return (\n     <Card className={classes.card}>\n"
+                },
+                {
+                    "date": 1640353641533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({value, props}) => {\n+const CustomCard = ({value}, ...props) => {\n   const classes = useStyles(props);\n \n   return (\n     <Card className={classes.card}>\n"
+                },
+                {
+                    "date": 1640353669786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({value}, ...props) => {\n-  const classes = useStyles(props);\n+const CustomCard = ({ value, bgColor, bgAfter }) => {\n+  const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n"
+                },
+                {
+                    "date": 1640353808484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({ value, bgColor, bgAfter }) => {\n+const CustomCard = ({ value, bgColor, bgAfter, value, type, month }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n@@ -16,9 +16,9 @@\n         }\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n-          Нарачки\n+          {type}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.month}>\n           Декември 2021\n         </Typography>\n"
+                },
+                {
+                    "date": 1640353837726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({ value, bgColor, bgAfter, value, type, month }) => {\n+const CustomCard = ({ bgColor, bgAfter, value, type, month }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n"
+                },
+                {
+                    "date": 1640353848876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         <Typography variant='h5' className={classes.type}>\n           {type}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.month}>\n-          Декември 2021\n+          {month}\n         </Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640353918380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({ bgColor, bgAfter, value, type, month }) => {\n+const CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n@@ -19,9 +19,9 @@\n         <Typography variant='h5' className={classes.type}>\n           {type}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.month}>\n-          {month}\n+          {description}\n         </Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640361262734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,14 @@\n import React from 'react';\n-import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n+import {\n+  Card,\n+  CardHeader,\n+  CardContent,\n+  Typography,\n+  ListItemAvatar,\n+  Avatar,\n+} from '@material-ui/core';\n+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './CardStyles';\n \n const CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n@@ -13,14 +21,21 @@\n           <Typography variant='h4' className={classes.value}>\n             {value}\n           </Typography>\n         }\n+        subheader={\n+          <ListItemAvatar>\n+            <Avatar className={classes.avatar} variant='rounded'>\n+              <TableChartOutlinedIcon fontSize='inherit' />\n+            </Avatar>\n+          </ListItemAvatar>\n+        }\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n           {type}\n         </Typography>\n-        <Typography variant='subtitle1' className={classes.month}>\n+        <Typography variant='subtitle1' className={classes.description}>\n           {description}\n         </Typography>\n       </CardContent>\n     </Card>\n"
+                },
+                {
+                    "date": 1640361299297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,19 +17,19 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n-          <Typography variant='h4' className={classes.value}>\n-            {value}\n-          </Typography>\n-        }\n-        subheader={\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n         }\n+        subheader={\n+          <Typography variant='h4' className={classes.value}>\n+            {value}\n+          </Typography>\n+        }\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n           {type}\n"
+                },
+                {
+                    "date": 1640361385781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   Typography,\n   ListItemAvatar,\n   Avatar,\n } from '@material-ui/core';\n-import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n+import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './CardStyles';\n \n const CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n@@ -19,9 +19,9 @@\n       <CardHeader\n         title={\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n-              <TableChartOutlinedIcon fontSize='inherit' />\n+              <PeopleIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n         }\n         subheader={\n"
+                },
+                {
+                    "date": 1640361453451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n-  const classes = useStyles({ bgColor, bgAfter });\n+const CustomCard = ({ bgColor, bgAfter, value, type, description, avatarColor }) => {\n+  const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n"
+                },
+                {
+                    "date": 1640361765074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,22 @@\n   Typography,\n   ListItemAvatar,\n   Avatar,\n } from '@material-ui/core';\n+import ArticleIcon from '@material-ui/icons/Article';\n import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './CardStyles';\n \n-const CustomCard = ({ bgColor, bgAfter, value, type, description, avatarColor }) => {\n+const CustomCard = ({\n+  bgColor,\n+  bgAfter,\n+  value,\n+  type,\n+  description,\n+  avatarColor,\n+  icon = 'people',\n+}) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n   return (\n     <Card className={classes.card}>\n"
+                },
+                {
+                    "date": 1640361798031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   Typography,\n   ListItemAvatar,\n   Avatar,\n } from '@material-ui/core';\n-import ArticleIcon from '@material-ui/icons/Article';\n+import FeedIcon from '@material-ui/icons/Feed';\n import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './CardStyles';\n \n"
+                },
+                {
+                    "date": 1640361817194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   Typography,\n   ListItemAvatar,\n   Avatar,\n } from '@material-ui/core';\n-import FeedIcon from '@material-ui/icons/Feed';\n+import AssignmentIcon from '@material-ui/icons/Assignment';\n import PeopleIcon from '@material-ui/icons/People';\n \n import useStyles from './CardStyles';\n \n"
+                },
+                {
+                    "date": 1640361888355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,13 @@\n       <CardHeader\n         title={\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n-              <PeopleIcon fontSize='inherit' />\n+              {icon === 'people' ? (\n+                <PeopleIcon fontSize='inherit' />\n+              ) : (\n+                <PeopleIcon fontSize='AssignmentIcon' />\n+              )}\n             </Avatar>\n           </ListItemAvatar>\n         }\n         subheader={\n"
+                },
+                {
+                    "date": 1640361918973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n             <Avatar className={classes.avatar} variant='rounded'>\n               {icon === 'people' ? (\n                 <PeopleIcon fontSize='inherit' />\n               ) : (\n-                <PeopleIcon fontSize='AssignmentIcon' />\n+                <AssignmentIcon fontSize='inherit' />\n               )}\n             </Avatar>\n           </ListItemAvatar>\n         }\n"
+                },
+                {
+                    "date": 1640361984456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,19 +25,19 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n-        title={\n-          <ListItemAvatar>\n-            <Avatar className={classes.avatar} variant='rounded'>\n-              {icon === 'people' ? (\n-                <PeopleIcon fontSize='inherit' />\n-              ) : (\n-                <AssignmentIcon fontSize='inherit' />\n-              )}\n-            </Avatar>\n-          </ListItemAvatar>\n-        }\n+        // title={\n+        //   <ListItemAvatar>\n+        //     <Avatar className={classes.avatar} variant='rounded'>\n+        //       {icon === 'people' ? (\n+        //         <PeopleIcon fontSize='inherit' />\n+        //       ) : (\n+        //         <AssignmentIcon fontSize='inherit' />\n+        //       )}\n+        //     </Avatar>\n+        //   </ListItemAvatar>\n+        // }\n         subheader={\n           <Typography variant='h4' className={classes.value}>\n             {value}\n           </Typography>\n"
+                },
+                {
+                    "date": 1640362008831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,24 +25,29 @@\n \n   return (\n     <Card className={classes.card}>\n       <CardHeader\n-        // title={\n-        //   <ListItemAvatar>\n-        //     <Avatar className={classes.avatar} variant='rounded'>\n-        //       {icon === 'people' ? (\n-        //         <PeopleIcon fontSize='inherit' />\n-        //       ) : (\n-        //         <AssignmentIcon fontSize='inherit' />\n-        //       )}\n-        //     </Avatar>\n-        //   </ListItemAvatar>\n-        // }\n-        subheader={\n-          <Typography variant='h4' className={classes.value}>\n+        title={\n+          <>\n+            <ListItemAvatar>\n+              <Avatar className={classes.avatar} variant='rounded'>\n+                {icon === 'people' ? (\n+                  <PeopleIcon fontSize='inherit' />\n+                ) : (\n+                  <AssignmentIcon fontSize='inherit' />\n+                )}\n+              </Avatar>\n+            </ListItemAvatar>\n+            <Typography variant='h4' className={classes.value}>\n             {value}\n           </Typography>\n+          </>\n         }\n+        // subheader={\n+        //   <Typography variant='h4' className={classes.value}>\n+        //     {value}\n+        //   </Typography>\n+        // }\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n           {type}\n"
+                },
+                {
+                    "date": 1640362023591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n-          <>\n+          <div>\n             <ListItemAvatar>\n               <Avatar className={classes.avatar} variant='rounded'>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n@@ -39,9 +39,9 @@\n             </ListItemAvatar>\n             <Typography variant='h4' className={classes.value}>\n             {value}\n           </Typography>\n-          </>\n+          </div>\n         }\n         // subheader={\n         //   <Typography variant='h4' className={classes.value}>\n         //     {value}\n"
+                },
+                {
+                    "date": 1640362034875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n-          <div>\n+          <div className={classes.cardHeader}>\n             <ListItemAvatar>\n               <Avatar className={classes.avatar} variant='rounded'>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n"
+                },
+                {
+                    "date": 1640362160900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,11 @@\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n           <div className={classes.cardHeader}>\n+            <Typography variant='h4' className={classes.value}>\n+            {value}\n+          </Typography>\n             <ListItemAvatar>\n               <Avatar className={classes.avatar} variant='rounded'>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n@@ -36,11 +39,11 @@\n                   <AssignmentIcon fontSize='inherit' />\n                 )}\n               </Avatar>\n             </ListItemAvatar>\n-            <Typography variant='h4' className={classes.value}>\n+            {/* <Typography variant='h4' className={classes.value}>\n             {value}\n-          </Typography>\n+          </Typography> */}\n           </div>\n         }\n         // subheader={\n         //   <Typography variant='h4' className={classes.value}>\n"
+                },
+                {
+                    "date": 1640362174530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,11 +27,8 @@\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n           <div className={classes.cardHeader}>\n-            <Typography variant='h4' className={classes.value}>\n-            {value}\n-          </Typography>\n             <ListItemAvatar>\n               <Avatar className={classes.avatar} variant='rounded'>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n@@ -39,18 +36,13 @@\n                   <AssignmentIcon fontSize='inherit' />\n                 )}\n               </Avatar>\n             </ListItemAvatar>\n-            {/* <Typography variant='h4' className={classes.value}>\n-            {value}\n-          </Typography> */}\n+            <Typography variant='h4' className={classes.value}>\n+              {value}\n+            </Typography>\n           </div>\n         }\n-        // subheader={\n-        //   <Typography variant='h4' className={classes.value}>\n-        //     {value}\n-        //   </Typography>\n-        // }\n       />\n       <CardContent>\n         <Typography variant='h5' className={classes.type}>\n           {type}\n"
+                },
+                {
+                    "date": 1640362194774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       <CardHeader\n         title={\n           <div className={classes.cardHeader}>\n             <ListItemAvatar>\n-              <Avatar className={classes.avatar} variant='rounded'>\n+              <Avatar className={classes.avatar}>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n                 ) : (\n                   <AssignmentIcon fontSize='inherit' />\n"
+                },
+                {
+                    "date": 1640362596190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       <CardHeader\n         title={\n           <div className={classes.cardHeader}>\n             <ListItemAvatar>\n-              <Avatar className={classes.avatar}>\n+              <Avatar className={classes.avatar} variant='rounded'>\n                 {icon === 'people' ? (\n                   <PeopleIcon fontSize='inherit' />\n                 ) : (\n                   <AssignmentIcon fontSize='inherit' />\n"
+                },
+                {
+                    "date": 1640790252632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   type,\n   description,\n   avatarColor,\n   icon = 'people',\n+  period\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n   return (\n"
+                },
+                {
+                    "date": 1640790283153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n   period\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n+  console.log('PERIOD ', period);\n+\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n"
+                },
+                {
+                    "date": 1640790305140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n   period\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n-  console.log('PERIOD ', period);\n+  const periodToDisplay = period;\n \n+  console.log('PERIOD ', periodToDisplay);\n+\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n"
+                },
+                {
+                    "date": 1640790310571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   period\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n-  const periodToDisplay = period;\n+  const periodToDisplay = period();\n \n   console.log('PERIOD ', periodToDisplay);\n \n   return (\n"
+                },
+                {
+                    "date": 1640790464768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,10 @@\n   period\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n-  const periodToDisplay = period();\n+  console.log('PERIOD ', period);\n \n-  console.log('PERIOD ', periodToDisplay);\n-\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n"
+                },
+                {
+                    "date": 1640790483895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <Typography variant='h5' className={classes.type}>\n           {type}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.description}>\n-          {description}\n+          {period}\n         </Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640790492293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <Typography variant='h5' className={classes.type}>\n           {type}\n         </Typography>\n         <Typography variant='subtitle1' className={classes.description}>\n-          {period}\n+          {description}\n         </Typography>\n       </CardContent>\n     </Card>\n   );\n"
+                },
+                {
+                    "date": 1640790516898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,15 +18,12 @@\n   value,\n   type,\n   description,\n   avatarColor,\n-  icon = 'people',\n-  period\n+  icon = 'people'\n }) => {\n   const classes = useStyles({ bgColor, bgAfter, avatarColor });\n \n-  console.log('PERIOD ', period);\n-\n   return (\n     <Card className={classes.card}>\n       <CardHeader\n         title={\n"
+                }
+            ],
+            "date": 1640302601232,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n\nconst CustomCard = () => {\n  return <Card>Card</Card>;\n};\n\nexport default CustomCard;\n"
+        }
+    ]
+}

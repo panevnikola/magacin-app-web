@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1640264954097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640272318626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       200: '#b39ddb',\n       800: '#4527a0'\n     },\n     background: {\n-      default: '#f2f2f2',\n+      default: 'red',\n     },\n   },\n   typography: {\n     subtitle1: {\n"
+                },
+                {
+                    "date": 1640272324376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       200: '#b39ddb',\n       800: '#4527a0'\n     },\n     background: {\n-      default: 'red',\n+      default: '#4527a0',\n     },\n   },\n   typography: {\n     subtitle1: {\n"
+                },
+                {
+                    "date": 1640272376570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       200: '#b39ddb',\n       800: '#4527a0'\n     },\n     background: {\n-      default: '#4527a0',\n+      default: '#e3f2fd',\n     },\n   },\n   typography: {\n     subtitle1: {\n"
+                },
+                {
+                    "date": 1640272403575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       200: '#b39ddb',\n       800: '#4527a0'\n     },\n     background: {\n-      default: '#e3f2fd',\n+      default: '#f2f2f2',\n     },\n   },\n   typography: {\n     subtitle1: {\n"
+                },
+                {
+                    "date": 1640272570504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,18 @@\n     secondary: {\n       main: '#673ab7',\n       light: '#ede7f6',\n       dark: '#5e35b1',\n-      200: '#b39ddb',\n+      200: '#E8E8E8',\n       800: '#4527a0'\n     },\n+    grey: {\n+      main: '#A0A0A0',\n+      light: '#D3D3D3',\n+      dark: '#101010',\n+      200: '#b39ddb',\n+      800: '#282828'\n+    },\n     background: {\n       default: '#f2f2f2',\n     },\n   },\n"
+                },
+                {
+                    "date": 1640272735840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       dark: '#5e35b1',\n       200: '#E8E8E8',\n       800: '#4527a0'\n     },\n-    grey: {\n+    neutral: {\n       main: '#A0A0A0',\n       light: '#D3D3D3',\n       dark: '#101010',\n       200: '#b39ddb',\n"
+                },
+                {
+                    "date": 1640272765210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n       dark: '#5e35b1',\n       200: '#E8E8E8',\n       800: '#4527a0'\n     },\n-    neutral: {\n+    grey: {\n       main: '#A0A0A0',\n       light: '#D3D3D3',\n       dark: '#101010',\n       200: '#b39ddb',\n"
+                },
+                {
+                    "date": 1640272851691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n       main: '#A0A0A0',\n       light: '#D3D3D3',\n       dark: '#101010',\n       200: '#b39ddb',\n-      800: '#282828'\n+      800: '#4527a0'\n     },\n     background: {\n       default: '#f2f2f2',\n     },\n"
+                },
+                {
+                    "date": 1640272884204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,11 +28,11 @@\n     },\n     grey: {\n       main: '#A0A0A0',\n       light: '#D3D3D3',\n-      dark: '#101010',\n+      dark: '#404040',\n       200: '#b39ddb',\n-      800: '#4527a0'\n+      800: '#505050'\n     },\n     background: {\n       default: '#f2f2f2',\n     },\n"
+                },
+                {
+                    "date": 1640359969245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,15 @@\n       dark: '#404040',\n       200: '#b39ddb',\n       800: '#505050'\n     },\n+    orange: {\n+      main: '#ff9933',\n+      light: '#ffcc99',\n+      dark: '#b35900',\n+      200: '#ffd9b3',\n+      800: '#e67300'\n+    },\n     background: {\n       default: '#f2f2f2',\n     },\n   },\n"
+                },
+                {
+                    "date": 1640361548958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n       main: '#673ab7',\n       light: '#ede7f6',\n       dark: '#5e35b1',\n       200: '#E8E8E8',\n+      300: '#d3c5ed',\n       800: '#4527a0'\n     },\n     grey: {\n       main: '#A0A0A0',\n"
+                },
+                {
+                    "date": 1640361588190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n       main: '#673ab7',\n       light: '#ede7f6',\n       dark: '#5e35b1',\n       200: '#E8E8E8',\n-      300: '#d3c5ed',\n+      300: '#9876d5',\n       800: '#4527a0'\n     },\n     grey: {\n       main: '#A0A0A0',\n"
+                },
+                {
+                    "date": 1640361627876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n       main: '#2196f3',\n       light: '#e3f2fd',\n       dark: '#1e88e5',\n       200: '#90caf9',\n+      300: '#86c5f9',\n       800: '#1565c0'\n     },\n     secondary: {\n       main: '#673ab7',\n"
+                }
+            ],
+            "date": 1640264954097,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { BrowserRouter as Router } from 'react-router-dom';\nimport reportWebVitals from './reportWebVitals';\nimport { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';\nimport * as serviceWorkerRegistration from './serviceWorkerRegistration';\n\n\nimport './index.css';\nimport App from './App';\n\nconst theme = createMuiTheme({\n  palette: {\n    type: 'light',\n    primary: {\n      main: '#2196f3',\n      light: '#e3f2fd',\n      dark: '#1e88e5',\n      200: '#90caf9',\n      800: '#1565c0'\n    },\n    secondary: {\n      main: '#673ab7',\n      light: '#ede7f6',\n      dark: '#5e35b1',\n      200: '#b39ddb',\n      800: '#4527a0'\n    },\n    background: {\n      default: '#f2f2f2',\n    },\n  },\n  typography: {\n    subtitle1: {\n      fontWeight: 600,\n    },\n    subtitle2: {\n      fontWeight: 600,\n    },\n    button: {\n      textTransform: 'none',\n    },\n  },\n});\n\nconst app = (\n  <Router basename='/'>\n    <ThemeProvider theme={theme}>\n      <App />\n    </ThemeProvider>\n  </Router>\n);\n\nReactDOM.render(app, document.getElementById('root'));\n\n// If you want your app to work offline and load faster, you can change\n// unregister() to register() below. Note this comes with some pitfalls.\n// Learn more about service workers: https://cra.link/PWA\nserviceWorkerRegistration.register();\n\n// If you want to start measuring performance in your app, pass a function\n// to log results (for example: reportWebVitals(console.log))\n// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\nreportWebVitals();\n"
+        }
+    ]
+}

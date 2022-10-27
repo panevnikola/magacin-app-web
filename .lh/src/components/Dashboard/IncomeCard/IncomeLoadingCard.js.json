@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/Dashboard/IncomeCard/IncomeLoadingCard.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1640356529546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640356537899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n         <ListItem\n           classname={classes.list}\n           alignItems='center'\n           disableGutters\n-          sx={{ py: 0 }}\n         >\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n"
+                },
+                {
+                    "date": 1640356546983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n           <ListItemText\n-            sx={{ py: 0 }}\n+            classname={classes.list}\n             primary={<Skeleton variant='rectangular' height={20} />}\n             secondary={<Skeleton variant='text' />}\n           />\n         </ListItem>\n"
+                },
+                {
+                    "date": 1640356696843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n import Skeleton from '@material-ui/lab/Skeleton';\n \n import useStyles from './IncomeLoadingCardStyles';\n \n-const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n+const IncomeLoadingCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card classname={classes.card}>\n@@ -34,5 +34,5 @@\n     </Card>\n   );\n };\n \n-export default IncomeCard;\n+export default IncomeLoadingCard;\n"
+                },
+                {
+                    "date": 1640357247750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,20 +13,20 @@\n const IncomeLoadingCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n-    <Card classname={classes.card}>\n-      <List classname={classes.list}>\n+    <Card className={classes.card}>\n+      <List className={classes.list}>\n         <ListItem\n-          classname={classes.list}\n+          className={classes.list}\n           alignItems='center'\n           disableGutters\n         >\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n           <ListItemText\n-            classname={classes.list}\n+            className={classes.list}\n             primary={<Skeleton variant='rectangular' height={20} />}\n             secondary={<Skeleton variant='text' />}\n           />\n         </ListItem>\n"
+                }
+            ],
+            "date": 1640356529546,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport {\n  Card,\n  List,\n  ListItem,\n  ListItemAvatar,\n  ListItemText,\n} from '@material-ui/core';\nimport Skeleton from '@material-ui/lab/Skeleton';\n\nimport useStyles from './IncomeLoadingCardStyles';\n\nconst IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n  const classes = useStyles({ bgColor, bgAfter });\n\n  return (\n    <Card classname={classes.card}>\n      <List classname={classes.list}>\n        <ListItem\n          classname={classes.list}\n          alignItems='center'\n          disableGutters\n          sx={{ py: 0 }}\n        >\n          <ListItemAvatar>\n            <Skeleton variant='rectangular' width={44} height={44} />\n          </ListItemAvatar>\n          <ListItemText\n            sx={{ py: 0 }}\n            primary={<Skeleton variant='rectangular' height={20} />}\n            secondary={<Skeleton variant='text' />}\n          />\n        </ListItem>\n      </List>\n    </Card>\n  );\n};\n\nexport default IncomeCard;\n"
+        }
+    ]
+}

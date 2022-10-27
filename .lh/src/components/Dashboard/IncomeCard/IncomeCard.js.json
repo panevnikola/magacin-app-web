@@ -1,0 +1,190 @@
+{
+    "sourceFile": "src/components/Dashboard/IncomeCard/IncomeCard.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1640355895288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1640355909067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react';\n import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n \n-import useStyles from './CardStyles';\n+import useStyles from './IncomeCardStyles';\n \n-const CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n+const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n@@ -26,5 +26,5 @@\n     </Card>\n   );\n };\n \n-export default CustomCard;\n+export default IncomeCard;\n"
+                },
+                {
+                    "date": 1640356122803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,35 @@\n import React from 'react';\n-import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n+import {\n+  Card,\n+  CardHeader,\n+  CardContent,\n+  List,\n+  ListItem,\n+  ListItemAvatar,\n+  ListItemText,\n+  Skeleton,\n+} from '@material-ui/core';\n \n import useStyles from './IncomeCardStyles';\n \n const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n-    <Card className={classes.card}>\n-      <CardHeader\n-        title={\n-          <Typography variant='h4' className={classes.value}>\n-            {value}\n-          </Typography>\n-        }\n-      />\n-      <CardContent>\n-        <Typography variant='h5' className={classes.type}>\n-          {type}\n-        </Typography>\n-        <Typography variant='subtitle1' className={classes.description}>\n-          {description}\n-        </Typography>\n-      </CardContent>\n+    <Card classname={classes.card}>\n+      <List sx={{ py: 0 }}>\n+        <ListItem alignItems='center' disableGutters sx={{ py: 0 }}>\n+          <ListItemAvatar>\n+            <Skeleton variant='rectangular' width={44} height={44} />\n+          </ListItemAvatar>\n+          <ListItemText\n+            sx={{ py: 0 }}\n+            primary={<Skeleton variant='rectangular' height={20} />}\n+            secondary={<Skeleton variant='text' />}\n+          />\n+        </ListItem>\n+      </List>\n     </Card>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1640356208000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n import React from 'react';\n import {\n   Card,\n-  CardHeader,\n-  CardContent,\n   List,\n   ListItem,\n   ListItemAvatar,\n   ListItemText,\n-  Skeleton,\n } from '@material-ui/core';\n+import Skeleton from '@material-ui/lab/Skeleton';\n \n import useStyles from './IncomeCardStyles';\n \n const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n"
+                },
+                {
+                    "date": 1640356306120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card classname={classes.card}>\n-      <List sx={{ py: 0 }}>\n+      <List classname={classes.list}>\n         <ListItem alignItems='center' disableGutters sx={{ py: 0 }}>\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n"
+                },
+                {
+                    "date": 1640356319400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n-        <ListItem alignItems='center' disableGutters sx={{ py: 0 }}>\n+        <ListItem classname={classes.listItem} alignItems='center' disableGutters sx={{ py: 0 }}>\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n           <ListItemText\n"
+                },
+                {
+                    "date": 1640356325221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n-        <ListItem classname={classes.listItem} alignItems='center' disableGutters sx={{ py: 0 }}>\n+        <ListItem classname={classes.list} alignItems='center' disableGutters sx={{ py: 0 }}>\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n           <ListItemText\n"
+                },
+                {
+                    "date": 1640356742945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,22 +7,26 @@\n   ListItemText,\n } from '@material-ui/core';\n import Skeleton from '@material-ui/lab/Skeleton';\n \n-import useStyles from './IncomeCardStyles';\n+import useStyles from './IncomeLoadingCardStyles';\n \n const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n-        <ListItem classname={classes.list} alignItems='center' disableGutters sx={{ py: 0 }}>\n+        <ListItem\n+          classname={classes.list}\n+          alignItems='center'\n+          disableGutters\n+        >\n           <ListItemAvatar>\n             <Skeleton variant='rectangular' width={44} height={44} />\n           </ListItemAvatar>\n           <ListItemText\n-            sx={{ py: 0 }}\n+            classname={classes.list}\n             primary={<Skeleton variant='rectangular' height={20} />}\n             secondary={<Skeleton variant='text' />}\n           />\n         </ListItem>\n"
+                },
+                {
+                    "date": 1640356833499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,12 @@\n   List,\n   ListItem,\n   ListItemAvatar,\n   ListItemText,\n+  Avatar,\n+  TableChartOutlinedIcon\n } from '@material-ui/core';\n+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n import Skeleton from '@material-ui/lab/Skeleton';\n \n import useStyles from './IncomeLoadingCardStyles';\n \n@@ -14,21 +17,42 @@\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card classname={classes.card}>\n-      <List classname={classes.list}>\n-        <ListItem\n-          classname={classes.list}\n-          alignItems='center'\n-          disableGutters\n-        >\n+      <List sx={{ py: 0 }}>\n+        <ListItem alignItems='center' disableGutters sx={{ py: 0 }}>\n           <ListItemAvatar>\n-            <Skeleton variant='rectangular' width={44} height={44} />\n+            <Avatar\n+              variant='rounded'\n+              sx={{\n+                ...theme.typography.commonAvatar,\n+                ...theme.typography.largeAvatar,\n+                backgroundColor: theme.palette.primary[800],\n+                color: '#fff',\n+              }}\n+            >\n+              <TableChartOutlinedIcon fontSize='inherit' />\n+            </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n-            classname={classes.list}\n-            primary={<Skeleton variant='rectangular' height={20} />}\n-            secondary={<Skeleton variant='text' />}\n+            sx={{\n+              py: 0,\n+              mt: 0.45,\n+              mb: 0.45,\n+            }}\n+            primary={\n+              <Typography variant='h4' sx={{ color: '#fff' }}>\n+                $203k\n+              </Typography>\n+            }\n+            secondary={\n+              <Typography\n+                variant='subtitle2'\n+                sx={{ color: 'primary.light', mt: 0.25 }}\n+              >\n+                Total Income\n+              </Typography>\n+            }\n           />\n         </ListItem>\n       </List>\n     </Card>\n"
+                },
+                {
+                    "date": 1640356858694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card classname={classes.card}>\n-      <List sx={{ py: 0 }}>\n-        <ListItem alignItems='center' disableGutters sx={{ py: 0 }}>\n+      <List classname={classes.list}>\n+        <ListItem classname={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n             <Avatar\n               variant='rounded'\n               sx={{\n"
+                },
+                {
+                    "date": 1640356919912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   ListItem,\n   ListItemAvatar,\n   ListItemText,\n   Avatar,\n-  TableChartOutlinedIcon\n+  TableChartOutlinedIcon,\n } from '@material-ui/core';\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n import Skeleton from '@material-ui/lab/Skeleton';\n \n@@ -20,17 +20,9 @@\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n         <ListItem classname={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n-            <Avatar\n-              variant='rounded'\n-              sx={{\n-                ...theme.typography.commonAvatar,\n-                ...theme.typography.largeAvatar,\n-                backgroundColor: theme.palette.primary[800],\n-                color: '#fff',\n-              }}\n-            >\n+            <Avatar classname={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n"
+                },
+                {
+                    "date": 1640356954882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n   ListItem,\n   ListItemAvatar,\n   ListItemText,\n   Avatar,\n-  TableChartOutlinedIcon,\n } from '@material-ui/core';\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n import Skeleton from '@material-ui/lab/Skeleton';\n \n"
+                },
+                {
+                    "date": 1640356963672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,10 @@\n   ListItemText,\n   Avatar,\n } from '@material-ui/core';\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n-import Skeleton from '@material-ui/lab/Skeleton';\n \n-import useStyles from './IncomeLoadingCardStyles';\n+import useStyles from './IncomeCardStyles';\n \n const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n   const classes = useStyles({ bgColor, bgAfter });\n \n"
+                },
+                {
+                    "date": 1640356977194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import React from 'react';\n import {\n+  Avatar,\n   Card,\n   List,\n   ListItem,\n   ListItemAvatar,\n   ListItemText,\n-  Avatar,\n+  Typography,\n } from '@material-ui/core';\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n"
+                },
+                {
+                    "date": 1640357072266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,13 +24,9 @@\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n-            sx={{\n-              py: 0,\n-              mt: 0.45,\n-              mb: 0.45,\n-            }}\n+            classname={classes.listItemText}\n             primary={\n               <Typography variant='h4' sx={{ color: '#fff' }}>\n                 $203k\n               </Typography>\n"
+                },
+                {
+                    "date": 1640357113008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             classname={classes.listItemText}\n             primary={\n-              <Typography variant='h4' sx={{ color: '#fff' }}>\n+              <Typography classname={classes.value} variant='h4'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357139997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n \n-const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n-  const classes = useStyles({ bgColor, bgAfter });\n+const IncomeCard = (props) => {\n+  const classes = useStyles(props);\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n"
+                },
+                {
+                    "date": 1640357146076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n import useStyles from './IncomeCardStyles';\n \n const IncomeCard = (props) => {\n-  const classes = useStyles(props);\n+  const classes = useStyles();\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n"
+                },
+                {
+                    "date": 1640357177710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n import useStyles from './IncomeCardStyles';\n \n const IncomeCard = (props) => {\n-  const classes = useStyles();\n+  const classes = useStyles(props);\n \n   return (\n     <Card classname={classes.card}>\n       <List classname={classes.list}>\n@@ -32,10 +32,10 @@\n               </Typography>\n             }\n             secondary={\n               <Typography\n+                classname={classes.description}\n                 variant='subtitle2'\n-                sx={{ color: 'primary.light', mt: 0.25 }}\n               >\n                 Total Income\n               </Typography>\n             }\n"
+                },
+                {
+                    "date": 1640357234776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,26 +15,26 @@\n const IncomeCard = (props) => {\n   const classes = useStyles(props);\n \n   return (\n-    <Card classname={classes.card}>\n-      <List classname={classes.list}>\n-        <ListItem classname={classes.list} alignItems='center' disableGutters>\n+    <Card className={classes.card}>\n+      <List className={classes.list}>\n+        <ListItem className={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n-            <Avatar classname={classes.avatar} variant='rounded'>\n+            <Avatar className={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n-            classname={classes.listItemText}\n+            className={classes.listItemText}\n             primary={\n-              <Typography classname={classes.value} variant='h4'>\n+              <Typography className={classes.value} variant='h4'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n               <Typography\n-                classname={classes.description}\n+                className={classes.description}\n                 variant='subtitle2'\n               >\n                 Total Income\n               </Typography>\n"
+                },
+                {
+                    "date": 1640357293845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n-        <ListItem className={classes.list} alignItems='center' disableGutters>\n+        <ListItem className={classes.list} disableGutters>\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n@@ -31,12 +31,9 @@\n                 $203k\n               </Typography>\n             }\n             secondary={\n-              <Typography\n-                className={classes.description}\n-                variant='subtitle2'\n-              >\n+              <Typography className={classes.description} variant='subtitle2'>\n                 Total Income\n               </Typography>\n             }\n           />\n"
+                },
+                {
+                    "date": 1640357390923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,18 +17,18 @@\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n-        <ListItem className={classes.list} disableGutters>\n+        <ListItem className={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='h4'>\n+              <Typography className={classes.value} variant='h3'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357396965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='h3'>\n+              <Typography className={classes.value} variant='h4'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357411021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='h4'>\n+              <Typography className={classes.value} variant='subtitle1'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357462244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='subtitle1'>\n+              <Typography className={classes.value} variant='body1'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357469178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='body1'>\n+              <Typography className={classes.value} variant='h6'>\n                 $203k\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640357583409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 $203k\n               </Typography>\n             }\n             secondary={\n-              <Typography className={classes.description} variant='subtitle2'>\n+              <Typography className={classes.description} variant='subtitle1'>\n                 Total Income\n               </Typography>\n             }\n           />\n"
+                },
+                {
+                    "date": 1640357611984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       <List className={classes.list}>\n         <ListItem className={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n             <Avatar className={classes.avatar} variant='rounded'>\n-              <TableChartOutlinedIcon fontSize='inherit' />\n+              <TableChartOutlinedIcon />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n@@ -31,9 +31,9 @@\n                 $203k\n               </Typography>\n             }\n             secondary={\n-              <Typography className={classes.description} variant='subtitle1'>\n+              <Typography className={classes.description} variant='subtitle2'>\n                 Total Income\n               </Typography>\n             }\n           />\n"
+                },
+                {
+                    "date": 1640357617491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n     <Card className={classes.card}>\n       <List className={classes.list}>\n         <ListItem className={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n-            <Avatar className={classes.avatar} variant='rounded'>\n-              <TableChartOutlinedIcon />\n+            <Avatar className={classes.avatar}>\n+              <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n"
+                },
+                {
+                    "date": 1640357709127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,17 +19,17 @@\n     <Card className={classes.card}>\n       <List className={classes.list}>\n         <ListItem className={classes.list} alignItems='center' disableGutters>\n           <ListItemAvatar>\n-            <Avatar className={classes.avatar}>\n+            <Avatar className={classes.avatar} variant='rounded'>\n               <TableChartOutlinedIcon fontSize='inherit' />\n             </Avatar>\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='h6'>\n-                $203k\n+                MKD203k\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                },
+                {
+                    "date": 1640357726077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='h6'>\n-                MKD203k\n+                203500 MKD\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                },
+                {
+                    "date": 1640357733480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='h6'>\n-                203500 MKD\n+                203m500 MKD\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                },
+                {
+                    "date": 1640357748309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='h6'>\n-                203m500 MKD\n+                MKD 203,500\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                },
+                {
+                    "date": 1640357799809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,14 +27,14 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='h6'>\n-                MKD 203,500\n+                203,500 MKD\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n-                Total Income\n+                Вкупна сума на нарачки\n               </Typography>\n             }\n           />\n         </ListItem>\n"
+                },
+                {
+                    "date": 1640357919408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n \n-const IncomeCard = (props) => {\n-  const classes = useStyles(props);\n+const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n+  const classes = useStyles({ bgColor, bgAfter });\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n"
+                },
+                {
+                    "date": 1640358043681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n           </ListItemAvatar>\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n-              <Typography className={classes.value} variant='h6'>\n+              <Typography className={classes.value} variant='subtitle1'>\n                 203,500 MKD\n               </Typography>\n             }\n             secondary={\n"
+                },
+                {
+                    "date": 1640358481716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n \n-const IncomeCard = ({ bgColor, bgAfter, value, type, description }) => {\n-  const classes = useStyles({ bgColor, bgAfter });\n+const IncomeCard = ({ bgColor, bgAfter, textColor, value, type, description }) => {\n+  const classes = useStyles({ bgColor, bgAfter, textColor });\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n"
+                },
+                {
+                    "date": 1640358539837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n \n-const IncomeCard = ({ bgColor, bgAfter, textColor, value, type, description }) => {\n-  const classes = useStyles({ bgColor, bgAfter, textColor });\n+const IncomeCard = ({ bgColor, bgAfter, textColor, descriptionColor, value, type, description }) => {\n+  const classes = useStyles({ bgColor, bgAfter, textColor, descriptionColor });\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n"
+                },
+                {
+                    "date": 1640358843479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,25 @@\n import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';\n \n import useStyles from './IncomeCardStyles';\n \n-const IncomeCard = ({ bgColor, bgAfter, textColor, descriptionColor, value, type, description }) => {\n-  const classes = useStyles({ bgColor, bgAfter, textColor, descriptionColor });\n+const IncomeCard = ({\n+  bgColor,\n+  bgAfter,\n+  textColor,\n+  descriptionColor,\n+  avatarColor,\n+  value,\n+  type,\n+  description,\n+}) => {\n+  const classes = useStyles({\n+    bgColor,\n+    bgAfter,\n+    avatarColor,\n+    textColor,\n+    descriptionColor,\n+  });\n \n   return (\n     <Card className={classes.card}>\n       <List className={classes.list}>\n"
+                },
+                {
+                    "date": 1640359153486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n-                Вкупна сума на нарачки\n+                Вкупна сума од нарачки\n               </Typography>\n             }\n           />\n         </ListItem>\n"
+                },
+                {
+                    "date": 1640359231914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,14 +42,14 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='subtitle1'>\n-                203,500 MKD\n+                {value}\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n-                Вкупна сума од нарачки\n+                {description}\n               </Typography>\n             }\n           />\n         </ListItem>\n"
+                },
+                {
+                    "date": 1640359245111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,8 @@\n   textColor,\n   descriptionColor,\n   avatarColor,\n   value,\n-  type,\n   description,\n }) => {\n   const classes = useStyles({\n     bgColor,\n"
+                },
+                {
+                    "date": 1640816282869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='subtitle1'>\n-                {value}\n+                {value} MKD\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                },
+                {
+                    "date": 1640904974444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n           <ListItemText\n             className={classes.listItemText}\n             primary={\n               <Typography className={classes.value} variant='subtitle1'>\n-                {value} MKD\n+                {value}\n               </Typography>\n             }\n             secondary={\n               <Typography className={classes.description} variant='subtitle2'>\n"
+                }
+            ],
+            "date": 1640355895288,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Card, CardHeader, CardContent, Typography } from '@material-ui/core';\n\nimport useStyles from './CardStyles';\n\nconst CustomCard = ({ bgColor, bgAfter, value, type, description }) => {\n  const classes = useStyles({ bgColor, bgAfter });\n\n  return (\n    <Card className={classes.card}>\n      <CardHeader\n        title={\n          <Typography variant='h4' className={classes.value}>\n            {value}\n          </Typography>\n        }\n      />\n      <CardContent>\n        <Typography variant='h5' className={classes.type}>\n          {type}\n        </Typography>\n        <Typography variant='subtitle1' className={classes.description}>\n          {description}\n        </Typography>\n      </CardContent>\n    </Card>\n  );\n};\n\nexport default CustomCard;\n"
+        }
+    ]
+}
